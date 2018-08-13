@@ -14,7 +14,7 @@ rm -f /usr/lib/systemd/system/basic.target.wants/*;\
 rm -f /usr/lib/systemd/system/anaconda.target.wants/*;
 
 # Install ansible
-RUN zypper -n install git ansible sudo; zypper clean
+RUN zypper -n install git ansible sudo ssh; zypper clean
 
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/lib/systemd/systemd", "--system"]
