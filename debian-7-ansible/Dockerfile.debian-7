@@ -1,5 +1,5 @@
 FROM debian:7
-MAINTAINER diodonfrost <diodonfrost@protonmail.com>
+MAINTAINER diodonfrost <keres@protonmail.com>
 
 RUN apt-get update -y  &&  apt-get install --fix-missing && \
     DEBIAN_FRONTEND=noninteractive \

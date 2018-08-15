@@ -1,5 +1,5 @@
 FROM oraclelinux:6
-MAINTAINER diodonfrost <diodonfrost@protonmail.com>
+MAINTAINER diodonfrost <keres@protonmail.com>
 
 RUN rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 RUN yum -y install git ansible sudo which curl openssh-server openssh-clients

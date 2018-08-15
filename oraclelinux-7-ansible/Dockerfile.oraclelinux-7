@@ -1,5 +1,5 @@
 FROM oraclelinux:7
-MAINTAINER diodonfrost <diodonfrost@protonmail.com>
+MAINTAINER diodonfrost <keres@protonmail.com>
 
 # Install systemd -- See https://hub.docker.com/_/centos/
 RUN yum -y swap -- remove fakesystemd -- install systemd systemd-libs

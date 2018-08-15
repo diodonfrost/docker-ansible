@@ -1,5 +1,5 @@
 FROM amazonlinux:1
-MAINTAINER diodonfrost <diodonfrost@protonmail.com>
+MAINTAINER diodonfrost <keres@protonmail.com>
 
 # Install Ansible and other requirements.
 RUN rpm -ihv http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm

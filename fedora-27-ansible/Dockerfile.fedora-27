@@ -1,5 +1,5 @@
 FROM fedora:27
-MAINTAINER diodonfrost <diodonfrost@protonmail.com>
+MAINTAINER diodonfrost <keres@protonmail.com>
 
 # Install systemd
 RUN dnf -y update && dnf -y install systemd && dnf clean all; \

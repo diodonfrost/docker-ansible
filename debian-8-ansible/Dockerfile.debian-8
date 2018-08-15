@@ -1,5 +1,5 @@
 FROM debian:8
-MAINTAINER diodonfrost <diodonfrost@protonmail.com>
+MAINTAINER diodonfrost <keres@protonmail.com>
 
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
     software-properties-common \

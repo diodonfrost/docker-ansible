@@ -1,4 +1,5 @@
 FROM base/archlinux:2018.08.01
+MAINTAINER diodonfrost <keres@protonmail.com>
 
 RUN pacman --noconfirm -Sy systemd procps; pacman --noconfirm -Scc ;\
 (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done); \
