@@ -1,0 +1,11 @@
+FROM gentoo/stage3-amd64:latest
+MAINTAINER diodonfrost <keres@protonmail.com>
+
+RUN emerge --sync && \
+    echo 'USE=-bindist' >> /etc/portage/make.conf && \
+    echo 'dev-lang/python sqlite' >> /etc/portage/package.use/python && \
+    emerge net-misc/openssh app-admin/sudo app-admin/ansible && \
+    rm -rf /usr/portage/*
+
+# Install Ansible inventory file.
+RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
