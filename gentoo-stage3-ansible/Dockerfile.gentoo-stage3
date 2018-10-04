@@ -4,6 +4,7 @@ MAINTAINER diodonfrost <keres@protonmail.com>
 # Install systemd
 RUN emerge-webrsync && \
     emerge --quiet --unmerge sys-fs/eudev && \
+    mkdir /etc/portage/package.mask && \
     echo ">=sys-apps/dbus-1.10.12 systemd" > /etc/portage/package.use/iputils && \
     echo "sys-libs/pam" > /etc/portage/package.mask/pam && \
     emerge --quiet --pretend --tree --verbose sys-apps/systemd && \

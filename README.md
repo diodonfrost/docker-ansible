@@ -1,4 +1,7 @@
-# ansible
+# docker-ansible
+
+[![Build Status](https://travis-ci.org/diodonfrost/docker-ansible.svg?branch=master)](https://travis-ci.org/diodonfrost/docker-ansible)
+
 Provides dockerfiles with ansible and in some case systemd integration.
 
 Provides docker containers use for testing ansible role on some operating system.

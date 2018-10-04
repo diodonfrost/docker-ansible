@@ -12,7 +12,8 @@ rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 # Install ansible
-RUN pacman --noconfirm -S git ansible sudo openssh && pacman --noconfirm -Scc
+RUN pacman --noconfirm -Syu git ansible sudo openssh && pacman --noconfirm -Scc
 
 VOLUME ["/sys/fs/cgroup"]
+
 CMD ["/usr/lib/systemd/systemd"]

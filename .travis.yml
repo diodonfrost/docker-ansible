@@ -37,15 +37,14 @@ env:
     version: "42.3"
   - distribution: archlinux
     version: "rolling"
-  - distribution: gentoo
-    version: "stage3"
 
 before_install:
-  - 'sudo docker build --no-cache --rm --file=${distribution}-${version}-ansible/Dockerfile.${distribution}-${version} --tag=${distribution}-${version}:ansible ${distribution}-${version}-ansible'
+  - 'sudo docker build --no-cache --rm --file=${distribution}-${version}-ansible/Dockerfile.${distribution}-${version} --tag=${distribution}-${version}:ansible .'
 
 script:
   - container_id=$(mktemp)
   - 'sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro ${distribution}-${version}:ansible > "${container_id}"'
+
   # Test role
   - 'inspec exec tests/inspec -t docker://$(cat ${container_id})'
 
