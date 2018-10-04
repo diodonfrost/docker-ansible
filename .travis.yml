@@ -1,0 +1,53 @@
+---
+services:
+  - docker
+
+env:
+  - distribution: centos
+    version: "7"
+  - distribution: centos
+    version: "6"
+  - distribution: fedora
+    version: "28"
+  - distribution: fedora
+    version: "27"
+  - distribution: ubuntu
+    version: "18.04"
+  - distribution: ubuntu
+    version: "16.04"
+  - distribution: ubuntu
+    version: "14.04"
+  - distribution: ubuntu
+    version: "12.04"
+  - distribution: debian
+    version: "9"
+  - distribution: debian
+    version: "8"
+  - distribution: debian
+    version: "7"
+  - distribution: oraclelinux
+    version: "7"
+  - distribution: oraclelinux
+    version: "6"
+  - distribution: amazonlinux
+    version: "2"
+  - distribution: amazonlinux
+    version: "1"
+  - distribution: opensuse
+    version: "42.3"
+  - distribution: archlinux
+    version: "rolling"
+  - distribution: gentoo
+    version: "stage3"
+
+before_install:
+  - 'sudo docker build --no-cache --rm --file=${distribution}-${version}-ansible/Dockerfile.${distribution}-${version} --tag=${distribution}-${version}:ansible ${distribution}-${version}-ansible'
+
+script:
+  - container_id=$(mktemp)
+  - 'sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro ${distribution}-${version}:ansible > "${container_id}"'
+  # Test role
+  - 'inspec exec tests/inspec -t docker://$(cat ${container_id})'
+
+  # Delete container
+  - 'sudo docker rm -f "$(cat ${container_id})"'
