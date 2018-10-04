@@ -14,9 +14,5 @@ control 'ansible-01' do
     describe pip(ansible_package) do
       it { should be_installed }
     end
-  elsif os.name == "gentoo"
-    describe command('eix -I ansible') do
-      its('exit_status') { should eq 0 }
-    end
   end
 end
