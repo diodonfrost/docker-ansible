@@ -1,6 +1,7 @@
 # docker-ansible
 
 [![Build Status](https://travis-ci.org/diodonfrost/docker-ansible.svg?branch=master)](https://travis-ci.org/diodonfrost/docker-ansible)
+[![Docker Automated build](https://img.shields.io/docker/automated/diodonfrost/centos-7-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/diodonfrost/centos-7-ansible/)
 
 Provides dockerfiles with ansible and in some case systemd integration.
 
