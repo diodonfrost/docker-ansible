@@ -1,5 +1,5 @@
 FROM centos:6
-MAINTAINER diodonfrost <keres@protonmail.com>
+MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
 
 RUN yum -y install epel-release
 RUN yum -y install git ansible sudo openssh-server openssh-clients

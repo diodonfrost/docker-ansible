@@ -1,5 +1,5 @@
 FROM centos:7
-MAINTAINER diodonfrost <keres@protonmail.com>
+MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
 
 # Install systemd -- See https://hub.docker.com/_/centos/
 RUN yum -y swap -- remove fakesystemd -- install systemd systemd-libs

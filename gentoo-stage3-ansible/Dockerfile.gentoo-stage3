@@ -1,5 +1,5 @@
 FROM gentoo/stage3-amd64:latest
-MAINTAINER diodonfrost <keres@protonmail.com>
+MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
 
 # Install systemd
 RUN emerge-webrsync && \
