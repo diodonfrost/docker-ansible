@@ -8,6 +8,8 @@ env:
   - distribution: centos
     version: "6"
   - distribution: fedora
+    version: "29"
+  - distribution: fedora
     version: "28"
   - distribution: fedora
     version: "27"
