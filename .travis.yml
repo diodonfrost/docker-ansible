@@ -50,5 +50,12 @@ script:
   # Test role
   - 'inspec exec tests/inspec -t docker://$(cat ${container_id})'
 
+after_success:
+  # Login on dockerhub.io before pushing
+  - 'echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin'
+
+  # Pushing image to dockerhub
+  - 'docker push diodonfrost/${distribution}-${version}-ansible'
+
   # Delete container
   - 'sudo docker rm -f "$(cat ${container_id})"'
