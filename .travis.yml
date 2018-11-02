@@ -41,11 +41,11 @@ env:
     version: "rolling"
 
 before_install:
-  - 'sudo docker build --no-cache --rm --file=${distribution}-${version}-ansible/Dockerfile.${distribution}-${version} --tag=${distribution}-${version}:ansible .'
+  - 'sudo docker build --no-cache --rm --file=${distribution}-${version}-ansible/Dockerfile.${distribution}-${version} --tag=${distribution}-${version}:latest .'
 
 script:
   - container_id=$(mktemp)
-  - 'sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro ${distribution}-${version}:ansible > "${container_id}"'
+  - 'sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro ${distribution}-${version}:latest > "${container_id}"'
 
   # Test role
   - 'inspec exec tests/inspec -t docker://$(cat ${container_id})'
@@ -55,7 +55,7 @@ after_success:
   - 'echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin'
 
   # Pushing image to dockerhub
-  - 'docker push diodonfrost/${distribution}-${version}-ansible'
+  - 'docker push diodonfrost/${distribution}-${version}-ansible:latest'
 
   # Delete container
   - 'sudo docker rm -f "$(cat ${container_id})"'
