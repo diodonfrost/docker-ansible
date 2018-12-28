@@ -1,8 +1,8 @@
 FROM centos:6
 MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
 
-RUN yum -y install epel-release
-RUN yum -y install git ansible sudo openssh-server openssh-clients
+RUN yum -y install epel-release && yum clean all
+RUN yum -y install git ansible sudo openssh-server openssh-clients && yum clean all
 
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
