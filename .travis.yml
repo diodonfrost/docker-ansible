@@ -33,8 +33,8 @@ env:
     version: "7"
   - distribution: oraclelinux
     version: "6"
-#  - distribution: amazonlinux
-#    version: "2"
+  - distribution: amazonlinux
+    version: "2"
   - distribution: amazonlinux
     version: "1"
   - distribution: opensuse
