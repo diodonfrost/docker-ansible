@@ -1,4 +1,4 @@
-FROM base/archlinux:latest
+FROM archlinux/base:latest
 MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
 
 RUN pacman --noconfirm -Sy systemd procps; pacman --noconfirm -Scc ;\
