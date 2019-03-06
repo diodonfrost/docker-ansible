@@ -40,8 +40,6 @@ env:
   - distribution: opensuse
     version: "42.3"
   - distribution: opensuse
-    version: "13.2"
-  - distribution: opensuse
     version: "15"
   - distribution: opensuse
     version: "15.1"
