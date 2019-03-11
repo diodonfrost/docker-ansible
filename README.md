@@ -30,6 +30,7 @@ Provides docker containers use for testing ansible role on some operating system
 | [Amazonlinux 2][Amazonlinux] | [amazonlinux-2-ansible][]     | [diodonfrost/amazonlinux-2-ansible][]     |
 | [Amazonlinux 1][Amazonlinux] | [amazonlinux-1-ansible][]     | [diodonfrost/amazonlinux-1-ansible][]     |
 | [Opensuse 42.3][Opensuse]    | [opensuse-42.3-ansible][]     | [diodonfrost/opensuse-42.3-ansible][]     |
+| [Opensuse 42.2][Opensuse]    | [opensuse-42.2-ansible][]     | [diodonfrost/opensuse-42.2-ansible][]     |
 | [Opensuse 13.2][Opensuse]    | [opensuse-13.2-ansible][]     | [diodonfrost/opensuse-13.2-ansible][]     |
 | [Opensuse 15][Opensuse]      | [opensuse-15-ansible][]       | [diodonfrost/opensuse-15-ansible][]       |
 | [Opensuse 15.1][Opensuse]    | [opensuse-15.1-ansible][]     | [diodonfrost/opensuse-15.1-ansible][]     |
@@ -65,6 +66,7 @@ Provides docker containers use for testing ansible role on some operating system
 [amazonlinux-2-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/amazonlinux-2-ansible/Dockerfile.amazonlinux-2
 [amazonlinux-1-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/amazonlinux-1-ansible/Dockerfile.amazonlinux-1
 [opensuse-42.3-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-42.3-ansible/Dockerfile.opensuse-42.3
+[opensuse-42.2-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-42.2-ansible/Dockerfile.opensuse-42.2
 [opensuse-13.2-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-13.2-ansible/Dockerfile.opensuse-13.2
 [opensuse-15-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-15-ansible/Dockerfile.opensuse-15
 [opensuse-15.1-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-15.1-ansible/Dockerfile.opensuse-15.1
@@ -90,6 +92,7 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/amazonlinux-2-ansible]: https://hub.docker.com/r/diodonfrost/amazonlinux-2-ansible
 [diodonfrost/amazonlinux-1-ansible]: https://hub.docker.com/r/diodonfrost/oraclelinux-1-ansible
 [diodonfrost/opensuse-42.3-ansible]:  https://hub.docker.com/r/diodonfrost/opensuse-42.3-ansible
+[diodonfrost/opensuse-42.2-ansible]:  https://hub.docker.com/r/diodonfrost/opensuse-42.2-ansible
 [diodonfrost/opensuse-13.2-ansible]:  https://hub.docker.com/r/diodonfrost/opensuse-13.2-ansible
 [diodonfrost/opensuse-15-ansible]:  https://hub.docker.com/r/diodonfrost/opensuse-15-ansible
 [diodonfrost/opensuse-15.1-ansible]:  https://hub.docker.com/r/diodonfrost/opensuse-15.1-ansible
