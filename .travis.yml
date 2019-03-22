@@ -27,8 +27,6 @@ env:
     version: "9"
   - distribution: debian
     version: "8"
-  - distribution: debian
-    version: "7"
   - distribution: oraclelinux
     version: "7"
   - distribution: oraclelinux
