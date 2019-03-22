@@ -16,6 +16,9 @@ rm -f /usr/lib/systemd/system/anaconda.target.wants/*;
 # Install ansible
 RUN zypper -n install git ansible sudo python-pip openssh; zypper clean
 
+# Install curl
+RUN zypper -n install --oldpackage libcurl4-7.59.0-lp150.1.1.x86_64 curl && zypper clean
+
 RUN pip install ansible
 
 VOLUME [ "/sys/fs/cgroup" ]
