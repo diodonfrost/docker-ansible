@@ -27,6 +27,8 @@ env:
     version: "9"
   - distribution: debian
     version: "8"
+  - distribution: debian
+    version: "7"
   - distribution: oraclelinux
     version: "7"
   - distribution: oraclelinux
@@ -45,7 +47,7 @@ env:
     version: "rolling"
 
 before_install:
-  - 'sudo docker build --no-cache --rm --file=${distribution}-${version}-ansible/Dockerfile.${distribution}-${version} --tag=diodonfrost/${distribution}-${version}-ansible:latest .'
+  - 'sudo docker build --no-cache --rm --file=${distribution}-${version}-ansible/Dockerfile.${distribution}-${version} --tag=diodonfrost/${distribution}-${version}-ansible:latest ${distribution}-${version}-ansible'
 
 script:
   - container_id=$(mktemp)
