@@ -1,0 +1,9 @@
+FROM alpine:latest
+MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
+
+# Install Ansible
+RUN apk add git ansible sudo openssh && rm -rf /var/cache/apk/*
+
+VOLUME ["/sys/fs/cgroup"]
+
+CMD ["/sbin/init"]
