@@ -3,6 +3,8 @@ services:
   - docker
 
 env:
+  - distribution: alpine
+    version: "rolling"
   - distribution: centos
     version: "7"
   - distribution: centos
