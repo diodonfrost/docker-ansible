@@ -34,6 +34,7 @@ Provides docker containers use for testing ansible role on some operating system
 | [Opensuse 42.3][Opensuse]    | [opensuse-42.3-ansible][]     | [diodonfrost/opensuse-42.3-ansible][]     |
 | [Opensuse 42.2][Opensuse]    | [opensuse-42.2-ansible][]     | [diodonfrost/opensuse-42.2-ansible][]     |
 | [Opensuse 13.2][Opensuse]    | [opensuse-13.2-ansible][]     | [diodonfrost/opensuse-13.2-ansible][]     |
+| [Alpine][Alpine]             | [alpine-rolling-ansible][]    | [diodonfrost/alpine-rolling-ansible][]    |
 | [Archlinux][Archlinux]       | [archlinux-rolling-ansible][] | [diodonfrost/archlinux-rolling-ansible][] |
 | [Gentoo stage3][Gentoo]      | [gentoo-stage3-ansible][]     | [diodonfrost/gentoo-stage3-ansible][]     |
 
@@ -44,6 +45,7 @@ Provides docker containers use for testing ansible role on some operating system
 [Oraclelinux]: https://hub.docker.com/_/oraclelinux/
 [Amazonlinux]: https://hub.docker.com/_/amazonlinux/
 [Opensuse]: https://hub.docker.com/_/opensuse/
+[Alpine]: https://hub.docker.com/_/alpine
 [Archlinux]: https://hub.docker.com/r/base/archlinux/
 [Gentoo]: https://hub.docker.com/r/gentoo/stage3-amd64/
 
@@ -70,6 +72,7 @@ Provides docker containers use for testing ansible role on some operating system
 [opensuse-42.3-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-42.3-ansible/Dockerfile.opensuse-42.3
 [opensuse-42.2-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-42.2-ansible/Dockerfile.opensuse-42.2
 [opensuse-13.2-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-13.2-ansible/Dockerfile.opensuse-13.2
+[alpine-rolling-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/alpine-rolling-ansible/Dockerfile.alpine-rolling
 [archlinux-rolling-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/archlinux-rolling-ansible/Dockerfile.archlinux-rolling
 [gentoo-stage3-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/gentoo-stage3-ansible/Dockerfile.gentoo-stage3
 
@@ -96,5 +99,6 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/opensuse-42.3-ansible]:  https://hub.docker.com/r/diodonfrost/opensuse-42.3-ansible
 [diodonfrost/opensuse-42.2-ansible]:  https://hub.docker.com/r/diodonfrost/opensuse-42.2-ansible
 [diodonfrost/opensuse-13.2-ansible]:  https://hub.docker.com/r/diodonfrost/opensuse-13.2-ansible
+[diodonfrost/alpine-rolling-ansible]: https://hub.docker.com/r/diodonfrost/alpine-rolling-ansible
 [diodonfrost/archlinux-rolling-ansible]: https://hub.docker.com/r/diodonfrost/archlinux-rolling-ansible
 [diodonfrost/gentoo-stage3-ansible]: https://hub.docker.com/r/diodonfrost/gentoo-stage3-ansible
