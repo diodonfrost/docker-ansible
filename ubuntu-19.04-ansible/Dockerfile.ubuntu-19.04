@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
     git \
     ansible \
     apt-transport-https \
+    ca-certificates-java \
     curl \
     init \
     openssh-server openssh-client \
