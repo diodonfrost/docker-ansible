@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
 
 # Install Ansible
-RUN apk add git ansible sudo openssh && rm -rf /var/cache/apk/*
+RUN apk add --no-cache git ansible sudo openssh
 
 VOLUME ["/sys/fs/cgroup"]
 
