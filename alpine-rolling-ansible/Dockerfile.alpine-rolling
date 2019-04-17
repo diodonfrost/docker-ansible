@@ -1,8 +1,11 @@
 FROM alpine:latest
 MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
 
-# Install Ansible
-RUN apk add --no-cache git ansible sudo openssh
+# Install python pip
+RUN apk add --no-cache git python3 sudo openssh
+
+# Install ansible
+RUN pip install --no-cache-dir ansible==2.5
 
 VOLUME ["/sys/fs/cgroup"]
 

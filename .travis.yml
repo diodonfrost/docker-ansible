@@ -65,7 +65,7 @@ after_success:
   - 'echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin'
 
   # Pushing image to dockerhub
-  - 'docker push diodonfrost/${distribution}-${version}-ansible:latest'
+  - 'docker push diodonfrost/${distribution}-${version}-ansible:2.5'
 
   # Delete container
   - 'sudo docker rm -f "$(cat ${container_id})"'
