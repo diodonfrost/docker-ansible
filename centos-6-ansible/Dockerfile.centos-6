@@ -5,26 +5,21 @@ MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
 RUN yum -y install epel-release && yum clean all
 
 # Install requirement
-RUN yum -y install git sudo openssh-server openssh-clients && yum clean all
-
-# Install python 2.7
-RUN yum groupinstall "Development tools" && \
-    yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel
-
+RUN yum -y install wget git sudo openssh-server openssh-clients && \
+    yum groupinstall -y "Development tools" && \
+    yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel && \
+    yum clean all
 
 RUN wget http://www.python.org/ftp/python/2.7.5/Python-2.7.5.tar.bz2 --no-check-certificate && \
     tar xvf Python-2.7.5.tar.bz2 && \
     cd Python-2.7.5 && \
     ./configure --prefix=/usr/local --enable-shared && \
-    make && make install && \
-    cd .. && rm -rf Python* && \
-    ln -s /usr/local/bin/python2.7 /usr/local/bin/python
+    make && make install && ln -s /usr/local/bin/python2.7 /usr/local/bin/python
 
 RUN wget http://pypi.python.org/packages/source/d/distribute/distribute-0.6.27.tar.gz && \
     tar xf distribute-0.6.27.tar.gz --no-check-certificate && \
     cd distribute-0.6.27 && \
     python2.7 setup.py install && \
-    cd .. && rm -rf distribute* && \
     easy_install-2.7 pip
 
 RUN pip install ansible==2.5

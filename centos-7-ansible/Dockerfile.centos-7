@@ -15,7 +15,16 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 # Install epel repository and python-pip3
 RUN yum -y install epel-release && yum clean all
-RUN yum -y install git python36-pip sudo openssh-server openssh-clients && yum clean all
+RUN yum -y install git \
+                   python36-pip \
+                   python36-devel \
+                   gcc \
+                   make \
+                   openssl-devel \
+                   sudo \
+                   openssh-server \
+                   openssh-clients && \
+                   yum clean all
 
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 

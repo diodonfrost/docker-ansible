@@ -13,8 +13,18 @@ rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*; \
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 
-RUN rpm -ihv http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-RUN yum -y install git python36-pip sudo openssh-server openssh-clients && yum clean all
+# Install epel repository and python-pip3
+RUN rpm -ihv http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && yum clean all
+RUN yum -y install git \
+                   python36-pip \
+                   python36-devel \
+                   gcc \
+                   make \
+                   openssl-devel \
+                   sudo \
+                   openssh-server \
+                   openssh-clients && \
+                   yum clean all
 
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 

@@ -14,10 +14,20 @@ rm -f /usr/lib/systemd/system/basic.target.wants/*;\
 rm -f /usr/lib/systemd/system/anaconda.target.wants/*;
 
 # Install python pip
-RUN zypper -n install git python3-pip sudo openssh; zypper clean
+RUN zypper -n install git \
+                      gcc \
+                      make \
+                      python3-pip \
+                      python3-devel \
+                      libffi-devel \
+                      openssl-devel \
+                      sudo \
+                      openssh && \
+                      zypper clean
 
 # Install Ansible
-RUN pip3 install --no-cache-dir ansible==2.5
+RUN pip3 install --no-cache-dir --upgrade setuptools && \
+    pip3 install --no-cache-dir ansible==2.5
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible && \

@@ -2,10 +2,19 @@ FROM alpine:latest
 MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
 
 # Install python pip
-RUN apk add --no-cache git python3 sudo openssh
+RUN apk add --no-cache git \
+                       python3 \
+                       python3-dev \
+                       sudo \
+                       openssh \
+                       gcc \
+                       make \
+                       libc-dev \
+                       libffi-dev \
+                       openssl-dev
 
 # Install ansible
-RUN pip install --no-cache-dir ansible==2.5
+RUN pip3 install --no-cache-dir ansible==2.5
 
 VOLUME ["/sys/fs/cgroup"]
 
