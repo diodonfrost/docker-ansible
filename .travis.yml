@@ -66,6 +66,7 @@ after_success:
 
   # Pushing image to dockerhub
   - 'docker push diodonfrost/${distribution}-${version}-ansible:2.5'
+  - 'docker push diodonfrost/${distribution}-${version}-ansible:latest'
 
   # Delete container
   - 'sudo docker rm -f "$(cat ${container_id})"'
