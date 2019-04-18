@@ -13,8 +13,25 @@ rm -f /usr/lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /usr/lib/systemd/system/basic.target.wants/*;\
 rm -f /usr/lib/systemd/system/anaconda.target.wants/*;
 
-# Install ansible
-RUN zypper -n install git ansible sudo openssh; zypper clean
+# Install python pip
+RUN zypper -n install git \
+                      gcc \
+                      make \
+                      python-pip \
+                      python-devel \
+                      libffi-devel \
+                      openssl-devel \
+                      sudo \
+                      openssh && \
+                      zypper clean
+
+# Install Ansible
+RUN pip install --no-cache-dir --upgrade setuptools && \
+    pip install --no-cache-dir ansible==2.5
+
+# Install Ansible inventory file.
+RUN mkdir -p /etc/ansible && \
+    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/lib/systemd/systemd", "--system"]

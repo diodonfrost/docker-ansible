@@ -1,12 +1,39 @@
 FROM oraclelinux:6
 MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
 
-RUN rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
-RUN yum -y install git ansible sudo which curl openssh-server openssh-clients
+# Install python requirements
+RUN yum -y install git \
+                   gcc \
+                   make \
+                   openssl-devel \
+                   bzip2-devel \
+                   sudo \
+                   wget \
+                   curl \
+                   tar \
+                   openssh-server \
+                   openssh-clients && \
+                   yum clean all
+
+# Install Python 2.7
+RUN wget https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tgz && \
+    tar zxvf Python-2.7.15.tgz && \
+    cd Python-2.7.15 && \
+    ./configure --enable-optimizations && \
+    make altinstall && \
+    cd ../ && rm -rf Python-2.7.15*
+
+# Install Python pip
+RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" && \
+    /usr/local/bin/python2.7 get-pip.py
+
+RUN pip2.7 install ansible==2.5
 
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
-RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+# Install Ansible inventory file.
+RUN mkdir -p /etc/ansible && \
+    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
 VOLUME ["/sys/fs/cgroup"]
 

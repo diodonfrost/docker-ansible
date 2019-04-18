@@ -17,8 +17,11 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
     openssh-server openssh-client \
  && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade setuptools && pip install ansible
+ # Install Ansible
+ RUN pip install --upgrade setuptools && pip install ansible==2.5
 
-RUN mkdir -p /etc/ansible && echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
+ # Install Ansible inventory file.
+ RUN mkdir -p /etc/ansible && \
+     echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
 ENTRYPOINT ["/bin/systemd"]
