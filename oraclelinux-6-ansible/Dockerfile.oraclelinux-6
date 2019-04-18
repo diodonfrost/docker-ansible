@@ -1,17 +1,35 @@
 FROM oraclelinux:6
 MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
 
-# Install epel repository
-RUN yum -y install epel-release && yum clean all
+# Install python requirements
+RUN yum -y install git \
+                   gcc \
+                   make \
+                   openssl-devel \
+                   bzip2-devel \
+                   sudo \
+                   wget \
+                   curl \
+                   tar \
+                   openssh-server \
+                   openssh-clients && \
+                   yum clean all
 
-# Install python-pip3
-RUN yum -y install git python34-setuptools sudo openssh-server openssh-clients && yum clean all
-RUN easy_install-3.4 pip
+# Install Python 2.7
+RUN wget https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tgz && \
+    tar zxvf Python-2.7.15.tgz && \
+    cd Python-2.7.15 && \
+    ./configure --enable-optimizations && \
+    make altinstall && \
+    cd ../ && rm -rf Python-2.7.15*
+
+# Install Python pip
+RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" && \
+    /usr/local/bin/python2.7 get-pip.py
+
+RUN pip2.7 install ansible==2.5
 
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
-
-# Install Ansible
-RUN pip3 install --no-cache-dir ansible==2.5
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible && \

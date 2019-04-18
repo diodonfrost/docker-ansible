@@ -17,8 +17,8 @@ rm -f /usr/lib/systemd/system/anaconda.target.wants/*;
 RUN zypper -n install git \
                       gcc \
                       make \
-                      python3-pip \
-                      python3-devel \
+                      python-pip \
+                      python-devel \
                       libffi-devel \
                       openssl-devel \
                       sudo \
@@ -26,8 +26,8 @@ RUN zypper -n install git \
                       zypper clean
 
 # Install Ansible
-RUN pip3 install --no-cache-dir --upgrade setuptools && \
-    pip3 install --no-cache-dir ansible==2.5
+RUN pip install --no-cache-dir --upgrade setuptools && \
+    pip install --no-cache-dir ansible==2.5
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible && \

@@ -1,28 +1,32 @@
 FROM centos:6
 MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
 
-# Install epel repository
-RUN yum -y install epel-release && yum clean all
+# Install python requirements
+RUN yum -y install git \
+                   gcc \
+                   make \
+                   openssl-devel \
+                   bzip2-devel \
+                   sudo \
+                   wget \
+                   curl \
+                   openssh-server \
+                   openssh-clients && \
+                   yum clean all
 
-# Install requirement
-RUN yum -y install wget git sudo openssh-server openssh-clients && \
-    yum groupinstall -y "Development tools" && \
-    yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel && \
-    yum clean all
+# Install Python 2.7
+RUN wget https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tgz && \
+    tar zxvf Python-2.7.15.tgz && \
+    cd Python-2.7.15 && \
+    ./configure --enable-optimizations && \
+    make altinstall && \
+    cd ../ && rm -rf Python-2.7.15*
 
-RUN wget http://www.python.org/ftp/python/2.7.5/Python-2.7.5.tar.bz2 --no-check-certificate && \
-    tar xvf Python-2.7.5.tar.bz2 && \
-    cd Python-2.7.5 && \
-    ./configure --prefix=/usr/local --enable-shared && \
-    make && make install && ln -s /usr/local/bin/python2.7 /usr/local/bin/python
+# Install Python pip
+RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" && \
+    /usr/local/bin/python2.7 get-pip.py
 
-RUN wget http://pypi.python.org/packages/source/d/distribute/distribute-0.6.27.tar.gz && \
-    tar xf distribute-0.6.27.tar.gz --no-check-certificate && \
-    cd distribute-0.6.27 && \
-    python2.7 setup.py install && \
-    easy_install-2.7 pip
-
-RUN pip install ansible==2.5
+RUN pip2.7 install ansible==2.5
 
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
