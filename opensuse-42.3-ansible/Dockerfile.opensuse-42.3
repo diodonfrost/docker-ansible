@@ -27,7 +27,7 @@ RUN zypper -n install git \
 
 # Install Ansible
 RUN pip install --no-cache-dir --upgrade setuptools && \
-    pip install --no-cache-dir ansible==2.5
+    pip install --no-cache-dir ansible==2.6
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible && \
