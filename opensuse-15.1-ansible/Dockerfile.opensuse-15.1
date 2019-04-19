@@ -14,7 +14,7 @@ rm -f /usr/lib/systemd/system/basic.target.wants/*;\
 rm -f /usr/lib/systemd/system/anaconda.target.wants/*;
 
 # Install python pip
-RUN zypper -n install git python3-pip sudo openssh; zypper clean
+RUN zypper -n install git python python3-pip sudo openssh; zypper clean
 
 # Install Ansible
 RUN pip3 install --no-cache-dir ansible==2.5
