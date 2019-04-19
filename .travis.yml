@@ -3,55 +3,58 @@ services:
   - docker
 
 env:
-  - distribution: alpine
-    version: "rolling"
-  - distribution: centos
-    version: "7"
-  - distribution: centos
-    version: "6"
-  - distribution: fedora
-    version: "29"
-  - distribution: fedora
-    version: "28"
-  - distribution: fedora
-    version: "27"
-  - distribution: fedora
-    version: "26"
-  - distribution: ubuntu
-    version: "19.04"
-  - distribution: ubuntu
-    version: "18.04"
-  - distribution: ubuntu
-    version: "16.04"
-  - distribution: ubuntu
-    version: "14.04"
-  - distribution: ubuntu
-    version: "12.04"
-  - distribution: debian
-    version: "9"
-  - distribution: debian
-    version: "8"
-#  - distribution: debian
-#    version: "7"
-  - distribution: oraclelinux
-    version: "7"
-  - distribution: oraclelinux
-    version: "6"
-  - distribution: amazonlinux
-    version: "2"
-  - distribution: amazonlinux
-    version: "1"
-  - distribution: opensuse
-    version: "42.3"
-  - distribution: opensuse
-    version: "15"
-  - distribution: opensuse
-    version: "15.1"
-  - distribution: archlinux
-    version: "rolling"
+  global:
+    - ansible_version: 2.5
+  matrix:
+    - distribution: alpine
+      version: "rolling"
+    - distribution: centos
+      version: "7"
+    - distribution: centos
+      version: "6"
+    - distribution: fedora
+      version: "29"
+    - distribution: fedora
+      version: "28"
+    - distribution: fedora
+      version: "27"
+    - distribution: fedora
+      version: "26"
+    - distribution: ubuntu
+      version: "19.04"
+    - distribution: ubuntu
+      version: "18.04"
+    - distribution: ubuntu
+      version: "16.04"
+    - distribution: ubuntu
+      version: "14.04"
+    - distribution: ubuntu
+      version: "12.04"
+    - distribution: debian
+      version: "9"
+    - distribution: debian
+      version: "8"
+  #  - distribution: debian
+  #    version: "7"
+    - distribution: oraclelinux
+      version: "7"
+    - distribution: oraclelinux
+      version: "6"
+    - distribution: amazonlinux
+      version: "2"
+    - distribution: amazonlinux
+      version: "1"
+    - distribution: opensuse
+      version: "42.3"
+    - distribution: opensuse
+      version: "15"
+    - distribution: opensuse
+      version: "15.1"
+    - distribution: archlinux
+      version: "rolling"
 
 before_install:
-  - 'sudo docker build --no-cache --rm --file=${distribution}-${version}-ansible/Dockerfile.${distribution}-${version} --tag=diodonfrost/${distribution}-${version}-ansible:2.5 --tag=diodonfrost/${distribution}-${version}-ansible:latest ${distribution}-${version}-ansible'
+  - 'sudo docker build --no-cache --rm --file=${distribution}-${version}-ansible/Dockerfile.${distribution}-${version} --tag=diodonfrost/${distribution}-${version}-ansible:${ansible_version} --tag=diodonfrost/${distribution}-${version}-ansible:latest ${distribution}-${version}-ansible'
 
 script:
   - container_id=$(mktemp)
@@ -65,7 +68,7 @@ after_success:
   - 'echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin'
 
   # Pushing image to dockerhub
-  - 'docker push diodonfrost/${distribution}-${version}-ansible:2.5'
+  - 'docker push diodonfrost/${distribution}-${version}-ansible:${ansible_version}'
   - 'docker push diodonfrost/${distribution}-${version}-ansible:latest'
 
   # Delete container
