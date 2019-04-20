@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     init \
     openssh-server openssh-client \
     unzip \
+    python \
  && rm -rf /var/lib/apt/lists/*
 
 RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
