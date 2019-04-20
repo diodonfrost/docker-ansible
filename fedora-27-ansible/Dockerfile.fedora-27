@@ -22,6 +22,7 @@ RUN dnf -y install \
            which \
            python2-dnf \
            openssh-server openssh-clients \
+           unzip \
    && dnf clean all
 
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers

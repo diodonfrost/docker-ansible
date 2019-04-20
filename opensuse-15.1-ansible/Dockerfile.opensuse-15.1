@@ -14,7 +14,7 @@ rm -f /usr/lib/systemd/system/basic.target.wants/*;\
 rm -f /usr/lib/systemd/system/anaconda.target.wants/*;
 
 # Install ansible
-RUN zypper -n install git ansible sudo python-pip openssh curl; zypper clean
+RUN zypper -n install git ansible sudo python-pip openssh curl unzip; zypper clean
 
 RUN pip install ansible
 

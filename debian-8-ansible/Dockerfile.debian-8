@@ -15,6 +15,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
     apt-transport-https \
     curl \
     openssh-server openssh-client \
+    unzip \
  && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade setuptools && pip install ansible
