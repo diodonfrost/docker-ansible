@@ -5,7 +5,7 @@ RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y software-pro
 
 RUN apt-add-repository -y ppa:ansible/ansible && apt-get update && apt-get install -y \
     git \
-    ansible=2.5\* \
+    ansible \
     apt-transport-https \
     curl \
     openssh-server openssh-client \

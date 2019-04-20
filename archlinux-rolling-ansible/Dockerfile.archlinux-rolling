@@ -11,15 +11,8 @@ rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 
-# Install python-pip
-RUN pacman --noconfirm -Syu git python-pip sudo openssh && pacman --noconfirm -Scc
-
-# Install Ansible
-RUN pip install --no-cache-dir ansible==2.8
-
-# Install Ansible inventory file.
-RUN mkdir -p /etc/ansible && \
-    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+# Install ansible
+RUN pacman --noconfirm -Syu git ansible sudo openssh && pacman --noconfirm -Scc
 
 VOLUME ["/sys/fs/cgroup"]
 
