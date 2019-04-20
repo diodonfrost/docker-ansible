@@ -28,7 +28,7 @@ RUN dnf -y install \
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
 # Install Ansible
-RUN pip3 install --no-cache-dir ansible==2.7
+RUN pip3 install --no-cache-dir ansible==2.8
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible && \

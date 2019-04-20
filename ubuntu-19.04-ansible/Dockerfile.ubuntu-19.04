@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 
  # Install Ansible
  RUN pip3 install --no-cache-dir --upgrade setuptools && \
-     pip3 install --no-cache-dir ansible==2.7
+     pip3 install --no-cache-dir ansible==2.8
 
  # Install Ansible inventory file.
  RUN mkdir -p /etc/ansible && \

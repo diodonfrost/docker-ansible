@@ -9,7 +9,7 @@ RUN yum makecache fast && \
     yum clean all
 
 # Install Ansible
-RUN pip-3.6 --no-cache-dir install ansible==2.7
+RUN pip-3.6 --no-cache-dir install ansible==2.8
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible && \

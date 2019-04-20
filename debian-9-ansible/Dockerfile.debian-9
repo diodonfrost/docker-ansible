@@ -18,7 +18,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
  && rm -rf /var/lib/apt/lists/*
 
  # Install Ansible
- RUN pip install --upgrade setuptools && pip install ansible==2.7
+ RUN pip install --upgrade setuptools && pip install ansible==2.8
 
  # Install Ansible inventory file.
  RUN mkdir -p /etc/ansible && \
