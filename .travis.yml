@@ -4,7 +4,7 @@ services:
 
 env:
   global:
-    - ansible_version: 2.6
+    - ansible_version: 2.7
   matrix:
     - distribution: alpine
       version: "rolling"

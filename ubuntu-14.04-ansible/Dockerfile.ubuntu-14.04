@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 
  # Install Ansible
  RUN pip install --upgrade setuptools && \
-     pip install markupsafe ansible==2.6
+     pip install markupsafe ansible==2.7
 
  # Install Ansible inventory file.
  RUN mkdir -p /etc/ansible && \
