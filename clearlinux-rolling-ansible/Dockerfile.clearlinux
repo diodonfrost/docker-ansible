@@ -1,0 +1,12 @@
+FROM clearlinux:latest
+MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
+
+# Install ansible
+RUN swupd bundle-add ansible unzip
+
+RUN mkdir -p /etc/ansible && \
+    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+
+VOLUME ["/sys/fs/cgroup"]
+
+CMD ["/usr/sbin/init"]

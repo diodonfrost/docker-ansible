@@ -53,6 +53,8 @@ env:
     version: "13.2"
   - distribution: archlinux
     version: "rolling"
+  - distribution: clearlinux
+    version: "rolling"
 
 before_install:
   - 'sudo docker build --no-cache --rm --file=${distribution}-${version}-ansible/Dockerfile.${distribution}-${version} --tag=diodonfrost/${distribution}-${version}-ansible:latest ${distribution}-${version}-ansible'
