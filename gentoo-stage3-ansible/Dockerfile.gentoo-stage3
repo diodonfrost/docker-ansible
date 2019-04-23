@@ -21,4 +21,8 @@ RUN emerge-webrsync && \
     emerge --quiet net-misc/openssh app-admin/sudo app-admin/ansible && \
     rm -rf /usr/portage/*
 
+# Create ansible directory
+RUN mkdir -p /etc/ansible && \
+    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+
 CMD ["/usr/lib/systemd/systemd"]
