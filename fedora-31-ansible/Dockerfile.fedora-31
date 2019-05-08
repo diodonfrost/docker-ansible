@@ -24,6 +24,8 @@ RUN dnf -y install \
            unzip \
    && dnf clean all
 
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
 RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
