@@ -13,6 +13,8 @@ Provides docker containers use for testing ansible role on some operating system
 | ---------------------------- | ------------------------------ | ------------------------------------------ |
 | [CentOS 7][CentOS]           | [centos-7-ansible][]           | [diodonfrost/centos-7-ansible][]           |
 | [CentOS 6][CentOS]           | [centos-6-ansible][]           | [diodonfrost/centos-6-ansible][]           |
+| [Fedora 31][Fedora]          | [fedora-31-ansible][]          | [diodonfrost/fedora-31-ansible][]          |
+| [Fedora 30][Fedora]          | [fedora-30-ansible][]          | [diodonfrost/fedora-30-ansible][]          |
 | [Fedora 29][Fedora]          | [fedora-29-ansible][]          | [diodonfrost/fedora-29-ansible][]          |
 | [Fedora 28][Fedora]          | [fedora-28-ansible][]          | [diodonfrost/fedora-28-ansible][]          |
 | [Fedora 27][Fedora]          | [fedora-27-ansible][]          | [diodonfrost/fedora-27-ansible][]          |
@@ -53,6 +55,8 @@ Provides docker containers use for testing ansible role on some operating system
 
 [centos-7-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-7-ansible/Dockerfile.centos-7
 [centos-6-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-6-ansible/Dockerfile.centos-6
+[fedora-31-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-31-ansible/Dockerfile.fedora-31
+[fedora-30-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-30-ansible/Dockerfile.fedora-30
 [fedora-29-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-29-ansible/Dockerfile.fedora-29
 [fedora-28-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-28-ansible/Dockerfile.fedora-28
 [fedora-27-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-27-ansible/Dockerfile.fedora-27
@@ -81,6 +85,8 @@ Provides docker containers use for testing ansible role on some operating system
 
 [diodonfrost/centos-7-ansible]: https://hub.docker.com/r/diodonfrost/centos-7-ansible
 [diodonfrost/centos-6-ansible]: https://hub.docker.com/r/diodonfrost/centos-6-ansible
+[diodonfrost/fedora-31-ansible]: https://hub.docker.com/r/diodonfrost/fedora-31-ansible
+[diodonfrost/fedora-30-ansible]: https://hub.docker.com/r/diodonfrost/fedora-30-ansible
 [diodonfrost/fedora-29-ansible]: https://hub.docker.com/r/diodonfrost/fedora-29-ansible
 [diodonfrost/fedora-28-ansible]: https://hub.docker.com/r/diodonfrost/fedora-28-ansible
 [diodonfrost/fedora-27-ansible]: https://hub.docker.com/r/diodonfrost/fedora-27-ansible
