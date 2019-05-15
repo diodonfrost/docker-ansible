@@ -24,6 +24,7 @@ Provides docker containers use for testing ansible role on some operating system
 | [Ubuntu 16.04][Ubuntu]       | [ubuntu-16.04-ansible][]       | [diodonfrost/ubuntu-16.04-ansible][]       |
 | [Ubuntu 14.04][Ubuntu]       | [ubuntu-14.04-ansible][]       | [diodonfrost/ubuntu-14.04-ansible][]       |
 | [Ubuntu 12.04][Ubuntu]       | [ubuntu-12.04-ansible][]       | [diodonfrost/ubuntu-12.04-ansible][]       |
+| [Debian 10][Debian]          | [debian-10-ansible][]          | [diodonfrost/debian-10-ansible][]          |
 | [Debian 9][Debian]           | [debian-9-ansible][]           | [diodonfrost/debian-9-ansible][]           |
 | [Debian 8][Debian]           | [debian-8-ansible][]           | [diodonfrost/debian-8-ansible][]           |
 | [Debian 7][Debian]           | [debian-7-ansible][]           | [diodonfrost/debian-7-ansible][]           |
@@ -66,6 +67,7 @@ Provides docker containers use for testing ansible role on some operating system
 [ubuntu-16.04-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-16.04-ansible/Dockerfile.ubuntu-16.04
 [ubuntu-14.04-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-14.04-ansible/Dockerfile.ubuntu-14.04
 [ubuntu-12.04-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-12.04-ansible/Dockerfile.ubuntu-12.04
+[debian-10-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-10-ansible/Dockerfile.debian-10
 [debian-9-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-9-ansible/Dockerfile.debian-9
 [debian-8-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-8-ansible/Dockerfile.debian-8
 [debian-7-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-7-ansible/Dockerfile.debian-7
@@ -96,6 +98,7 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/ubuntu-16.04-ansible]: https://hub.docker.com/r/diodonfrost/ubuntu-16.04-ansible
 [diodonfrost/ubuntu-14.04-ansible]: https://hub.docker.com/r/diodonfrost/ubuntu-14.04-ansible
 [diodonfrost/ubuntu-12.04-ansible]: https://hub.docker.com/r/diodonfrost/ubuntu-12.04-ansible
+[diodonfrost/debian-10-ansible]: https://hub.docker.com/r/diodonfrost/debian-10-ansible
 [diodonfrost/debian-9-ansible]: https://hub.docker.com/r/diodonfrost/debian-9-ansible
 [diodonfrost/debian-8-ansible]: https://hub.docker.com/r/diodonfrost/debian-8-ansible
 [diodonfrost/debian-7-ansible]: https://hub.docker.com/r/diodonfrost/debian-7-ansible

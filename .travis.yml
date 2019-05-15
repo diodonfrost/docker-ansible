@@ -32,6 +32,8 @@ env:
   - distribution: ubuntu
     version: "12.04"
   - distribution: debian
+    version: "10"
+  - distribution: debian
     version: "9"
   - distribution: debian
     version: "8"
