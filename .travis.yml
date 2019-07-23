@@ -70,7 +70,7 @@ script:
   - 'sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro diodonfrost/${distribution}-${version}-ansible:latest > "${container_id}"'
 
   # Test role
-  - 'inspec exec tests/inspec -t docker://$(cat ${container_id})'
+  - 'inspec exec tests/inspec --chef-license accept-silent -t docker://$(cat ${container_id})'
 
 after_success:
   # Login on dockerhub.io before pushing
