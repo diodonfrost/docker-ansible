@@ -10,6 +10,8 @@ env:
   - distribution: centos
     version: "6"
   - distribution: fedora
+    version: "32"
+  - distribution: fedora
     version: "31"
   - distribution: fedora
     version: "30"
