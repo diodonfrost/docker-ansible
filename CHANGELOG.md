@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+## [1.6.0] - 2019-09-24
+### Added
+-   Fedora 32 support
 
 ## [1.5.0] - 2019-05-08
 ### Added
