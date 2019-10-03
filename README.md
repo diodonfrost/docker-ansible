@@ -11,6 +11,7 @@ Provides docker containers use for testing ansible role on some operating system
 
 | Base operating system        | Github                         | Docker Hub                                 |
 | ---------------------------- | ------------------------------ | ------------------------------------------ |
+| [CentOS 8][CentOS]           | [centos-8-ansible][]           | [diodonfrost/centos-8-ansible][]           |
 | [CentOS 7][CentOS]           | [centos-7-ansible][]           | [diodonfrost/centos-7-ansible][]           |
 | [CentOS 6][CentOS]           | [centos-6-ansible][]           | [diodonfrost/centos-6-ansible][]           |
 | [Fedora 32][Fedora]          | [fedora-32-ansible][]          | [diodonfrost/fedora-32-ansible][]          |
@@ -56,6 +57,7 @@ Provides docker containers use for testing ansible role on some operating system
 [Gentoo]: https://hub.docker.com/r/gentoo/stage3-amd64/
 [Clearlinux]: https://hub.docker.com/_/clearlinux
 
+[centos-8-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-8-ansible/Dockerfile.centos-8
 [centos-7-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-7-ansible/Dockerfile.centos-7
 [centos-6-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-6-ansible/Dockerfile.centos-6
 [fedora-32-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-32-ansible/Dockerfile.fedora-32
@@ -89,6 +91,7 @@ Provides docker containers use for testing ansible role on some operating system
 [gentoo-stage3-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/gentoo-stage3-ansible/Dockerfile.gentoo-stage3
 [clearlinux-rolling-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/clearlinux-rolling-ansible/Dockerfile.clearlinux-rolling
 
+[diodonfrost/centos-8-ansible]: https://hub.docker.com/r/diodonfrost/centos-8-ansible
 [diodonfrost/centos-7-ansible]: https://hub.docker.com/r/diodonfrost/centos-7-ansible
 [diodonfrost/centos-6-ansible]: https://hub.docker.com/r/diodonfrost/centos-6-ansible
 [diodonfrost/fedora-32-ansible]: https://hub.docker.com/r/diodonfrost/fedora-32-ansible

@@ -6,6 +6,8 @@ env:
   - distribution: alpine
     version: "rolling"
   - distribution: centos
+    version: "8"
+  - distribution: centos
     version: "7"
   - distribution: centos
     version: "6"
