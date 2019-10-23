@@ -1,5 +1,5 @@
 FROM oraclelinux:7
-MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
+LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 # Install systemd -- See https://hub.docker.com/_/centos/
 RUN yum -y swap -- remove fakesystemd -- install systemd systemd-libs

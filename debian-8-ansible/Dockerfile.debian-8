@@ -1,5 +1,5 @@
 FROM debian:8
-MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
+LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 # Use Debian archive repository
 COPY ./apt/sources.list /etc/apt/sources.list

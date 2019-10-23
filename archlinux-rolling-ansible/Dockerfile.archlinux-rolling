@@ -1,5 +1,5 @@
 FROM archlinux/base:latest
-MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
+LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 RUN pacman --noconfirm -Sy systemd procps; pacman --noconfirm -Scc ;\
 (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done); \

@@ -1,5 +1,5 @@
 FROM centos:6
-MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
+LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 RUN yum -y install epel-release && yum clean all
 RUN yum -y install git ansible sudo openssh-server openssh-clients unzip && yum clean all

@@ -1,5 +1,5 @@
 FROM clearlinux:latest
-MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
+LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 # Install ansible
 RUN swupd bundle-add ansible unzip

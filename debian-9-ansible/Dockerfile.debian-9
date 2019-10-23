@@ -1,5 +1,5 @@
 FROM debian:9
-MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
+LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
     software-properties-common \

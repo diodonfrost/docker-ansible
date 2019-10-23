@@ -1,5 +1,5 @@
 FROM opensuse/leap:15
-MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
+LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 ENV container docker
 

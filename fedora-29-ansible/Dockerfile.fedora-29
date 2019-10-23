@@ -1,5 +1,5 @@
 FROM fedora:29
-MAINTAINER diodonfrost <diodon.frost@diodonfrost.me>
+LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 # Update Fedora
 RUN dnf -y update && dnf clean all
