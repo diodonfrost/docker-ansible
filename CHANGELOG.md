@@ -6,16 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
-## [1.7.1] - 2019-10-23
+## [1.6.1] - 2019-10-23
 ### Added
 -   replace MAINTAINER instruction by LABEL
 
-## [1.7.0] - 2019-10-03
+## [1.6.0] - 2019-10-03
 ### Added
 -   Centos 8 support
-
-## [1.6.0] - 2019-09-24
-### Added
 -   Fedora 32 support
 
 ## [1.5.0] - 2019-05-08
@@ -58,8 +55,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/1.7.0...HEAD
-[1.7.0]: https://github.com/diodonfrost/docker-ansible/compare/1.6.0...1.7.0
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/1.6.1...HEAD
+[1.6.1]: https://github.com/diodonfrost/docker-ansible/compare/1.6.0...1.6.1
 [1.6.0]: https://github.com/diodonfrost/docker-ansible/compare/1.5.0...1.6.0
 [1.5.0]: https://github.com/diodonfrost/docker-ansible/compare/1.4.0...1.5.0
 [1.4.0]: https://github.com/diodonfrost/docker-ansible/compare/1.3.0...1.4.0
