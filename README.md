@@ -31,6 +31,7 @@ Provides docker containers use for testing ansible role on some operating system
 | [Debian 9][Debian]           | [debian-9-ansible][]           | [diodonfrost/debian-9-ansible][]           |
 | [Debian 8][Debian]           | [debian-8-ansible][]           | [diodonfrost/debian-8-ansible][]           |
 | [Debian 7][Debian]           | [debian-7-ansible][]           | [diodonfrost/debian-7-ansible][]           |
+| [Oraclelinux 8][Oraclelinux] | [oraclelinux-8-ansible][]      | [diodonfrost/oraclelinux-8-ansible][]      |
 | [Oraclelinux 7][Oraclelinux] | [oraclelinux-7-ansible][]      | [diodonfrost/oraclelinux-7-ansible][]      |
 | [Oraclelinux 6][Oraclelinux] | [oraclelinux-6-ansible][]      | [diodonfrost/oraclelinux-6-ansible][]      |
 | [Amazonlinux 2][Amazonlinux] | [amazonlinux-2-ansible][]      | [diodonfrost/amazonlinux-2-ansible][]      |
@@ -77,6 +78,7 @@ Provides docker containers use for testing ansible role on some operating system
 [debian-9-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-9-ansible/Dockerfile.debian-9
 [debian-8-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-8-ansible/Dockerfile.debian-8
 [debian-7-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-7-ansible/Dockerfile.debian-7
+[oraclelinux-8-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-8-ansible/Dockerfile.oraclelinux-8
 [oraclelinux-7-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-7-ansible/Dockerfile.oraclelinux-7
 [oraclelinux-6-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-6-ansible/Dockerfile.oraclelinux-6
 [amazonlinux-2-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/amazonlinux-2-ansible/Dockerfile.amazonlinux-2
@@ -111,6 +113,7 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/debian-9-ansible]: https://hub.docker.com/r/diodonfrost/debian-9-ansible
 [diodonfrost/debian-8-ansible]: https://hub.docker.com/r/diodonfrost/debian-8-ansible
 [diodonfrost/debian-7-ansible]: https://hub.docker.com/r/diodonfrost/debian-7-ansible
+[diodonfrost/oraclelinux-8-ansible]: https://hub.docker.com/r/diodonfrost/oraclelinux-8-ansible
 [diodonfrost/oraclelinux-7-ansible]: https://hub.docker.com/r/diodonfrost/oraclelinux-7-ansible
 [diodonfrost/oraclelinux-6-ansible]: https://hub.docker.com/r/diodonfrost/oraclelinux-6-ansible
 [diodonfrost/amazonlinux-2-ansible]: https://hub.docker.com/r/diodonfrost/amazonlinux-2-ansible
