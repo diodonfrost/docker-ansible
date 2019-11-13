@@ -21,6 +21,8 @@ RUN dnf -y install \
            sudo \
            which \
            python2-dnf \
+           python2-pyyaml \
+           python3-pyyaml \
            openssh-server openssh-clients \
            unzip \
    && dnf clean all
