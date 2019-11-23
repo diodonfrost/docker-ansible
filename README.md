@@ -21,6 +21,7 @@ Provides docker containers use for testing ansible role on some operating system
 | [Fedora 28][Fedora]          | [fedora-28-ansible][]          | [diodonfrost/fedora-28-ansible][]          |
 | [Fedora 27][Fedora]          | [fedora-27-ansible][]          | [diodonfrost/fedora-27-ansible][]          |
 | [Fedora 26][Fedora]          | [fedora-26-ansible][]          | [diodonfrost/fedora-26-ansible][]          |
+| [Ubuntu 20.04][Ubuntu]       | [ubuntu-20.04-ansible][]       | [diodonfrost/ubuntu-20.04-ansible][]       |
 | [Ubuntu 19.04][Ubuntu]       | [ubuntu-19.04-ansible][]       | [diodonfrost/ubuntu-19.04-ansible][]       |
 | [Ubuntu 18.04][Ubuntu]       | [ubuntu-18.04-ansible][]       | [diodonfrost/ubuntu-18.04-ansible][]       |
 | [Ubuntu 17.10][Ubuntu]       | [ubuntu-17.10-ansible][]       | [diodonfrost/ubuntu-17.10-ansible][]       |
@@ -68,6 +69,7 @@ Provides docker containers use for testing ansible role on some operating system
 [fedora-28-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-28-ansible/Dockerfile.fedora-28
 [fedora-27-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-27-ansible/Dockerfile.fedora-27
 [fedora-26-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-26-ansible/Dockerfile.fedora-28
+[ubuntu-20.04-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-20.04-ansible/Dockerfile.ubuntu-20.04
 [ubuntu-19.04-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-19.04-ansible/Dockerfile.ubuntu-19.04
 [ubuntu-18.04-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-18.04-ansible/Dockerfile.ubuntu-18.04
 [ubuntu-17.10-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-17.10-ansible/Dockerfile.ubuntu-17.10
@@ -103,6 +105,7 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/fedora-28-ansible]: https://hub.docker.com/r/diodonfrost/fedora-28-ansible
 [diodonfrost/fedora-27-ansible]: https://hub.docker.com/r/diodonfrost/fedora-27-ansible
 [diodonfrost/fedora-26-ansible]: https://hub.docker.com/r/diodonfrost/fedora-26-ansible
+[diodonfrost/ubuntu-20.04-ansible]: https://hub.docker.com/r/diodonfrost/ubuntu-20.04-ansible
 [diodonfrost/ubuntu-19.04-ansible]: https://hub.docker.com/r/diodonfrost/ubuntu-19.04-ansible
 [diodonfrost/ubuntu-18.04-ansible]: https://hub.docker.com/r/diodonfrost/ubuntu-18.04-ansible
 [diodonfrost/ubuntu-17.10-ansible]: https://hub.docker.com/r/diodonfrost/ubuntu-17.10-ansible

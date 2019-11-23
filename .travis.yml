@@ -26,6 +26,8 @@ env:
   - distribution: fedora
     version: "26"
   - distribution: ubuntu
+    version: "20.04"
+  - distribution: ubuntu
     version: "19.04"
   - distribution: ubuntu
     version: "18.04"
