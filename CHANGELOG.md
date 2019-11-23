@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [1.8.0] - 2019-11-23
+### Added
+-   Ubuntu 20.04 support
+
 ## [1.7.0] - 2019-11-10
 ### Added
 -   Oraclelinux 8 support
@@ -58,7 +62,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/1.7.0...HEAD
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/1.8.0...HEAD
+[1.8.0]: https://github.com/diodonfrost/docker-ansible/compare/1.7.0...1.8.0
 [1.7.0]: https://github.com/diodonfrost/docker-ansible/compare/1.6.1...1.7.0
 [1.6.1]: https://github.com/diodonfrost/docker-ansible/compare/1.6.0...1.6.1
 [1.6.0]: https://github.com/diodonfrost/docker-ansible/compare/1.5.0...1.6.0
