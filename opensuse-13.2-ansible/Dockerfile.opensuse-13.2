@@ -27,9 +27,10 @@ RUN zypper -n install git \
                       zypper clean
 
 # Install Ansible
-RUN pip install -U setuptools && \
-    pip install markupsafe && \
-    pip install ansible
+RUN python -m pip install -U setuptools && \
+    python -m pip install -U markupsafe && \
+    python -m pip install -U cffi && \
+    python -m pip install -U ansible==2.9.1
 
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/lib/systemd/systemd", "--system"]
