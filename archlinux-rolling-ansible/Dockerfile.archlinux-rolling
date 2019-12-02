@@ -16,4 +16,4 @@ RUN pacman --noconfirm -Syu git ansible sudo openssh unzip && pacman --noconfirm
 
 VOLUME ["/sys/fs/cgroup"]
 
-CMD ["/usr/lib/systemd/systemd"]
+ENTRYPOINT ["/usr/lib/systemd/systemd"]
