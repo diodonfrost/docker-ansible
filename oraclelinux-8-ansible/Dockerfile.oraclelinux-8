@@ -14,4 +14,4 @@ RUN mkdir /etc/ansible && echo -e '[local]\nlocalhost ansible_connection=local' 
 
 VOLUME ["/sys/fs/cgroup"]
 
-CMD ["/usr/lib/systemd/systemd"]
+ENTRYPOINT ["/usr/lib/systemd/systemd"]

@@ -17,4 +17,5 @@ rm -f /usr/lib/systemd/system/anaconda.target.wants/*;
 RUN zypper -n install git ansible sudo openssh unzip; zypper clean
 
 VOLUME [ "/sys/fs/cgroup" ]
-CMD ["/usr/lib/systemd/systemd", "--system"]
+
+ENTRYPOINT ["/usr/lib/systemd/systemd", "--system"]

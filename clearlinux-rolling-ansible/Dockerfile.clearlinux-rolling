@@ -9,4 +9,4 @@ RUN mkdir -p /etc/ansible && \
 
 VOLUME ["/sys/fs/cgroup"]
 
-CMD ["/usr/sbin/init"]
+ENTRYPOINT ["/usr/sbin/init"]

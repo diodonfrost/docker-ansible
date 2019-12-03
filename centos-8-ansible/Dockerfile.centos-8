@@ -25,4 +25,4 @@ RUN mkdir /etc/ansible && echo -e '[local]\nlocalhost ansible_connection=local' 
 
 VOLUME ["/sys/fs/cgroup"]
 
-CMD ["/usr/sbin/init"]
+ENTRYPOINT ["/usr/sbin/init"]

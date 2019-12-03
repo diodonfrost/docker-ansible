@@ -19,4 +19,5 @@ RUN zypper -n install git ansible sudo python2-pip python3-pip openssh curl unzi
 RUN pip install ansible
 
 VOLUME [ "/sys/fs/cgroup" ]
-CMD ["/usr/lib/systemd/systemd", "--system"]
+
+ENTRYPOINT ["/usr/lib/systemd/systemd", "--system"]

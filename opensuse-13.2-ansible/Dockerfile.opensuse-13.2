@@ -33,4 +33,5 @@ RUN python -m pip install -U setuptools && \
     python -m pip install -U ansible==2.9.1
 
 VOLUME [ "/sys/fs/cgroup" ]
-CMD ["/usr/lib/systemd/systemd", "--system"]
+
+ENTRYPOINT ["/usr/lib/systemd/systemd", "--system"]

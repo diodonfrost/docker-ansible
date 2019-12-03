@@ -25,4 +25,4 @@ RUN emerge-webrsync && \
 RUN mkdir -p /etc/ansible && \
     echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
-CMD ["/usr/lib/systemd/systemd"]
+ENTRYPOINT ["/usr/lib/systemd/systemd"]

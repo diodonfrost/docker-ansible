@@ -14,4 +14,4 @@ RUN yum makecache fast && \
 # Install Ansible inventory file.
 RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
-CMD ["/sbin/init"]
+ENTRYPOINT ["/sbin/init"]
