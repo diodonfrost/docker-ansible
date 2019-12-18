@@ -7,7 +7,7 @@ COPY ./apt/sources.list /etc/apt/sources.list
 RUN apt-get update -y  &&  apt-get install --fix-missing && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -y \
-    python python-yaml sudo openssh-server openssh-client unzip \
+    python python-yaml sudo openssh-server openssh-client unzip rsync \
     curl gcc python-dev libffi-dev libssl-dev
 
 # Install pip

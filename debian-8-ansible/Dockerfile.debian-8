@@ -14,6 +14,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
     init \
     openssh-server openssh-client \
     unzip \
+    rsync \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Ansible ppa repository

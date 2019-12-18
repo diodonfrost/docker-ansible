@@ -14,7 +14,7 @@ rm -f /lib/systemd/system/basic.target.wants/*; \
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 RUN yum -y install epel-release && yum clean all
-RUN yum -y install git ansible sudo openssh-server openssh-clients unzip && yum clean all
+RUN yum -y install git ansible sudo openssh-server openssh-clients unzip rsync && yum clean all
 
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 

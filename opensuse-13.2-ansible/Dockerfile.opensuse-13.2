@@ -23,7 +23,8 @@ RUN zypper -n install git \
                       libffi-devel \
                       sudo \
                       openssh \
-                      unzip && \
+                      unzip \
+                      rsync && \
                       zypper clean
 
 # Install Ansible

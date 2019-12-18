@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     init \
     openssh-server openssh-client \
     unzip \
+    rsync \
     python \
     fuse snapd snap-confine squashfuse sudo \
     && rm -rf /var/lib/apt/lists/*

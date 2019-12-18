@@ -12,6 +12,7 @@ RUN emerge-webrsync && \
     emerge --quiet app-portage/eix && \
     touch /var/cache/eix/portage.eix && chown portage:portage /var/cache/eix/portage.eix && eix-update && \
     emerge --quiet app-portage/gentoolkit && \
+    emerge --quiet net-misc/rsync && \
     rm -rf /usr/portage/*
 
 # Install ansible
