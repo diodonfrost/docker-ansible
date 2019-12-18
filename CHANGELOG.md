@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [2.1.0] - 2019-12-18
+### Changed
+-   Install rsync in docker images
+
 ## [2.0.0] - 2019-12-03
 ### Changed
 -   Replace in Dockerfile CMD by ENTRYPOINT
@@ -66,7 +70,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/2.0.0...HEAD
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/2.1.0...HEAD
+[2.1.0]: https://github.com/diodonfrost/docker-ansible/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/diodonfrost/docker-ansible/compare/1.8.0...2.0.0
 [1.8.0]: https://github.com/diodonfrost/docker-ansible/compare/1.7.0...1.8.0
 [1.7.0]: https://github.com/diodonfrost/docker-ansible/compare/1.6.1...1.7.0
