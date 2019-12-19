@@ -2,7 +2,7 @@ FROM clearlinux:latest
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 # Install ansible
-RUN swupd bundle-add ansible unzip rsync
+RUN swupd bundle-add ansible unzip rsync && swupd clean
 
 RUN mkdir -p /etc/ansible && \
     echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
