@@ -21,6 +21,7 @@ RUN dnf -y install \
            sudo \
            which \
            openssh-server openssh-clients \
+           findutils \
            unzip \
            rsync \
    && dnf clean all

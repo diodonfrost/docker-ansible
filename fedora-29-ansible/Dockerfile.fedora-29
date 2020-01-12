@@ -24,6 +24,7 @@ RUN dnf -y install \
            python2-pyyaml \
            python3-pyyaml \
            openssh-server openssh-clients \
+           findutils \
            unzip \
            rsync \
    && dnf clean all
