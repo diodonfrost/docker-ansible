@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -y \
     unzip \
     rsync \
     python \
-    fuse snapd snap-confine squashfuse sudo \
+    sudo \
+    fuse snapd snap-confine squashfuse \
     && rm -rf /var/lib/apt/lists/*
 
 # Configure udev for docker integration
