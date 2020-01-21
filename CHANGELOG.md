@@ -5,73 +5,82 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [2.2.0] - 2020-01-21
+### Added
+- Install sudo on Ubuntu, Debian and Amazonlinux images
+- Install tar on Amazonlinux images
+- Install find on Fedora images
+
+### Changed
+- Use travis-ci.com url instead of travis-ci.org
+
 ## [2.1.1] - 2019-12-20
 ### Changed
--   Clear cache files in clearlinux image
+- Clear cache files in clearlinux image
 
 ## [2.1.0] - 2019-12-18
 ### Changed
--   Install rsync in docker images
+- Install rsync in docker images
 
 ## [2.0.0] - 2019-12-03
 ### Changed
--   Replace in Dockerfile CMD by ENTRYPOINT
+- Replace in Dockerfile CMD by ENTRYPOINT
 
 ## [1.8.0] - 2019-11-23
 ### Added
--   Ubuntu 20.04 support
+- Ubuntu 20.04 support
 
 ## [1.7.0] - 2019-11-10
 ### Added
--   Oraclelinux 8 support
+- Oraclelinux 8 support
 
 ## [1.6.1] - 2019-10-23
 ### Added
--   replace MAINTAINER instruction by LABEL
+- replace MAINTAINER instruction by LABEL
 
 ## [1.6.0] - 2019-10-03
 ### Added
--   Centos 8 support
--   Fedora 32 support
+- Centos 8 support
+- Fedora 32 support
 
 ## [1.5.0] - 2019-05-08
 ### Added
--   Fedora 30 et 31 image
--   Debian 10 support
+- Fedora 30 et 31 image
+- Debian 10 support
 
 ## [1.4.0] - 2019-04-20
 ### Added
--   Clearlinux image
+- Clearlinux image
 
 ### Changed
--   Use ansible-ppa in debina and ubuntu image
+- Use ansible-ppa in debina and ubuntu image
 
 ## [1.3.0] - 2019-04-20
 ### Added
--   Unzip package install
+- Unzip package install
 
 ### Changed
--   Improve inspec test
--   Improve travis-ci pipeline
+- Improve inspec test
+- Improve travis-ci pipeline
 
 ## [1.2.0] - 2019-03-28
 ### Added
--   Opensuse 15.0 image
--   Opensuse 15.1 image
--   Ubuntu 19.04 image
--   Alpine image
+- Opensuse 15.0 image
+- Opensuse 15.1 image
+- Ubuntu 19.04 image
+- Alpine image
 
 ### Changed
--   Travis-ci pipeline
--   Refactoring debian 7 image
+- Travis-ci pipeline
+- Refactoring debian 7 image
 
 ## [1.1.0] - 2018-08-13
 ### Added
--   Openssh package installed
+- Openssh package installed
 
 ## [1.0.0] - 2018-08-13
 ### Added
--   Docker images with ansible installed
+- Docker images with ansible installed
 
 
 [Unreleased]: https://github.com/diodonfrost/docker-ansible/2.1.0...HEAD
