@@ -1,0 +1,19 @@
+FROM elementary/docker:juno-stable
+LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
+
+RUN apt-get update && apt-get install -y \
+    git \
+    ansible \
+    apt-transport-https \
+    ca-certificates-java \
+    curl \
+    init \
+    openssh-server openssh-client \
+    unzip \
+    rsync \
+    sudo \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
+
+ENTRYPOINT ["/lib/systemd/systemd"]

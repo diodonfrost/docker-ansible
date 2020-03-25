@@ -25,6 +25,8 @@ env:
     version: "27"
   - distribution: fedora
     version: "26"
+  - distribution: elementary
+    version: "juno"
   - distribution: ubuntu
     version: "20.04"
   - distribution: ubuntu
