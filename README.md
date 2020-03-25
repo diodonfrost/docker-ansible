@@ -82,7 +82,7 @@ Provides docker containers use for testing ansible role on some operating system
 [debian-9-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-9-ansible/Dockerfile.debian-9
 [debian-8-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-8-ansible/Dockerfile.debian-8
 [debian-7-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-7-ansible/Dockerfile.debian-7
-[Elementary juno]: https://github.com/diodonfrost/docker-ansible/blob/master/elementary-juno-ansible/Dockerfile.elementary-juno
+[elementary-juno-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/elementary-juno-ansible/Dockerfile.elementary-juno
 [oraclelinux-8-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-8-ansible/Dockerfile.oraclelinux-8
 [oraclelinux-7-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-7-ansible/Dockerfile.oraclelinux-7
 [oraclelinux-6-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-6-ansible/Dockerfile.oraclelinux-6
