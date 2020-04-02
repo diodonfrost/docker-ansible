@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [2.3.0] - 2020-03-25
+### Added
+- Elementary os juno support
+
+### Fix
+- Ubuntu 20.04: avoiding interaction during apt-get command
+
 ## [2.2.1] - 2020-03-02
 ### Changed
 - Freeze inspec and inspec-bin version
