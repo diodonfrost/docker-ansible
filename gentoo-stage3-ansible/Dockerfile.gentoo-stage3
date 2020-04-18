@@ -19,6 +19,7 @@ RUN emerge-webrsync && \
 RUN emerge-webrsync && \
     echo 'USE=-bindist' >> /etc/portage/make.conf && \
     echo 'dev-lang/python sqlite' >> /etc/portage/package.use/python && \
+    echo 'net-libs/zeromq drafts' >> /etc/portage/package.use/zeromq && \
     emerge --quiet net-misc/openssh app-admin/sudo app-admin/ansible && \
     rm -rf /usr/portage/*
 
