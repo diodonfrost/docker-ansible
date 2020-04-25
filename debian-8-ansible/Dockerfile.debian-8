@@ -1,9 +1,6 @@
 FROM debian:8
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
-# Use Debian archive repository
-COPY ./apt/sources.list /etc/apt/sources.list
-
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
     software-properties-common \
     git \
