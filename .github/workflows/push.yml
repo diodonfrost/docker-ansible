@@ -9,7 +9,7 @@ on:
 
 jobs:
   push:
-    name: Push
+    name: ${{ matrix.distribution }}
     runs-on: ubuntu-18.04
     strategy:
       fail-fast: false
