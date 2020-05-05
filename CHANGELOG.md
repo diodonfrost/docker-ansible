@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- CI: Github action
+
+### Fix
+- CentOS-8: Install dnf-plugins-core
+
 ## [2.3.0] - 2020-03-25
 ### Added
 - Elementary os juno support
