@@ -1,0 +1,73 @@
+name: Push
+
+on:
+  push:
+    tags:
+    - '*'
+  schedule:
+    - cron: '0 18 * * sun'
+
+jobs:
+  push:
+    name: Push
+    runs-on: ubuntu-18.04
+    strategy:
+      fail-fast: false
+      matrix:
+        distribution:
+          - alpine-rolling
+          - centos-8
+          - centos-7
+          - centos-6
+          - fedora-32
+          - fedora-31
+          - fedora-30
+          - fedora-29
+          - fedora-28
+          - fedora-27
+          - fedora-26
+          - elementary-juno
+          - ubuntu-20.04
+          - ubuntu-18.04
+          - ubuntu-16.04
+          - ubuntu-14.04
+          - ubuntu-12.04
+          - debian-10
+          - debian-9
+          - debian-8
+          - oraclelinux-8
+          - oraclelinux-7
+          - oraclelinux-6
+          - amazonlinux-2
+          - amazonlinux-1
+          - opensuse-42.3
+          - opensuse-15.1
+          - opensuse-15
+          - opensuse-13.2
+          - archlinux-rolling
+          - clearlinux-rolling
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Inspec
+        run: curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec -v 4.18.51
+
+      - name: Build Docker image
+        run: docker build --no-cache --rm --file=${{ matrix.distribution }}-ansible/Dockerfile.${{ matrix.distribution }} --tag=diodonfrost/${{ matrix.distribution }}-ansible:latest ${{ matrix.distribution }}-ansible
+
+      - name: Test Docker image
+        run: |
+          container_id=$(mktemp)
+          sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro diodonfrost/${{ matrix.distribution }}-ansible:latest > "${container_id}"
+
+          inspec exec tests/inspec --chef-license accept-silent -t docker://$(cat ${container_id})
+
+      - name: Push Docker image
+        run: |
+          # Login on dockerhub.io before pushing
+          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+          # Pushing image to dockerhub
+          docker push diodonfrost/${{ matrix.distribution }}-ansible:latest
