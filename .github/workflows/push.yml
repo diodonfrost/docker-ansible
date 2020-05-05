@@ -19,6 +19,7 @@ jobs:
           - centos-8
           - centos-7
           - centos-6
+          - fedora-33
           - fedora-32
           - fedora-31
           - fedora-30
