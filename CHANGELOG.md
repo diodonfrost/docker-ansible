@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fix
 - CentOS-8: Install dnf-plugins-core
+- Debian-8 use default apt-get source.list
 
 ## [2.3.0] - 2020-03-25
 ### Added
