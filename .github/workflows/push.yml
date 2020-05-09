@@ -2,8 +2,8 @@ name: Push
 
 on:
   push:
-    tags:
-    - '*'
+    branches:
+      - master
   schedule:
     - cron: '0 18 * * sun'
 
