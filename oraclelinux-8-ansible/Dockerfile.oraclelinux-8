@@ -3,7 +3,17 @@ LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 RUN dnf -y update && dnf install -y systemd-239-13.0.1.el8.x86_64 && dnf clean all
 
-RUN dnf -y install git python3 python3-pip sudo openssh-server openssh-clients unzip rsync && dnf clean all
+RUN dnf -y install \
+           git \
+           python3 \
+           python3-pip \
+           sudo \
+           openssh-server \
+           openssh-clients \
+           unzip \
+           tar \
+           rsync \
+           && dnf clean all
 
 RUN python3 -m pip install ansible
 RUN ln -s /usr/local/bin/ansible* /usr/bin/

@@ -14,7 +14,18 @@ rm -f /lib/systemd/system/basic.target.wants/*; \
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 RUN rpm -ihv http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-RUN yum -y install git ansible sudo which curl openssh-server openssh-clients unzip rsync && yum clean all
+RUN yum -y install \
+           git \
+           ansible \
+           sudo \
+           which \
+           curl \
+           openssh-server \
+           openssh-clients \
+           unzip \
+           tar \
+           rsync \
+           && yum clean all
 
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
