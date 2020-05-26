@@ -1,6 +1,5 @@
 # docker-ansible
 
-[![Build Status](https://travis-ci.com/diodonfrost/docker-ansible.svg?branch=master)](https://travis-ci.com/diodonfrost/docker-ansible)
 [![Build](https://github.com/diodonfrost/docker-ansible/workflows/Build/badge.svg)](https://github.com/diodonfrost/docker-ansible/actions)
 [![Docker Automated build](https://img.shields.io/docker/automated/diodonfrost/centos-7-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/diodonfrost/centos-7-ansible/)
 
