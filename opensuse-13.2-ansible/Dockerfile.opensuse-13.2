@@ -29,9 +29,9 @@ RUN zypper -n install git \
                       zypper clean
 
 # Install Ansible
-RUN python -m pip install -U setuptools && \
-    python -m pip install -U markupsafe && \
-    python -m pip install -U cffi && \
+RUN python -m pip install -U setuptools==44.1.0 && \
+    python -m pip install -U MarkupSafe==1.1.1 && \
+    python -m pip install -U cffi==1.14.0 && \
     python -m pip install -U ansible==2.9.1
 
 VOLUME [ "/sys/fs/cgroup" ]
