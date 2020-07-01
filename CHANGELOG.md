@@ -5,8 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [2.5.0] - 2020-07-01
 ### Changed
 - Oraclelinux: install tar package
+
+### Fix
+- opensuse-13.2: freeze python packages versions
 
 ## [2.4.0] - 2020-05-06
 ### Added
@@ -106,7 +110,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/2.1.0...HEAD
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/2.5.0...HEAD
+[2.5.0]: https://github.com/diodonfrost/docker-ansible/compare/2.5.0...2.4.0
+[2.4.0]: https://github.com/diodonfrost/docker-ansible/compare/2.4.0...2.3.0
+[2.3.0]: https://github.com/diodonfrost/docker-ansible/compare/2.3.0...2.2.1
+[2.2.1]: https://github.com/diodonfrost/docker-ansible/compare/2.2.1...2.2.0
+[2.2.0]: https://github.com/diodonfrost/docker-ansible/compare/2.2.0...2.1.1
+[2.1.1]: https://github.com/diodonfrost/docker-ansible/compare/2.1.0...2.1.1
 [2.1.0]: https://github.com/diodonfrost/docker-ansible/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/diodonfrost/docker-ansible/compare/1.8.0...2.0.0
 [1.8.0]: https://github.com/diodonfrost/docker-ansible/compare/1.7.0...1.8.0
