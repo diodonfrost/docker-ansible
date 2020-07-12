@@ -1,7 +1,10 @@
 FROM clearlinux:latest
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
-# Install ansible
+RUN mkdir -p /etc/systemd/system && \
+    ln -s /dev/null /etc/systemd/system/swupd-update.service && \
+    ln -s /dev/null /etc/systemd/system/swupd-update.timer 
+
 RUN swupd bundle-add ansible unzip rsync && swupd clean
 
 RUN mkdir -p /etc/ansible && \
