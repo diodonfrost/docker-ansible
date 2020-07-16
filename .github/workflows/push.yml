@@ -16,37 +16,37 @@ jobs:
       matrix:
         distribution:
           - alpine-rolling
-          - centos-8
-          - centos-7
-          - centos-6
-          - fedora-33
-          - fedora-32
-          - fedora-31
-          - fedora-30
-          - fedora-29
-          - fedora-28
-          - fedora-27
-          - fedora-26
-          - elementary-juno
-          - ubuntu-20.04
-          - ubuntu-18.04
-          - ubuntu-16.04
-          - ubuntu-14.04
-          - ubuntu-12.04
-          - debian-10
-          - debian-9
-          - debian-8
-          - oraclelinux-8
-          - oraclelinux-7
-          - oraclelinux-6
-          - amazonlinux-2
           - amazonlinux-1
-          - opensuse-42.3
-          - opensuse-15.1
-          - opensuse-15
-          - opensuse-13.2
+          - amazonlinux-2
           - archlinux-rolling
+          - centos-6
+          - centos-7
+          - centos-8
           - clearlinux-rolling
+          - debian-10
+          - debian-8
+          - debian-9
+          - elementary-juno
+          - fedora-26
+          - fedora-27
+          - fedora-28
+          - fedora-29
+          - fedora-30
+          - fedora-31
+          - fedora-32
+          - fedora-33
+          - opensuse-13.2
+          - opensuse-15
+          - opensuse-15.1
+          - opensuse-42.3
+          - oraclelinux-6
+          - oraclelinux-7
+          - oraclelinux-8
+          - ubuntu-12.04
+          - ubuntu-14.04
+          - ubuntu-16.04
+          - ubuntu-18.04
+          - ubuntu-20.04
 
     steps:
       - name: Checkout repository
