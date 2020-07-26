@@ -34,7 +34,6 @@ jobs:
           - fedora-31
           - fedora-32
           - fedora-33
-          - opensuse-13.2
           - opensuse-15
           - opensuse-15.1
           - opensuse-42.3
