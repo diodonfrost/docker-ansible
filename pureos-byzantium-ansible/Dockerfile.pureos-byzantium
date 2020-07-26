@@ -1,0 +1,25 @@
+FROM pureos/byzantium:latest
+LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
+
+RUN apt-get update -y && apt-get install -y --no-install-recommends \
+    software-properties-common \
+    git \
+    gnupg2 \
+    dirmngr \
+    apt-transport-https \
+    curl \
+    init \
+    python3 python3-pip \
+    openssh-server openssh-client \
+    systemd \
+    unzip \
+    rsync \
+    sudo \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
+RUN python3 -m pip install ansible==2.9.11 && \
+    mkdir -p /etc/ansible && echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
+
+ENTRYPOINT ["/bin/systemd"]
