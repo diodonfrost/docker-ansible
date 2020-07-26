@@ -48,6 +48,7 @@ Provides docker containers use for testing ansible role on some operating system
 | [Archlinux][Archlinux]        | [archlinux-rolling-ansible][]  | [diodonfrost/archlinux-rolling-ansible][]  |
 | [Gentoo stage3][Gentoo]       | [gentoo-stage3-ansible][]      | [diodonfrost/gentoo-stage3-ansible][]      |
 | [Clearlinux][Clearlinux]      | [clearlinux-rolling-ansible][] | [diodonfrost/clearlinux-rolling-ansible][] |
+| [Pureos][Pureos]              | [pureos-byzantium-ansible][]   | [diodonfrost/pureos-byzantium-ansible][]   |
 
 [Centos]: https://hub.docker.com/_/centos/
 [Fedora]: https://hub.docker.com/_/fedora/
@@ -61,6 +62,7 @@ Provides docker containers use for testing ansible role on some operating system
 [Archlinux]: https://hub.docker.com/r/base/archlinux/
 [Gentoo]: https://hub.docker.com/r/gentoo/stage3-amd64/
 [Clearlinux]: https://hub.docker.com/_/clearlinux
+[Pureos]: https://hub.docker.com/u/pureos
 
 [centos-8-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-8-ansible/Dockerfile.centos-8
 [centos-7-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-7-ansible/Dockerfile.centos-7
@@ -99,6 +101,7 @@ Provides docker containers use for testing ansible role on some operating system
 [archlinux-rolling-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/archlinux-rolling-ansible/Dockerfile.archlinux-rolling
 [gentoo-stage3-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/gentoo-stage3-ansible/Dockerfile.gentoo-stage3
 [clearlinux-rolling-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/clearlinux-rolling-ansible/Dockerfile.clearlinux-rolling
+[pureos-byzantium-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/pureos-byzantium-ansible/Dockerfile.pureos-byzantium
 
 [diodonfrost/centos-8-ansible]: https://hub.docker.com/r/diodonfrost/centos-8-ansible
 [diodonfrost/centos-7-ansible]: https://hub.docker.com/r/diodonfrost/centos-7-ansible
@@ -137,3 +140,4 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/archlinux-rolling-ansible]: https://hub.docker.com/r/diodonfrost/archlinux-rolling-ansible
 [diodonfrost/gentoo-stage3-ansible]: https://hub.docker.com/r/diodonfrost/gentoo-stage3-ansible
 [diodonfrost/clearlinux-rolling-ansible]: https://hub.docker.com/r/diodonfrost/clearlinux-rolling-ansible
+[diodonfrost/pureos-byzantium-ansible]: https://hub.docker.com/r/diodonfrost/pureos-byzantium-ansible
