@@ -2,7 +2,7 @@ FROM debian:7
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 # Use Debian archive repository
-COPY ./apt/sources.list /etc/apt/sources.list
+COPY ./debian-7-apt/sources.list /etc/apt/sources.list
 
 RUN apt-get update -y  &&  apt-get install --fix-missing && \
     DEBIAN_FRONTEND=noninteractive \

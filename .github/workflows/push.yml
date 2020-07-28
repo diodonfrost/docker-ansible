@@ -9,44 +9,76 @@ on:
 
 jobs:
   push:
-    name: ${{ matrix.distribution }}
+    name: ${{ matrix.distribution.image }}-${{ matrix.distribution.version }}
     runs-on: ubuntu-18.04
     strategy:
       fail-fast: false
       matrix:
         distribution:
-          - alpine-rolling
-          - amazonlinux-1
-          - amazonlinux-2
-          - archlinux-rolling
-          - centos-6
-          - centos-7
-          - centos-8
-          - clearlinux-rolling
-          - debian-10
-          - debian-8
-          - debian-9
-          - elementary-juno
-          - fedora-26
-          - fedora-27
-          - fedora-28
-          - fedora-29
-          - fedora-30
-          - fedora-31
-          - fedora-32
-          - fedora-33
-          - opensuse-15
-          - opensuse-15.1
-          - opensuse-42.3
-          - oraclelinux-6
-          - oraclelinux-7
-          - oraclelinux-8
-          - pureos-byzantium
-          - ubuntu-12.04
-          - ubuntu-14.04
-          - ubuntu-16.04
-          - ubuntu-18.04
-          - ubuntu-20.04
+          - image: alpine
+            version: "rolling"
+          - image: amazonlinux
+            version: "1"
+          - image: amazonlinux
+            version: "2"
+          - image: archlinux
+            version: "rolling"
+          - image: centos
+            version: "6"
+          - image: centos
+            version: "7"
+          - image: centos
+            version: "8"
+          - image: clearlinux
+            version: "rolling"
+          - image: debian
+            version: "8"
+          - image: debian
+            version: "9"
+          - image: debian
+            version: "10"
+          - image: elementary
+            version: "juno"
+          - image: fedora
+            version: "26"
+          - image: fedora
+            version: "27"
+          - image: fedora
+            version: "28"
+          - image: fedora
+            version: "29"
+          - image: fedora
+            version: "30"
+          - image: fedora
+            version: "31"
+          - image: fedora
+            version: "32"
+          - image: fedora
+            version: "33"
+          - image: opensuse
+            version: "15"
+          - image: opensuse
+            version: "15.1"
+          - image: opensuse
+            version: "42.3"
+          - image: oraclelinux
+            version: "6"
+          - image: oraclelinux
+            version: "7"
+          - image: oraclelinux
+            version: "8"
+          - image: pureos
+            version: "byzantium"
+          - image: ubuntu
+            version: "12.04"
+          - image: ubuntu
+            version: "14.04"
+          - image: ubuntu
+            version: "16.04"
+          - image: ubuntu
+            version: "18.04"
+          - image: ubuntu
+            version: "20.04"
 
     steps:
       - name: Checkout repository
@@ -56,12 +88,12 @@ jobs:
         run: curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec -v 4.18.51
 
       - name: Build Docker image
-        run: docker build --no-cache --rm --file=${{ matrix.distribution }}-ansible/Dockerfile.${{ matrix.distribution }} --tag=diodonfrost/${{ matrix.distribution }}-ansible:latest ${{ matrix.distribution }}-ansible
+        run: docker build --no-cache --rm --file=${{ matrix.distribution.image }}-ansible/Dockerfile.${{ matrix.distribution.image }}-${{ matrix.distribution.version }} --tag=diodonfrost/${{ matrix.distribution.image }}-${{ matrix.distribution.version }}-ansible:latest ${{ matrix.distribution.image }}-ansible
 
       - name: Test Docker image
         run: |
           container_id=$(mktemp)
-          sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro diodonfrost/${{ matrix.distribution }}-ansible:latest > "${container_id}"
+          sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro diodonfrost/${{ matrix.distribution.image }}-${{ matrix.distribution.version }}-ansible:latest > "${container_id}"
 
           inspec exec tests/inspec --chef-license accept-silent -t docker://$(cat ${container_id})
 
@@ -71,4 +103,4 @@ jobs:
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
           # Pushing image to dockerhub
-          docker push diodonfrost/${{ matrix.distribution }}-ansible:latest
+          docker push diodonfrost/${{ matrix.distribution.image }}-${{ matrix.distribution.version }}-ansible:latest

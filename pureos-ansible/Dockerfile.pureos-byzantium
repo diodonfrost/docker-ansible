@@ -2,7 +2,6 @@ FROM pureos/byzantium:latest
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
-    software-properties-common \
     git \
     gnupg2 \
     dirmngr \
