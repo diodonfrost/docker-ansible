@@ -9,47 +9,48 @@ Provides docker containers use for testing ansible role on some operating system
 
 ## Images
 
-| Base operating system         | Github                         | Docker Hub                                 |
-| ----------------------------- | ------------------------------ | ------------------------------------------ |
-| [CentOS 8][CentOS]            | [centos-8-ansible][]           | [diodonfrost/centos-8-ansible][]           |
-| [CentOS 7][CentOS]            | [centos-7-ansible][]           | [diodonfrost/centos-7-ansible][]           |
-| [CentOS 6][CentOS]            | [centos-6-ansible][]           | [diodonfrost/centos-6-ansible][]           |
-| [Fedora 33][Fedora]           | [fedora-33-ansible][]          | [diodonfrost/fedora-33-ansible][]          |
-| [Fedora 32][Fedora]           | [fedora-32-ansible][]          | [diodonfrost/fedora-32-ansible][]          |
-| [Fedora 31][Fedora]           | [fedora-31-ansible][]          | [diodonfrost/fedora-31-ansible][]          |
-| [Fedora 30][Fedora]           | [fedora-30-ansible][]          | [diodonfrost/fedora-30-ansible][]          |
-| [Fedora 29][Fedora]           | [fedora-29-ansible][]          | [diodonfrost/fedora-29-ansible][]          |
-| [Fedora 28][Fedora]           | [fedora-28-ansible][]          | [diodonfrost/fedora-28-ansible][]          |
-| [Fedora 27][Fedora]           | [fedora-27-ansible][]          | [diodonfrost/fedora-27-ansible][]          |
-| [Fedora 26][Fedora]           | [fedora-26-ansible][]          | [diodonfrost/fedora-26-ansible][]          |
-| [Ubuntu 20.04][Ubuntu]        | [ubuntu-20.04-ansible][]       | [diodonfrost/ubuntu-20.04-ansible][]       |
-| [Ubuntu 19.04][Ubuntu]        | [ubuntu-19.04-ansible][]       | [diodonfrost/ubuntu-19.04-ansible][]       |
-| [Ubuntu 18.04][Ubuntu]        | [ubuntu-18.04-ansible][]       | [diodonfrost/ubuntu-18.04-ansible][]       |
-| [Ubuntu 17.10][Ubuntu]        | [ubuntu-17.10-ansible][]       | [diodonfrost/ubuntu-17.10-ansible][]       |
-| [Ubuntu 16.04][Ubuntu]        | [ubuntu-16.04-ansible][]       | [diodonfrost/ubuntu-16.04-ansible][]       |
-| [Ubuntu 14.04][Ubuntu]        | [ubuntu-14.04-ansible][]       | [diodonfrost/ubuntu-14.04-ansible][]       |
-| [Ubuntu 12.04][Ubuntu]        | [ubuntu-12.04-ansible][]       | [diodonfrost/ubuntu-12.04-ansible][]       |
-| [Debian 10][Debian]           | [debian-10-ansible][]          | [diodonfrost/debian-10-ansible][]          |
-| [Debian 9][Debian]            | [debian-9-ansible][]           | [diodonfrost/debian-9-ansible][]           |
-| [Debian 8][Debian]            | [debian-8-ansible][]           | [diodonfrost/debian-8-ansible][]           |
-| [Debian 7][Debian]            | [debian-7-ansible][]           | [diodonfrost/debian-7-ansible][]           |
-| [Elementary juno][Elementary] | [elementary-juno-ansible][]    | [diodonfrost/elementary-juno-ansible][]    |
-| [Oraclelinux 8][Oraclelinux]  | [oraclelinux-8-ansible][]      | [diodonfrost/oraclelinux-8-ansible][]      |
-| [Oraclelinux 7][Oraclelinux]  | [oraclelinux-7-ansible][]      | [diodonfrost/oraclelinux-7-ansible][]      |
-| [Oraclelinux 6][Oraclelinux]  | [oraclelinux-6-ansible][]      | [diodonfrost/oraclelinux-6-ansible][]      |
-| [Amazonlinux 2][Amazonlinux]  | [amazonlinux-2-ansible][]      | [diodonfrost/amazonlinux-2-ansible][]      |
-| [Amazonlinux 1][Amazonlinux]  | [amazonlinux-1-ansible][]      | [diodonfrost/amazonlinux-1-ansible][]      |
-| [Opensuse leap][Opensuse]     | [opensuse-leap-ansible][]      | [diodonfrost/opensuse-leap-ansible][]      |
-| [Opensuse 15.1][Opensuse]     | [opensuse-15.1-ansible][]      | [diodonfrost/opensuse-15.1-ansible][]      |
-| [Opensuse 15][Opensuse]       | [opensuse-15-ansible][]        | [diodonfrost/opensuse-15-ansible][]        |
-| [Opensuse 42.3][Opensuse]     | [opensuse-42.3-ansible][]      | [diodonfrost/opensuse-42.3-ansible][]      |
-| [Opensuse 42.2][Opensuse]     | [opensuse-42.2-ansible][]      | [diodonfrost/opensuse-42.2-ansible][]      |
-| [Opensuse 13.2][Opensuse]     | [opensuse-13.2-ansible][]      | [diodonfrost/opensuse-13.2-ansible][]      |
-| [Alpine][Alpine]              | [alpine-rolling-ansible][]     | [diodonfrost/alpine-rolling-ansible][]     |
-| [Archlinux][Archlinux]        | [archlinux-rolling-ansible][]  | [diodonfrost/archlinux-rolling-ansible][]  |
-| [Gentoo stage3][Gentoo]       | [gentoo-stage3-ansible][]      | [diodonfrost/gentoo-stage3-ansible][]      |
-| [Clearlinux][Clearlinux]      | [clearlinux-rolling-ansible][] | [diodonfrost/clearlinux-rolling-ansible][] |
-| [Pureos][Pureos]              | [pureos-byzantium-ansible][]   | [diodonfrost/pureos-byzantium-ansible][]   |
+| Base operating system           | Github                          | Docker Hub                                  |
+| ------------------------------- | ------------------------------- | ------------------------------------------- |
+| [CentOS 8][CentOS]              | [centos-8-ansible][]            | [diodonfrost/centos-8-ansible][]            |
+| [CentOS 7][CentOS]              | [centos-7-ansible][]            | [diodonfrost/centos-7-ansible][]            |
+| [CentOS 6][CentOS]              | [centos-6-ansible][]            | [diodonfrost/centos-6-ansible][]            |
+| [Fedora 33][Fedora]             | [fedora-33-ansible][]           | [diodonfrost/fedora-33-ansible][]           |
+| [Fedora 32][Fedora]             | [fedora-32-ansible][]           | [diodonfrost/fedora-32-ansible][]           |
+| [Fedora 31][Fedora]             | [fedora-31-ansible][]           | [diodonfrost/fedora-31-ansible][]           |
+| [Fedora 30][Fedora]             | [fedora-30-ansible][]           | [diodonfrost/fedora-30-ansible][]           |
+| [Fedora 29][Fedora]             | [fedora-29-ansible][]           | [diodonfrost/fedora-29-ansible][]           |
+| [Fedora 28][Fedora]             | [fedora-28-ansible][]           | [diodonfrost/fedora-28-ansible][]           |
+| [Fedora 27][Fedora]             | [fedora-27-ansible][]           | [diodonfrost/fedora-27-ansible][]           |
+| [Fedora 26][Fedora]             | [fedora-26-ansible][]           | [diodonfrost/fedora-26-ansible][]           |
+| [Ubuntu 20.04][Ubuntu]          | [ubuntu-20.04-ansible][]        | [diodonfrost/ubuntu-20.04-ansible][]        |
+| [Ubuntu 19.04][Ubuntu]          | [ubuntu-19.04-ansible][]        | [diodonfrost/ubuntu-19.04-ansible][]        |
+| [Ubuntu 18.04][Ubuntu]          | [ubuntu-18.04-ansible][]        | [diodonfrost/ubuntu-18.04-ansible][]        |
+| [Ubuntu 17.10][Ubuntu]          | [ubuntu-17.10-ansible][]        | [diodonfrost/ubuntu-17.10-ansible][]        |
+| [Ubuntu 16.04][Ubuntu]          | [ubuntu-16.04-ansible][]        | [diodonfrost/ubuntu-16.04-ansible][]        |
+| [Ubuntu 14.04][Ubuntu]          | [ubuntu-14.04-ansible][]        | [diodonfrost/ubuntu-14.04-ansible][]        |
+| [Ubuntu 12.04][Ubuntu]          | [ubuntu-12.04-ansible][]        | [diodonfrost/ubuntu-12.04-ansible][]        |
+| [Debian 10][Debian]             | [debian-10-ansible][]           | [diodonfrost/debian-10-ansible][]           |
+| [Debian 9][Debian]              | [debian-9-ansible][]            | [diodonfrost/debian-9-ansible][]            |
+| [Debian 8][Debian]              | [debian-8-ansible][]            | [diodonfrost/debian-8-ansible][]            |
+| [Debian 7][Debian]              | [debian-7-ansible][]            | [diodonfrost/debian-7-ansible][]            |
+| [Elementary juno][Elementary]   | [elementary-juno-ansible][]     | [diodonfrost/elementary-juno-ansible][]     |
+| [Oraclelinux 8][Oraclelinux]    | [oraclelinux-8-ansible][]       | [diodonfrost/oraclelinux-8-ansible][]       |
+| [Oraclelinux 7][Oraclelinux]    | [oraclelinux-7-ansible][]       | [diodonfrost/oraclelinux-7-ansible][]       |
+| [Oraclelinux 6][Oraclelinux]    | [oraclelinux-6-ansible][]       | [diodonfrost/oraclelinux-6-ansible][]       |
+| [Amazonlinux 2][Amazonlinux]    | [amazonlinux-2-ansible][]       | [diodonfrost/amazonlinux-2-ansible][]       |
+| [Amazonlinux 1][Amazonlinux]    | [amazonlinux-1-ansible][]       | [diodonfrost/amazonlinux-1-ansible][]       |
+| [Opensuse tumbleweed][Opensuse] | [opensuse-tumbleweed-ansible][] | [diodonfrost/opensuse-tumbleweed-ansible][] |
+| [Opensuse leap][Opensuse]       | [opensuse-leap-ansible][]       | [diodonfrost/opensuse-leap-ansible][]       |
+| [Opensuse 15.1][Opensuse]       | [opensuse-15.1-ansible][]       | [diodonfrost/opensuse-15.1-ansible][]       |
+| [Opensuse 15][Opensuse]         | [opensuse-15-ansible][]         | [diodonfrost/opensuse-15-ansible][]         |
+| [Opensuse 42.3][Opensuse]       | [opensuse-42.3-ansible][]       | [diodonfrost/opensuse-42.3-ansible][]       |
+| [Opensuse 42.2][Opensuse]       | [opensuse-42.2-ansible][]       | [diodonfrost/opensuse-42.2-ansible][]       |
+| [Opensuse 13.2][Opensuse]       | [opensuse-13.2-ansible][]       | [diodonfrost/opensuse-13.2-ansible][]       |
+| [Alpine][Alpine]                | [alpine-rolling-ansible][]      | [diodonfrost/alpine-rolling-ansible][]      |
+| [Archlinux][Archlinux]          | [archlinux-rolling-ansible][]   | [diodonfrost/archlinux-rolling-ansible][]   |
+| [Gentoo stage3][Gentoo]         | [gentoo-stage3-ansible][]       | [diodonfrost/gentoo-stage3-ansible][]       |
+| [Clearlinux][Clearlinux]        | [clearlinux-rolling-ansible][]  | [diodonfrost/clearlinux-rolling-ansible][]  |
+| [Pureos][Pureos]                | [pureos-byzantium-ansible][]    | [diodonfrost/pureos-byzantium-ansible][]    |
 
 [Centos]: https://hub.docker.com/_/centos/
 [Fedora]: https://hub.docker.com/_/fedora/
@@ -93,6 +94,7 @@ Provides docker containers use for testing ansible role on some operating system
 [oraclelinux-6-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-6-ansible/Dockerfile.oraclelinux-6
 [amazonlinux-2-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/amazonlinux-2-ansible/Dockerfile.amazonlinux-2
 [amazonlinux-1-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/amazonlinux-1-ansible/Dockerfile.amazonlinux-1
+[opensuse-tumbleweed-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-tumbleweed-ansible/Dockerfile.opensuse-tumbleweed
 [opensuse-leap-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-leap-ansible/Dockerfile.opensuse-leap
 [opensuse-15.1-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-15.1-ansible/Dockerfile.opensuse-15.1
 [opensuse-15-ansible]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-15-ansible/Dockerfile.opensuse-15
@@ -133,6 +135,7 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/oraclelinux-6-ansible]: https://hub.docker.com/r/diodonfrost/oraclelinux-6-ansible
 [diodonfrost/amazonlinux-2-ansible]: https://hub.docker.com/r/diodonfrost/amazonlinux-2-ansible
 [diodonfrost/amazonlinux-1-ansible]: https://hub.docker.com/r/diodonfrost/oraclelinux-1-ansible
+[diodonfrost/opensuse-tumbleweed-ansible]: https://hub.docker.com/r/diodonfrost/opensuse-tumbleweed-ansible
 [diodonfrost/opensuse-leap-ansible]: https://hub.docker.com/r/diodonfrost/opensuse-leap-ansible
 [diodonfrost/opensuse-15.1-ansible]: https://hub.docker.com/r/diodonfrost/opensuse-15.1-ansible
 [diodonfrost/opensuse-15-ansible]: https://hub.docker.com/r/diodonfrost/opensuse-15-ansible
