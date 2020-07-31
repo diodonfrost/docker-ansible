@@ -63,6 +63,8 @@ jobs:
             version: "42.3"
           - image: opensuse
             version: "leap"
+          - image: opensuse
+            version: "tumbleweed"
           - image: oraclelinux
             version: "6"
           - image: oraclelinux
