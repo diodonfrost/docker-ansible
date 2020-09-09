@@ -71,8 +71,6 @@ jobs:
             version: "7"
           - image: oraclelinux
             version: "8"
-          - image: pureos
-            version: "byzantium"
           - image: ubuntu
             version: "12.04"
           - image: ubuntu
