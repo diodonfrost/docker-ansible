@@ -14,6 +14,16 @@ RUN apt-add-repository -y ppa:ansible/ansible && apt-get update && apt-get insta
     sudo \
     && rm -rf /var/lib/apt/lists/*
 
+# Install python ssl packages to perform SNI verification in python >= 2.6
+RUN apt-get update && apt-get install -y \
+    python-pip \
+    python-openssl \
+    python-urllib3 \
+    python-pyasn1 \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install setuptools==40.0 && pip install ndg-httpsclient
+
 RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
 ENTRYPOINT ["/sbin/init"]

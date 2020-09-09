@@ -15,6 +15,9 @@ RUN yum -y install \
            rsync \
            && yum clean all
 
+# Install python ssl packages to perform SNI verification in python >= 2.6
+RUN yum -y install pyOpenSSL python-urllib3 python2-ndg_httpsclient python-pyasn1 && yum clean all
+
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
 RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
