@@ -2,7 +2,7 @@ FROM alpine:latest
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 # Install Ansible
-RUN apk add --no-cache git ansible sudo openssh unzip tar rsync
+RUN apk add --no-cache git ansible sudo openssh unzip tar rsync libc6-compat
 
 VOLUME ["/sys/fs/cgroup"]
 
