@@ -5,7 +5,7 @@ RUN mkdir -p /etc/systemd/system && \
     ln -s /dev/null /etc/systemd/system/swupd-update.service && \
     ln -s /dev/null /etc/systemd/system/swupd-update.timer 
 
-RUN swupd bundle-add ansible unzip rsync && swupd clean
+RUN swupd bundle-add ansible unzip rsync sudo && swupd clean
 
 RUN mkdir -p /etc/ansible && \
     echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
