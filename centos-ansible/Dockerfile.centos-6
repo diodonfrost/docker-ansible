@@ -2,7 +2,16 @@ FROM centos:6
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 RUN yum -y install epel-release && yum clean all
-RUN yum -y install git ansible sudo openssh-server openssh-clients unzip rsync && yum clean all
+RUN yum -y install \
+           git \
+           ansible \
+           sudo \
+           openssh-server \
+           openssh-clients \
+           unzip \
+           rsync \
+           which \
+           && yum clean all
 
 # Install python ssl packages to perform SNI verification in python >= 2.6
 RUN yum -y install pyOpenSSL python-urllib3 python2-ndg_httpsclient python-pyasn1 && yum clean all
