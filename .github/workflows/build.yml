@@ -54,6 +54,8 @@ jobs:
             version: "32"
           - image: fedora
             version: "33"
+          - image: fedora
+            version: "34"
           - image: opensuse
             version: "15"
           - image: opensuse
