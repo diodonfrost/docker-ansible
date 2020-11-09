@@ -5,6 +5,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [3.2.0] - 2020-10-09
+### Bug Fixes
+
+* **clearlinux:** install sudo ([356e55c](https://github.com/diodonfrost/docker-ansible/commit/356e55cf745ec959adfaf901608d7b80ea4c0bc7))
+
+### Features
+
+* **fedora:** add fedora 34 support ([51ac088](https://github.com/diodonfrost/docker-ansible/commit/51ac08830a479d03f7a1ec89ab2fa5fb0ca0aa17))
+* **github-registry:** push image to github registry ([b507f52](https://github.com/diodonfrost/docker-ansible/commit/b507f5232690ecb7bd499bd39287f90576bc549d))
+* **redhat:** install which package on redhat system image ([938d0dd](https://github.com/diodonfrost/docker-ansible/commit/938d0dd53bcb7f2e45abc6a24d6bbaf6c57fb9f0))
+
+## [3.1.0] - 2020-08-01
+### Features
+- Opensuse leap support
+- Opensuse tumbleweed support
+
 ## [3.0.0] - 2020-07-28
 ### BREAKING CHANGES
 - Reworking full directory structure
@@ -123,7 +139,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/3.0.0...HEAD
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/3.2.0...HEAD
+[3.2.0]: https://github.com/diodonfrost/docker-ansible/compare/3.1.0...3.2.0
+[3.1.0]: https://github.com/diodonfrost/docker-ansible/compare/3.0.0...3.1.0
 [3.0.0]: https://github.com/diodonfrost/docker-ansible/compare/2.5.0...3.0.0
 [2.5.0]: https://github.com/diodonfrost/docker-ansible/compare/2.4.0...2.5.0
 [2.4.0]: https://github.com/diodonfrost/docker-ansible/compare/2.3.0...2.4.0
