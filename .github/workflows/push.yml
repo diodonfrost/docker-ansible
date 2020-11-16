@@ -92,12 +92,12 @@ jobs:
         run: curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec -v 4.18.51
 
       - name: Build Docker image
-        run: docker build --no-cache --rm --file=${{ matrix.distribution.image }}-ansible/Dockerfile.${{ matrix.distribution.image }}-${{ matrix.distribution.version }} --tag=diodonfrost/${{ matrix.distribution.image }}-${{ matrix.distribution.version }}-ansible:latest ${{ matrix.distribution.image }}-ansible
+        run: docker build --no-cache --rm --file=${{ matrix.distribution.image }}-ansible/Dockerfile.${{ matrix.distribution.image }}-${{ matrix.distribution.version }} --tag=diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} ${{ matrix.distribution.image }}-ansible
 
       - name: Test Docker image
         run: |
           container_id=$(mktemp)
-          sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro diodonfrost/${{ matrix.distribution.image }}-${{ matrix.distribution.version }}-ansible:latest > "${container_id}"
+          sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} > "${container_id}"
 
           inspec exec tests/inspec --chef-license accept-silent -t docker://$(cat ${container_id})
 
@@ -107,7 +107,7 @@ jobs:
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
           # Pushing image to dockerhub
-          docker push diodonfrost/${{ matrix.distribution.image }}-${{ matrix.distribution.version }}-ansible:latest
+          docker push diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }}
 
       - name: Push Docker image to Github Docker registry
         run: |
@@ -115,5 +115,5 @@ jobs:
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u diodonfrost --password-stdin
 
           # Pushing image to Github Docker registry
-          docker tag diodonfrost/${{ matrix.distribution.image }}-${{ matrix.distribution.version }}-ansible:latest docker.pkg.github.com/diodonfrost/docker-ansible/${{ matrix.distribution.image }}-${{ matrix.distribution.version }}-ansible:latest
-          docker push docker.pkg.github.com/diodonfrost/docker-ansible/${{ matrix.distribution.image }}-${{ matrix.distribution.version }}-ansible:latest
+          docker tag diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} docker.pkg.github.com/diodonfrost/docker-ansible/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }}
+          docker push docker.pkg.github.com/diodonfrost/docker-ansible/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }}
