@@ -5,6 +5,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [ 4.0.0] - 2020-11-17
+### BREAKING CHANGES
+
+* **docker:** change docker image name structure ([65134b4](https://github.com/diodonfrost/docker-ansible/commit/65134b4cf12bd3093b06e13d761c25e067feb06e))
+* **docker:** replace the version name rolling by latest ([ed8bea2](https://github.com/diodonfrost/docker-ansible/commit/ed8bea2e2730d1d439165f2db685fbeb0248f14d))
+
+### Bug Fixes
+
+* **readme.md:** fix github link ([3deae23](https://github.com/diodonfrost/docker-ansible/commit/3deae238a1f847a3be46962db2315ff82d379241))
+
 ## [3.2.0] - 2020-10-09
 ### Bug Fixes
 
@@ -139,7 +149,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/3.2.0...HEAD
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.0.0...HEAD
+[4.0.0]: https://github.com/diodonfrost/docker-ansible/compare/3.2.0...4.0.0
 [3.2.0]: https://github.com/diodonfrost/docker-ansible/compare/3.1.0...3.2.0
 [3.1.0]: https://github.com/diodonfrost/docker-ansible/compare/3.0.0...3.1.0
 [3.0.0]: https://github.com/diodonfrost/docker-ansible/compare/2.5.0...3.0.0
