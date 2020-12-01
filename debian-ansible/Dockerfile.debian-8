@@ -2,7 +2,8 @@ FROM debian:8
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
-    software-properties-common \
+    python \
+    python-pip \
     git \
     gnupg2 \
     dirmngr \
