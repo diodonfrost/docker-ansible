@@ -1,6 +1,10 @@
 FROM centos:6
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
+# Use CentOS archive repository
+RUN rm -f /etc/yum.repos.d/*
+COPY ./centos-6-vault-repos/CentOS-Vault.repo /etc/yum.repos.d/CentOS-Vault.repo
+
 RUN yum -y install epel-release && yum clean all
 RUN yum -y install \
            git \
