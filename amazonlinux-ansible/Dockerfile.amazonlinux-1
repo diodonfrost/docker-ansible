@@ -2,7 +2,7 @@ FROM amazonlinux:1
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 # Install Ansible and other requirements.
-RUN rpm -ihv http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+RUN rpm -ihv https://archives.fedoraproject.org/pub/archive/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
 RUN yum makecache fast && \
     yum -y install deltarpm && \
