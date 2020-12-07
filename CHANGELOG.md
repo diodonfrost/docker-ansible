@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [ 4.0.1] - 2020-12-7
+### Bug Fixes
+
+* **centos-6:** use centos vault repository ([5fccca9](https://github.com/diodonfrost/docker-ansible/commit/5fccca9cd7165734a2caa7b4e5adc2eb96b53013))
+* **debian-8:** use only python 2.7 ([e7347fe](https://github.com/diodonfrost/docker-ansible/commit/e7347fe76a7a5d5cdccf590c5dae3c7e7cd3c101))
+* **redhat-family:** update epel repos url ([90005dc](https://github.com/diodonfrost/docker-ansible/commit/90005dc7c493055703a7dbf410267d902bba7ce3))
+
 ## [ 4.0.0] - 2020-11-17
 ### BREAKING CHANGES
 
@@ -149,7 +156,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.0.0...HEAD
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.0.1...HEAD
+[4.0.1]: https://github.com/diodonfrost/docker-ansible/compare/4.0.0...4.0.1
 [4.0.0]: https://github.com/diodonfrost/docker-ansible/compare/3.2.0...4.0.0
 [3.2.0]: https://github.com/diodonfrost/docker-ansible/compare/3.1.0...3.2.0
 [3.1.0]: https://github.com/diodonfrost/docker-ansible/compare/3.0.0...3.1.0
