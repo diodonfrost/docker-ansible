@@ -37,6 +37,8 @@ jobs:
             version: "9"
           - image: debian
             version: "10"
+          - image: debian
+            version: "testing"
           - image: elementary
             version: "juno"
           - image: fedora
