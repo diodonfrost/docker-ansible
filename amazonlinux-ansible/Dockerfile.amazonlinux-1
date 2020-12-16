@@ -1,17 +1,26 @@
 FROM amazonlinux:1
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
-# Install Ansible and other requirements.
-RUN rpm -ihv https://archives.fedoraproject.org/pub/archive/epel/6/x86_64/epel-release-6-8.noarch.rpm
-
 RUN yum makecache fast && \
     yum -y install deltarpm && \
     yum -y update && \
-    yum -y install ansible sysvinit initscripts openssh-server openssh-clients unzip tar rsync sudo which --enablerepo=epel && \
+    yum -y install \
+    python36-pip \
+    sysvinit initscripts \
+    openssh-server \
+    openssh-clients \
+    unzip \
+    tar \
+    rsync \
+    sudo \
+    which && \
     yum clean metadata && \
     yum clean all
 
+RUN python3 -m pip install ansible
+
 # Install Ansible inventory file.
-RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+RUN mkdir /etc/ansible && \
+    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
 ENTRYPOINT ["/sbin/init"]
