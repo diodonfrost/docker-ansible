@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [4.2.0] - 2020-12-16
+### Features
+
+* **redhat-system:** removing epel repository ([4b87e4f](https://github.com/diodonfrost/docker-ansible/commit/4b87e4f36bed406cd232ddb0e82e4fe8a0bee8c5))
+
 ## [4.1.0] - 2020-12-12
 ### Features
 
@@ -161,7 +166,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.1.0...HEAD
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.2.0...HEAD
+[4.2.0]: https://github.com/diodonfrost/docker-ansible/compare/4.1.0...4.2.0
 [4.1.0]: https://github.com/diodonfrost/docker-ansible/compare/4.0.1...4.1.0
 [4.0.1]: https://github.com/diodonfrost/docker-ansible/compare/4.0.0...4.0.1
 [4.0.0]: https://github.com/diodonfrost/docker-ansible/compare/3.2.0...4.0.0
