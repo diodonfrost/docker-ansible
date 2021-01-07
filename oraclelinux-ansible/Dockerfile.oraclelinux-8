@@ -1,7 +1,16 @@
 FROM oraclelinux:8
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
-RUN dnf -y update && dnf install -y systemd-239-13.0.1.el8.x86_64 && dnf clean all
+# Systemd install
+RUN dnf -y update && dnf clean all; \
+(cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done); \
+rm -f /lib/systemd/system/multi-user.target.wants/*; \
+rm -f /etc/systemd/system/*.wants/*; \
+rm -f /lib/systemd/system/local-fs.target.wants/*; \
+rm -f /lib/systemd/system/sockets.target.wants/*udev*; \
+rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
+rm -f /lib/systemd/system/basic.target.wants/*; \
+rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 RUN dnf -y install \
            git \
@@ -25,4 +34,4 @@ RUN mkdir /etc/ansible && echo -e '[local]\nlocalhost ansible_connection=local' 
 
 VOLUME ["/sys/fs/cgroup"]
 
-ENTRYPOINT ["/usr/lib/systemd/systemd"]
+ENTRYPOINT ["/usr/sbin/init"]
