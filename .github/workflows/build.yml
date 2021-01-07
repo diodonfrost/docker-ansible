@@ -16,74 +16,109 @@ jobs:
         distribution:
           - image: alpine
             version: "latest"
+            platform: "linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8"
           - image: amazonlinux
             version: "1"
+            platform: "linux/amd64"
           - image: amazonlinux
             version: "2"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: archlinux
             version: "latest"
+            platform: "linux/amd64"
           - image: centos
             version: "6"
+            platform: "linux/amd64"
           - image: centos
             version: "7"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: centos
             version: "8"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: clearlinux
             version: "latest"
+            platform: "linux/amd64"
           - image: debian
             version: "8"
+            platform: "linux/386,linux/amd64,linux/arm/v7"
           - image: debian
             version: "9"
+            platform: "linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8"
           - image: debian
             version: "10"
+            platform: "linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8"
           - image: debian
             version: "testing"
+            platform: "linux/amd64"
           - image: elementary
             version: "juno"
+            platform: "linux/amd64"
           - image: fedora
             version: "26"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: fedora
             version: "27"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: fedora
             version: "28"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: fedora
             version: "29"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: fedora
             version: "30"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: fedora
             version: "31"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: fedora
             version: "32"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: fedora
             version: "33"
+            platform: "linux/amd64"
           - image: fedora
             version: "34"
+            platform: "linux/amd64"
           - image: opensuse
             version: "15"
+            platform: "linux/amd64"
           - image: opensuse
             version: "15.1"
+            platform: "linux/amd64"
           - image: opensuse
             version: "42.3"
+            platform: "linux/amd64"
           - image: opensuse
             version: "leap"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: opensuse
             version: "tumbleweed"
+            platform: "linux/amd64"
           - image: oraclelinux
             version: "6"
+            platform: "linux/amd64"
           - image: oraclelinux
             version: "7"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: oraclelinux
             version: "8"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: ubuntu
             version: "12.04"
+            platform: "linux/amd64"
           - image: ubuntu
             version: "14.04"
+            platform: "linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8"
           - image: ubuntu
             version: "16.04"
+            platform: "linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8"
           - image: ubuntu
             version: "18.04"
+            platform: "linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8"
           - image: ubuntu
             version: "20.04"
+            platform: "linux/amd64,linux/arm/v7,linux/arm64/v8"
 
     steps:
       - name: Checkout repository
@@ -92,12 +127,36 @@ jobs:
       - name: Install Inspec
         run: curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec -v 4.24.8
 
-      - name: Build Docker image
-        run: docker build --no-cache --rm --file=${{ matrix.distribution.image }}-ansible/Dockerfile.${{ matrix.distribution.image }}-${{ matrix.distribution.version }} --tag=diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} ${{ matrix.distribution.image }}-ansible
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
 
-      - name: Test Docker image
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Build Docker images
+        run: |
+          docker build \
+            --no-cache \
+            --rm \
+            --file=${{ matrix.distribution.image }}-ansible/Dockerfile.${{ matrix.distribution.image }}-${{ matrix.distribution.version }} \
+            --tag=diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} \
+            ${{ matrix.distribution.image }}-ansible
+
+      - name: Test Docker images
         run: |
           container_id=$(mktemp)
-          sudo docker run --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} > "${container_id}"
+          sudo docker run \
+            --detach \
+            --privileged \
+            -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+            diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} > "${container_id}"
 
           inspec exec tests/inspec --chef-license accept-silent -t docker://$(cat ${container_id})
+
+      - name: Build Docker images on all platforms
+        run: |
+          docker buildx build \
+            --platform ${{ matrix.distribution.platform }} \
+            --file=${{ matrix.distribution.image }}-ansible/Dockerfile.${{ matrix.distribution.image }}-${{ matrix.distribution.version }} \
+            --tag=diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} \
+            ${{ matrix.distribution.image }}-ansible
