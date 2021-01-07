@@ -171,11 +171,6 @@ jobs:
         run: |
           # Login on Github Docker registry before pushing
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u diodonfrost --password-stdin
-
           # Pushing image to Github Docker registry
-          docker buildx build \
-            --push \
-            --platform ${{ matrix.distribution.platform }} \
-            --file=${{ matrix.distribution.image }}-ansible/Dockerfile.${{ matrix.distribution.image }}-${{ matrix.distribution.version }} \
-            --tag=docker.pkg.github.com/diodonfrost/docker-ansible/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} \
-            ${{ matrix.distribution.image }}-ansible
+          docker tag diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} docker.pkg.github.com/diodonfrost/docker-ansible/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }}
+          docker push docker.pkg.github.com/diodonfrost/docker-ansible/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }}
