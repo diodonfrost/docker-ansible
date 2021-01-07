@@ -26,7 +26,8 @@ RUN dnf -y install \
            && dnf clean all
 
 RUN alternatives --set python /usr/bin/python3
-RUN python3 -m pip install ansible
+RUN python3 -m pip install --upgrade pip && \
+    python3 -m pip install ansible
 RUN ln -s /usr/local/bin/ansible* /usr/bin/
 
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers

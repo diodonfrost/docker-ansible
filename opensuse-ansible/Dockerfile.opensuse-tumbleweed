@@ -16,7 +16,8 @@ rm -f /usr/lib/systemd/system/anaconda.target.wants/*;
 # Install ansible
 RUN zypper -n install git sudo python3-pip openssh curl tar unzip busybox-gzip rsync; zypper clean
 
-RUN python3 -m pip install ansible
+RUN python3 -m pip install --upgrade pip && \
+    python3 -m pip install ansible
 
 VOLUME [ "/sys/fs/cgroup" ]
 
