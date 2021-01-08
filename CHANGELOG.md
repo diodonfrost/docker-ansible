@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [4.3.0] - 2020-01-08
+### Features
+
+* **docker:** support arm architecture ([453b9ea](https://github.com/diodonfrost/docker-ansible/commit/453b9ead00d10ab4bd2a11d7e3312d52f6ed5da4))
+* **redhat-8:** removing initscripts install ([975387b](https://github.com/diodonfrost/docker-ansible/commit/975387be59fa7e968c56bd3a5d522cba9c6d22bd))
+* **redhat-system:** upgrade python-pip ([b675ced](https://github.com/diodonfrost/docker-ansible/commit/b675ced60ab93d719998ffcbe14b5b38f2ab57ae))
+
 ## [4.2.0] - 2020-12-16
 ### Features
 
@@ -166,7 +173,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.2.0...HEAD
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.3.0...HEAD
+[4.3.0]: https://github.com/diodonfrost/docker-ansible/compare/4.1.2...4.3.0
 [4.2.0]: https://github.com/diodonfrost/docker-ansible/compare/4.1.0...4.2.0
 [4.1.0]: https://github.com/diodonfrost/docker-ansible/compare/4.0.1...4.1.0
 [4.0.1]: https://github.com/diodonfrost/docker-ansible/compare/4.0.0...4.0.1
