@@ -1,30 +1,35 @@
-FROM gentoo/stage3-amd64:latest
+FROM gentoo/stage3:nomultilib
+
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
-# Install systemd
-RUN emerge-webrsync && \
-    mkdir /etc/portage/package.mask && \
-    echo ">=sys-apps/dbus-1.10.12 -systemd" > /etc/portage/package.use/iputils && \
-    echo "sys-libs/pam" > /etc/portage/package.mask/pam && \
-    emerge app-portage/eix && \
-    touch /var/cache/eix/portage.eix && chown portage:portage /var/cache/eix/portage.eix && eix-update && \
-    emerge app-portage/gentoolkit && \
-    emerge net-misc/rsync && \
-    rm -rf /usr/portage/*
+ARG FEATURES="-ipc-sandbox -network-sandbox -pid-sandbox"
 
-# Install ansible
+# update portage tree
 RUN emerge-webrsync && \
-    echo 'USE=-bindist' >> /etc/portage/make.conf && \
+    echo 'USE="-bindist -systemd"' >> /etc/portage/make.conf && \
+    echo 'MAKEOPTS="-j4"' >> /etc/portage/make.conf && \
+    echo 'EMERGE_DEFAULT_OPTS="--jobs=4"' >> /etc/portage/make.conf && \
     echo 'dev-lang/python sqlite' >> /etc/portage/package.use/python && \
     echo 'net-libs/zeromq drafts' >> /etc/portage/package.use/zeromq && \
-    emerge \
+    emerge --quiet --sync && \
+# remove setuptools and certifi, otherwise they will generate errors
+    emerge --quiet --unmerge dev-python/setuptools dev-python/certifi && \
+    emerge --quiet --oneshot sys-apps/portage && \
+# install eix
+    emerge --quiet app-portage/eix && \
+    touch /var/cache/eix/portage.eix && chown portage:portage /var/cache/eix/portage.eix && eix-update && \
+# install ansible and some tools
+    emerge --quiet \
+        app-portage/gentoolkit \
+        net-misc/rsync \
         net-misc/openssh \
         app-admin/sudo \
         app-admin/ansible && \
-    rm -rf /usr/portage/*
-
+    rm -rf \
+        /tmp/* \
+        /usr/portage/* && \
 # Create ansible directory
-RUN mkdir -p /etc/ansible && \
+    mkdir -p /etc/ansible && \
     echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
 
