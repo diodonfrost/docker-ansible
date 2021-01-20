@@ -13,11 +13,11 @@ RUN emerge-webrsync && \
     echo 'net-libs/zeromq drafts' >> /etc/portage/package.use/zeromq && \
     emerge --quiet --sync && \
 # remove setuptools and certifi, otherwise they will generate errors
-    emerge --quiet --unmerge dev-python/setuptools dev-python/certifi && \
+    emerge --quiet --unmerge \
+        dev-python/setuptools \
+        dev-python/certifi && \
+# reinstall portage if an update available
     emerge --quiet --oneshot sys-apps/portage && \
-# install eix
-    emerge --quiet app-portage/eix && \
-    touch /var/cache/eix/portage.eix && chown portage:portage /var/cache/eix/portage.eix && eix-update && \
 # install ansible and some tools
     emerge --quiet \
         app-portage/gentoolkit \
@@ -37,4 +37,4 @@ RUN emerge-webrsync && \
 
 VOLUME ["/sys/fs/cgroup"]
 
-# ENTRYPOINT ["/sbin/init"]
+ENTRYPOINT ["/sbin/init"]
