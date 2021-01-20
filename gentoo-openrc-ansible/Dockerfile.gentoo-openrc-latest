@@ -25,15 +25,16 @@ RUN emerge-webrsync && \
         net-misc/openssh \
         app-admin/sudo \
         app-admin/ansible && \
+# Create ansible directory
+    mkdir -p /etc/ansible && \
+    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts && \
+# cleanup
     rm -rf \
         /tmp/* \
         /usr/portage/* && \
-# Create ansible directory
-    mkdir -p /etc/ansible && \
-    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
-
+        /usr/bin/find \
+            /usr/lib/ -type d -name __pycache__ -exec rm -rf {} 2> /dev/null \; || true
 
 VOLUME ["/sys/fs/cgroup"]
 
-ENTRYPOINT ["/sbin/init"]
-
+# ENTRYPOINT ["/sbin/init"]
