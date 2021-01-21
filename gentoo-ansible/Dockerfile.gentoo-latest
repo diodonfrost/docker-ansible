@@ -1,30 +1,39 @@
-FROM gentoo/stage3-amd64:latest
+FROM gentoo/stage3:amd64-systemd
+
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
-# Install systemd
-RUN emerge-webrsync && \
-    emerge --quiet --unmerge sys-fs/eudev && \
-    mkdir /etc/portage/package.mask && \
-    echo ">=sys-apps/dbus-1.10.12 systemd" > /etc/portage/package.use/iputils && \
-    echo "sys-libs/pam" > /etc/portage/package.mask/pam && \
-    emerge --quiet --pretend --tree sys-apps/systemd && \
-    emerge sys-apps/systemd && \
-    emerge --quiet app-portage/eix && \
-    touch /var/cache/eix/portage.eix && chown portage:portage /var/cache/eix/portage.eix && eix-update && \
-    emerge --quiet app-portage/gentoolkit && \
-    emerge --quiet net-misc/rsync && \
-    rm -rf /usr/portage/*
+ARG FEATURES="-ipc-sandbox -network-sandbox -pid-sandbox"
 
-# Install ansible
-RUN emerge-webrsync && \
-    echo 'USE=-bindist' >> /etc/portage/make.conf && \
+# update portage tree
+RUN \
+    emerge-webrsync && \
+    echo 'USE="-bindist"' >> /etc/portage/make.conf && \
+    echo 'MAKEOPTS="-j4"' >> /etc/portage/make.conf && \
+    echo 'EMERGE_DEFAULT_OPTS="--jobs=4"' >> /etc/portage/make.conf && \
     echo 'dev-lang/python sqlite' >> /etc/portage/package.use/python && \
     echo 'net-libs/zeromq drafts' >> /etc/portage/package.use/zeromq && \
-    emerge --quiet net-misc/openssh app-admin/sudo app-admin/ansible && \
-    rm -rf /usr/portage/*
-
+    emerge --quiet --sync && \
+# remove setuptools and certifi, otherwise they will generate errors
+    emerge --quiet --unmerge \
+        dev-python/setuptools \
+        dev-python/certifi && \
+# reinstall portage if an update available
+    emerge --quiet --oneshot sys-apps/portage && \
+# install ansible and some tools
+    emerge --quiet \
+        app-portage/gentoolkit \
+        net-misc/rsync \
+        net-misc/openssh \
+        app-admin/sudo \
+        app-admin/ansible && \
 # Create ansible directory
-RUN mkdir -p /etc/ansible && \
-    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+    mkdir -p /etc/ansible && \
+    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts && \
+# cleanup
+    rm -rf \
+        /tmp/* \
+        /usr/portage/* && \
+        /usr/bin/find \
+            /usr/lib/ -type d -name __pycache__ -exec rm -rf {} 2> /dev/null \; || true
 
 ENTRYPOINT ["/usr/lib/systemd/systemd"]
