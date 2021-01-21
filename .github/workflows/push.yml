@@ -161,10 +161,10 @@ jobs:
         run: |
           # Login on Github Docker registry before pushing
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u diodonfrost --password-stdin
+
           # Pushing image to Github Docker registry
           docker tag diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} docker.pkg.github.com/diodonfrost/docker-ansible/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }}
           docker push docker.pkg.github.com/diodonfrost/docker-ansible/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }}
-
 
       - name: Push Docker image to Docker Hub
         run: |
