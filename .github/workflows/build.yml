@@ -29,6 +29,9 @@ jobs:
           - image: archlinux
             version: "latest"
             platform: "linux/amd64"
+          - image: artixlinux
+            version: "latest"
+            platform: "linux/amd64"
           - image: centos
             version: "6"
             platform: "linux/amd64"
