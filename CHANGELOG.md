@@ -5,6 +5,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [4.4.0] - 2020-01-21
+### Bug Fixes
+
+* **archlinux:** reduce size of docker steps ([d4e6f2e](https://github.com/diodonfrost/docker-ansible/commit/d4e6f2e30cbc4cd1a7f470b61ed51a880da1342d))
+
+
+### Features
+
+* **gentoo:** uses gentoo-systemd base image ([9e9dee7](https://github.com/diodonfrost/docker-ansible/commit/9e9dee7e6f4a72fb96b9cf7913ad7beb9891a13d)), closes [#2](https://github.com/diodonfrost/docker-ansible/issues/2) thanks to @bodsch
+
+
 ## [4.3.0] - 2020-01-08
 ### Features
 
@@ -173,8 +184,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.3.0...HEAD
-[4.3.0]: https://github.com/diodonfrost/docker-ansible/compare/4.1.2...4.3.0
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.4.0...HEAD
+[4.4.0]: https://github.com/diodonfrost/docker-ansible/compare/4.3.0...4.4.0
+[4.3.0]: https://github.com/diodonfrost/docker-ansible/compare/4.2.0...4.3.0
 [4.2.0]: https://github.com/diodonfrost/docker-ansible/compare/4.1.0...4.2.0
 [4.1.0]: https://github.com/diodonfrost/docker-ansible/compare/4.0.1...4.1.0
 [4.0.1]: https://github.com/diodonfrost/docker-ansible/compare/4.0.0...4.0.1
