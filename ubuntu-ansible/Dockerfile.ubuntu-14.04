@@ -6,13 +6,22 @@ RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y software-pro
 RUN apt-add-repository -y ppa:ansible/ansible && apt-get update && apt-get install -y \
     git \
     ansible \
+    python-dev \
+    python-pip \
+    python-openssl \
+    python-urllib3 \
+    python-pyasn1 \
     apt-transport-https \
     curl \
     openssh-server openssh-client \
     unzip \
     rsync \
     sudo \
+    wget \
     && rm -rf /var/lib/apt/lists/*
+
+RUN wget http://launchpadlibrarian.net/224464655/python-ndg-httpsclient_0.4.0-3_all.deb && \
+    dpkg -i python-ndg-httpsclient_0.4.0-3_all.deb
 
 RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
