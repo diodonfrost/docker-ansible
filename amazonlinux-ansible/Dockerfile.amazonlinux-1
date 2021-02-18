@@ -17,7 +17,7 @@ RUN yum makecache fast && \
     yum clean metadata && \
     yum clean all
 
-RUN python3 -m pip install ansible
+RUN python3 -m pip install --upgrade pip && python3 -m pip install ansible
 
 # Install Ansible inventory file.
 RUN mkdir /etc/ansible && \
