@@ -1,4 +1,4 @@
-FROM archlinux/base:latest
+FROM archlinux:base-20210131.0.14634
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 RUN pacman --noconfirm -Syu systemd procps; pacman --noconfirm -Scc ;\
