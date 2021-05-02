@@ -14,6 +14,8 @@ Provides docker containers use for testing ansible role on some operating system
 | [CentOS 8][CentOS]              | [ansible-centos:8][]            | [diodonfrost/ansible-centos:8][]            |
 | [CentOS 7][CentOS]              | [ansible-centos:7][]            | [diodonfrost/ansible-centos:7][]            |
 | [CentOS 6][CentOS]              | [ansible-centos:6][]            | [diodonfrost/ansible-centos:6][]            |
+| [Fedora 35][Fedora]             | [ansible-fedora:35][]           | [diodonfrost/ansible-fedora:35][]           |
+| [Fedora 34][Fedora]             | [ansible-fedora:34][]           | [diodonfrost/ansible-fedora:34][]           |
 | [Fedora 33][Fedora]             | [ansible-fedora:33][]           | [diodonfrost/ansible-fedora:33][]           |
 | [Fedora 32][Fedora]             | [ansible-fedora:32][]           | [diodonfrost/ansible-fedora:32][]           |
 | [Fedora 31][Fedora]             | [ansible-fedora:31][]           | [diodonfrost/ansible-fedora:31][]           |
@@ -66,6 +68,8 @@ Provides docker containers use for testing ansible role on some operating system
 [ansible-centos:8]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-8
 [ansible-centos:7]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-7
 [ansible-centos:6]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-6
+[ansible-fedora:35]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-ansible/Dockerfile.fedora-35
+[ansible-fedora:34]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-ansible/Dockerfile.fedora-34
 [ansible-fedora:33]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-ansible/Dockerfile.fedora-33
 [ansible-fedora:32]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-ansible/Dockerfile.fedora-32
 [ansible-fedora:31]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-ansible/Dockerfile.fedora-31
@@ -104,6 +108,8 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/ansible-centos:8]: https://hub.docker.com/r/diodonfrost/ansible-centos
 [diodonfrost/ansible-centos:7]: https://hub.docker.com/r/diodonfrost/ansible-centos
 [diodonfrost/ansible-centos:6]: https://hub.docker.com/r/diodonfrost/ansible-centos
+[diodonfrost/ansible-fedora:35]: https://hub.docker.com/r/diodonfrost/ansible-fedora
+[diodonfrost/ansible-fedora:34]: https://hub.docker.com/r/diodonfrost/ansible-fedora
 [diodonfrost/ansible-fedora:33]: https://hub.docker.com/r/diodonfrost/ansible-fedora
 [diodonfrost/ansible-fedora:32]: https://hub.docker.com/r/diodonfrost/ansible-fedora
 [diodonfrost/ansible-fedora:31]: https://hub.docker.com/r/diodonfrost/ansible-fedora
