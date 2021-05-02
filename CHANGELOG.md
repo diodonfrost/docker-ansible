@@ -5,6 +5,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [4.5.0] - 2020-01-21
+### Bug Fixes
+
+* **amazonlinux-1:** upgrade python pip ([a1d47cf](https://github.com/diodonfrost/docker-ansible/commit/a1d47cfdcc99de32c9e3215901df4544dc31c3eb))
+* **archlinux:** downgrade image version ([fa368c9](https://github.com/diodonfrost/docker-ansible/commit/fa368c950ad144f9af9ebe08ea3de212cff0ef97))
+* **ubuntu-14.04:** support SNI verfication with python 2.7 ([cf57fc6](https://github.com/diodonfrost/docker-ansible/commit/cf57fc6480185e21c449b537fb1e63175000ab98))
+
+
+### Features
+
+* **opensuse:** removing openssh package ([adc043d](https://github.com/diodonfrost/docker-ansible/commit/adc043d1b87c5e380678b42025997db812afeece))
+* **opensuse:tumbleweed:** install shadow package ([2d29694](https://github.com/diodonfrost/docker-ansible/commit/2d29694a6506fff33d3ecd9d83e69df67e8754c6))
+* **redhat:** add fedora 35 image ([c47d8f6](https://github.com/diodonfrost/docker-ansible/commit/c47d8f68689a2b53993ca26eefaddeda812d94bd))
+
 ## [4.4.0] - 2020-01-21
 ### Bug Fixes
 
@@ -184,7 +198,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.4.0...HEAD
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.5.0...HEAD
+[4.5.0]: https://github.com/diodonfrost/docker-ansible/compare/4.4.0...4.5.0
 [4.4.0]: https://github.com/diodonfrost/docker-ansible/compare/4.3.0...4.4.0
 [4.3.0]: https://github.com/diodonfrost/docker-ansible/compare/4.2.0...4.3.0
 [4.2.0]: https://github.com/diodonfrost/docker-ansible/compare/4.1.0...4.2.0
