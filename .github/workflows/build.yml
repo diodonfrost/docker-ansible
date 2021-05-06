@@ -110,6 +110,9 @@ jobs:
           - image: oraclelinux
             version: "8"
             platform: "linux/amd64,linux/arm64/v8"
+          - image: ubi-minimal
+            version: "8"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: ubuntu
             version: "12.04"
             platform: "linux/amd64"

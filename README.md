@@ -50,6 +50,7 @@ Provides docker containers use for testing ansible role on some operating system
 | [Gentoo][Gentoo]                | [ansible-gentoo:latest][]       | [diodonfrost/ansible-gentoo:latest][]       |
 | [Clearlinux][Clearlinux]        | [ansible-clearlinux:latest][]   | [diodonfrost/ansible-clearlinux:latest][]   |
 | [Pureos][Pureos]                | [ansible-pureos:byzantium][]    | [diodonfrost/ansible-pureos:byzantium][]    |
+| [ubi-minimal 8][ubi-minimal]    | [ansible-ubi-minimal:8][]       | [diodonfrost/ansible-ubi-minimal:8][]       |
 
 [Centos]: https://hub.docker.com/_/centos/
 [Fedora]: https://hub.docker.com/_/fedora/
@@ -64,6 +65,7 @@ Provides docker containers use for testing ansible role on some operating system
 [Gentoo]: https://hub.docker.com/r/gentoo/stage3-amd64/
 [Clearlinux]: https://hub.docker.com/_/clearlinux
 [Pureos]: https://hub.docker.com/u/pureos
+[ubi-minimal]: https://catalog.redhat.com/software/containers/ubi8/ubi-minimal/5c359a62bed8bd75a2c3fba8
 
 [ansible-centos:8]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-8
 [ansible-centos:7]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-7
@@ -104,6 +106,7 @@ Provides docker containers use for testing ansible role on some operating system
 [ansible-gentoo:latest]: https://github.com/diodonfrost/docker-ansible/blob/master/gentoo-ansible/Dockerfile.gentoo-latest
 [ansible-clearlinux:latest]: https://github.com/diodonfrost/docker-ansible/blob/master/clearlinux-ansible/Dockerfile.clearlinux-latest
 [ansible-pureos:byzantium]: https://github.com/diodonfrost/docker-ansible/blob/master/pureos-ansible/Dockerfile.pureos-byzantium
+[ansible-ubi-minimal:8]: https://github.com/diodonfrost/docker-ansible/blob/master/ubi-minimal-ansible/Dockerfile.ubi-minimal-8
 
 [diodonfrost/ansible-centos:8]: https://hub.docker.com/r/diodonfrost/ansible-centos
 [diodonfrost/ansible-centos:7]: https://hub.docker.com/r/diodonfrost/ansible-centos
@@ -144,3 +147,4 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/ansible-gentoo:latest]: https://hub.docker.com/r/diodonfrost/ansible-gentoo
 [diodonfrost/ansible-clearlinux:latest]: https://hub.docker.com/r/diodonfrost/ansible-clearlinux
 [diodonfrost/ansible-pureos:byzantium]: https://hub.docker.com/r/diodonfrost/ansible-pureos
+[diodonfrost/ansible-ubi-minimal:8]: https://hub.docker.com/r/diodonfrost/ansible-ubi-minimal
