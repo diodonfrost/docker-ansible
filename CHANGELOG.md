@@ -5,7 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-## [4.5.0] - 2020-01-21
+## [4.6.0] - 2021-05-07
+### Features
+
+* **redhat:** add universal base image ([68b18ed](https://github.com/diodonfrost/docker-ansible/commit/68b18ed9eb6688a2ac30eddd28453675ec9bba42))
+
+## [4.5.0] - 2021-05-02
 ### Bug Fixes
 
 * **amazonlinux-1:** upgrade python pip ([a1d47cf](https://github.com/diodonfrost/docker-ansible/commit/a1d47cfdcc99de32c9e3215901df4544dc31c3eb))
@@ -198,7 +203,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.5.0...HEAD
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.6.0...HEAD
+[4.6.0]: https://github.com/diodonfrost/docker-ansible/compare/4.5.0...4.6.0
 [4.5.0]: https://github.com/diodonfrost/docker-ansible/compare/4.4.0...4.5.0
 [4.4.0]: https://github.com/diodonfrost/docker-ansible/compare/4.3.0...4.4.0
 [4.3.0]: https://github.com/diodonfrost/docker-ansible/compare/4.2.0...4.3.0
