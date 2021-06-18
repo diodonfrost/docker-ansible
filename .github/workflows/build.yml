@@ -17,9 +17,6 @@ jobs:
           - image: alpine
             version: "latest"
             platform: "linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8"
-          - image: gentoo
-            version: "latest"
-            platform: "linux/amd64"
           - image: amazonlinux
             version: "1"
             platform: "linux/amd64"
@@ -85,6 +82,9 @@ jobs:
             platform: "linux/amd64"
           - image: fedora
             version: "35"
+            platform: "linux/amd64"
+          - image: gentoo
+            version: "latest"
             platform: "linux/amd64"
           - image: opensuse
             version: "15"
