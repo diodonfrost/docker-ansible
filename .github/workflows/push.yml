@@ -112,6 +112,9 @@ jobs:
             version: "8"
             platform: "linux/amd64,linux/arm64/v8"
           - image: rockylinux
+            version: "8"
+            platform: "linux/amd64"
+          - image: rockylinux
             version: "8.4-rc1"
             platform: "linux/amd64"
           - image: ubi-minimal
