@@ -52,6 +52,7 @@ Provides docker containers use for testing ansible role on some operating system
 | [Pureos][Pureos]                 | [ansible-pureos:byzantium][]    | [diodonfrost/ansible-pureos:byzantium][]    |
 | [ubi-minimal 8][ubi-minimal]     | [ansible-ubi-minimal:8][]       | [diodonfrost/ansible-ubi-minimal:8][]       |
 | [Rockylinux 8.4-rc1][Rockylinux] | [ansible-rockylinux:8.4-rc1][]  | [diodonfrost/ansible-rockylinux:8.4-rc1][]  |
+| [Rockylinux 8][Rockylinux]       | [ansible-rockylinux:8][]        | [diodonfrost/ansible-rockylinux:8][]        |
 
 [Centos]: https://hub.docker.com/_/centos/
 [Fedora]: https://hub.docker.com/_/fedora/
@@ -110,6 +111,7 @@ Provides docker containers use for testing ansible role on some operating system
 [ansible-pureos:byzantium]: https://github.com/diodonfrost/docker-ansible/blob/master/pureos-ansible/Dockerfile.pureos-byzantium
 [ansible-ubi-minimal:8]: https://github.com/diodonfrost/docker-ansible/blob/master/ubi-minimal-ansible/Dockerfile.ubi-minimal-8
 [ansible-rockylinux:8.4-rc1]: https://github.com/diodonfrost/docker-ansible/tree/master/rockylinux-ansible/Dockerfile.rockylinux-8.4-rc1
+[ansible-rockylinux:8]: https://github.com/diodonfrost/docker-ansible/tree/master/rockylinux-ansible/Dockerfile.rockylinux-8
 
 [diodonfrost/ansible-centos:8]: https://hub.docker.com/r/diodonfrost/ansible-centos
 [diodonfrost/ansible-centos:7]: https://hub.docker.com/r/diodonfrost/ansible-centos
@@ -152,3 +154,4 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/ansible-pureos:byzantium]: https://hub.docker.com/r/diodonfrost/ansible-pureos
 [diodonfrost/ansible-ubi-minimal:8]: https://hub.docker.com/r/diodonfrost/ansible-ubi-minimal
 [diodonfrost/ansible-rockylinux:8.4-rc1]: https://hub.docker.com/r/diodonfrost/ansible-rockylinux
+[diodonfrost/ansible-rockylinux:8]: https://hub.docker.com/r/diodonfrost/ansible-rockylinux
