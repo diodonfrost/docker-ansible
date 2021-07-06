@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [4.7.0] - 2021-05-07
+### Features
+
+* **os:** support rockylinux image ([3044fe9](https://github.com/diodonfrost/docker-ansible/commit/3044fe9f148412476d846096302223b5ab83442e))
+* **rockylinux:** rockylinux 8 image ([3a6d92f](https://github.com/diodonfrost/docker-ansible/commit/3a6d92f568c227f61a9370991c1585d40262f996))
+
 ## [4.6.0] - 2021-05-07
 ### Features
 
@@ -203,7 +209,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.6.0...HEAD
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.7.0...HEAD
+[4.7.0]: https://github.com/diodonfrost/docker-ansible/compare/4.6.0...4.7.0
 [4.6.0]: https://github.com/diodonfrost/docker-ansible/compare/4.5.0...4.6.0
 [4.5.0]: https://github.com/diodonfrost/docker-ansible/compare/4.4.0...4.5.0
 [4.4.0]: https://github.com/diodonfrost/docker-ansible/compare/4.3.0...4.4.0
