@@ -1,0 +1,41 @@
+
+FROM artixlinux/base:latest
+
+LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
+
+RUN \
+# enable community repo
+    echo -e '[community]\nInclude = /etc/pacman.d/mirrorlist-arch' >> /etc/pacman.conf && \
+# update package tree
+    pacman \
+        --noconfirm --sync --refresh --sysupgrade && \
+# install openrc as init system
+    pacman --noconfirm --sync \
+        openrc \
+        base \
+        procps \
+        git \
+        python-pip \
+        sudo \
+        openssh-openrc \
+        unzip \
+        tar \
+        ansible \
+        rsync-openrc && \
+# update pip and install ansible
+    python -m pip install --upgrade pip && \
+# Create ansible directory
+    mkdir -p /etc/ansible && \
+    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts && \
+# cleanup
+    pacman \
+        --noconfirm --sync -cc && \
+    rm -rf \
+        /tmp/* \
+        /usr/portage/* && \
+        /usr/bin/find \
+            /usr/lib/ -type d -name __pycache__ -exec rm -rf {} 2> /dev/null \; || true
+
+VOLUME ["/sys/fs/cgroup"]
+
+ENTRYPOINT  ["/usr/bin/init"]
