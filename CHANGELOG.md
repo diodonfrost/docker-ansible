@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Bug Fixes
+
+* **amazon:** removing amazonlinux-1 build ([7717281](https://github.com/diodonfrost/docker-ansible/commit/77172811178aae7195489276f5ca77d3aaf04b84))
+
 ## [4.7.0] - 2021-05-07
 ### Features
 
