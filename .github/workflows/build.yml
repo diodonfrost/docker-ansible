@@ -80,9 +80,6 @@ jobs:
           - image: fedora
             version: "34"
             platform: "linux/amd64"
-          - image: fedora
-            version: "35"
-            platform: "linux/amd64"
           - image: gentoo
             version: "latest"
             platform: "linux/amd64"
