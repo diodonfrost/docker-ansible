@@ -5,9 +5,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/v1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [4.8.0] - 2021-08-06
 ### Bug Fixes
 
+* **centos-7:** freeze pip version ([662b510](https://github.com/diodonfrost/docker-ansible/commit/662b510779be8f3c29c859106585e727cf949ff4))
+* **fedora-35:** removing fedora 35 build ([da7db9f](https://github.com/diodonfrost/docker-ansible/commit/da7db9fe1ee4107fcf75d785d91a77b4c3a38a5c))
 * **amazon:** removing amazonlinux-1 build ([7717281](https://github.com/diodonfrost/docker-ansible/commit/77172811178aae7195489276f5ca77d3aaf04b84))
+
+### Features
+
+* **os:** add almalinux 8 support ([3e69dba](https://github.com/diodonfrost/docker-ansible/commit/3e69dbaf4deeffda4f88b7b07f867dabc9281271))
 
 ## [4.7.0] - 2021-05-07
 ### Features
@@ -213,7 +220,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker images with ansible installed
 
 
-[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.7.0...HEAD
+[Unreleased]: https://github.com/diodonfrost/docker-ansible/4.8.0...HEAD
+[4.8.0]: https://github.com/diodonfrost/docker-ansible/compare/4.7.0...4.8.0
 [4.7.0]: https://github.com/diodonfrost/docker-ansible/compare/4.6.0...4.7.0
 [4.6.0]: https://github.com/diodonfrost/docker-ansible/compare/4.5.0...4.6.0
 [4.5.0]: https://github.com/diodonfrost/docker-ansible/compare/4.4.0...4.5.0
