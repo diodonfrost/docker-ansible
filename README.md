@@ -53,6 +53,7 @@ Provides docker containers use for testing ansible role on some operating system
 | [ubi-minimal 8][ubi-minimal]     | [ansible-ubi-minimal:8][]       | [diodonfrost/ansible-ubi-minimal:8][]       |
 | [Rockylinux 8.4-rc1][Rockylinux] | [ansible-rockylinux:8.4-rc1][]  | [diodonfrost/ansible-rockylinux:8.4-rc1][]  |
 | [Rockylinux 8][Rockylinux]       | [ansible-rockylinux:8][]        | [diodonfrost/ansible-rockylinux:8][]        |
+| [Almalinux 8][Almalinux]         | [ansible-Almalinux:8][]         | [diodonfrost/ansible-Almalinux:8][]         |
 
 [Centos]: https://hub.docker.com/_/centos/
 [Fedora]: https://hub.docker.com/_/fedora/
@@ -69,6 +70,7 @@ Provides docker containers use for testing ansible role on some operating system
 [Pureos]: https://hub.docker.com/u/pureos
 [ubi-minimal]: https://catalog.redhat.com/software/containers/ubi8/ubi-minimal/5c359a62bed8bd75a2c3fba8
 [Rockylinux]: https://hub.docker.com/r/rockylinux/rockylinux
+[Almalinux]: https://hub.docker.com/_/almalinux
 
 [ansible-centos:8]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-8
 [ansible-centos:7]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-7
@@ -112,6 +114,7 @@ Provides docker containers use for testing ansible role on some operating system
 [ansible-ubi-minimal:8]: https://github.com/diodonfrost/docker-ansible/blob/master/ubi-minimal-ansible/Dockerfile.ubi-minimal-8
 [ansible-rockylinux:8.4-rc1]: https://github.com/diodonfrost/docker-ansible/tree/master/rockylinux-ansible/Dockerfile.rockylinux-8.4-rc1
 [ansible-rockylinux:8]: https://github.com/diodonfrost/docker-ansible/tree/master/rockylinux-ansible/Dockerfile.rockylinux-8
+[ansible-almalinux:8]: https://github.com/diodonfrost/docker-ansible/tree/master/almalinux-ansible/Dockerfile.almalinux-8
 
 [diodonfrost/ansible-centos:8]: https://hub.docker.com/r/diodonfrost/ansible-centos
 [diodonfrost/ansible-centos:7]: https://hub.docker.com/r/diodonfrost/ansible-centos
@@ -155,3 +158,4 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/ansible-ubi-minimal:8]: https://hub.docker.com/r/diodonfrost/ansible-ubi-minimal
 [diodonfrost/ansible-rockylinux:8.4-rc1]: https://hub.docker.com/r/diodonfrost/ansible-rockylinux
 [diodonfrost/ansible-rockylinux:8]: https://hub.docker.com/r/diodonfrost/ansible-rockylinux
+[diodonfrost/ansible-almalinux:8]: https://hub.docker.com/r/diodonfrost/ansible-almalinux
