@@ -3,7 +3,7 @@ LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 RUN mkdir -p /etc/systemd/system && \
     ln -s /dev/null /etc/systemd/system/swupd-update.service && \
-    ln -s /dev/null /etc/systemd/system/swupd-update.timer 
+    ln -s /dev/null /etc/systemd/system/swupd-update.timer
 
 RUN swupd bundle-add ansible unzip rsync sudo && swupd clean
 
