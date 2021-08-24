@@ -49,6 +49,9 @@ jobs:
             version: "10"
             platform: "linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8"
           - image: debian
+            version: "11"
+            platform: "linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8"
+          - image: debian
             version: "testing"
             platform: "linux/amd64"
           - image: elementary
