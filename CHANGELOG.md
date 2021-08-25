@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Features
 
+* **os:** adding debian 11 image ([01a60cd](https://github.com/diodonfrost/docker-ansible/commit/01a60cd9f91b903cfad1841f8d0da9f8770a9b19))
 * **os:** add almalinux 8 support ([3e69dba](https://github.com/diodonfrost/docker-ansible/commit/3e69dbaf4deeffda4f88b7b07f867dabc9281271))
 
 ## [4.7.0] - 2021-05-07
