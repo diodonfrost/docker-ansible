@@ -98,9 +98,6 @@ jobs:
           - image: opensuse
             version: "leap"
             platform: "linux/amd64,linux/arm64/v8"
-          - image: opensuse
-            version: "tumbleweed"
-            platform: "linux/amd64"
           - image: oraclelinux
             version: "6"
             platform: "linux/amd64"
