@@ -25,6 +25,7 @@ RUN dnf -y install \
            findutils \
            unzip \
            rsync \
+           fuse-libs \
    && dnf clean all
 
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers

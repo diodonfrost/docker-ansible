@@ -24,6 +24,7 @@ RUN yum -y install \
            unzip \
            tar \
            rsync \
+           fuse-libs \
            && yum clean all
 
 RUN python3 -m pip install --upgrade pip && \

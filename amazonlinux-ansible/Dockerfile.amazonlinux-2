@@ -13,9 +13,10 @@ RUN yum makecache fast && \
     tar \
     rsync \
     sudo \
-    which && \
-    yum clean metadata && \
-    yum clean all
+    which \
+    fuse-libs \
+    && yum clean metadata \
+    && yum clean all
 
 RUN python3 -m pip install --upgrade pip && \
     python3 -m pip install ansible

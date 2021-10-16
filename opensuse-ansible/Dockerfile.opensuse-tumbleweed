@@ -23,8 +23,9 @@ RUN zypper -n install \
               unzip \
               busybox-gzip \
               rsync \
-              shadow && \
-              zypper clean
+              shadow \
+              fuse-devel \
+              && zypper clean
 
 RUN python3 -m pip install --upgrade pip && \
     python3 -m pip install ansible

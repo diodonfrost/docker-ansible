@@ -25,6 +25,7 @@ RUN \
         net-misc/rsync \
         net-misc/openssh \
         app-admin/sudo \
+        sys-fs/fuse \
         app-admin/ansible && \
 # Create ansible directory
     mkdir -p /etc/ansible && \

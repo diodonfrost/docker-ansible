@@ -22,6 +22,7 @@ RUN dnf -y install \
            unzip \
            tar \
            rsync \
+           fuse-libs \
            && dnf clean all
 
 RUN python3 -m pip install --upgrade pip && \

@@ -24,6 +24,7 @@ RUN dnf -y install \
            findutils \
            unzip \
            rsync \
+           fuse-libs \
    && dnf clean all
 
 RUN ln -s /usr/bin/python3 /usr/bin/python

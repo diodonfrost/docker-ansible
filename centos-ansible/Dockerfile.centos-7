@@ -22,6 +22,7 @@ RUN yum -y install \
            unzip \
            rsync \
            which \
+           fuse-libs \
            && yum clean all
 
 RUN python3 -m pip install pip==19.3.1 && \

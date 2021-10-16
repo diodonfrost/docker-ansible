@@ -11,7 +11,7 @@ rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 
-RUN pacman --noconfirm -Sy git python-pip sudo openssh gawk unzip tar rsync && pacman --noconfirm -Scc
+RUN pacman --noconfirm -Sy git python-pip sudo openssh gawk unzip tar rsync fuse && pacman --noconfirm -Scc
 
 # Install ansible
 RUN python -m pip install --upgrade pip && python -m pip install ansible
