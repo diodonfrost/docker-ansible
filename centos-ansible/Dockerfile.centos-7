@@ -28,7 +28,7 @@ RUN yum -y install \
            fuse-libs \
            && yum clean all
 
-RUN python3 -m pip install pip==19.3.1 && \
+RUN python3 -m pip install pip==21.3.1 && \
     python3 -m pip install ansible==2.10.7
 
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
