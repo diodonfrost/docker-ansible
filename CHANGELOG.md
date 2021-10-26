@@ -1,9 +1,22 @@
-#  (2021-10-15)
+#  (2021-10-26)
+
+
+
+# [4.9.0](https://github.com/diodonfrost/docker-ansible/compare/4.8.0...4.9.0) (2021-10-23)
+
+
+### Bug Fixes
+
+* **centos-7:** force LANG and LC_ALL ([e3c7ed3](https://github.com/diodonfrost/docker-ansible/commit/e3c7ed3832aad801219a63a0a1061734a4292638))
+* **centos-7:** upgrade pip version to 21.3 ([d6f77bc](https://github.com/diodonfrost/docker-ansible/commit/d6f77bcd4c2955eebba9eae44426b758a607ec9b))
 
 
 ### Features
 
+* **archlinux:** change base image ([3b7635d](https://github.com/diodonfrost/docker-ansible/commit/3b7635d6feff228e387d138816f2e9605f1cb8f3))
+* **gentoo:** change fuse version ([09e0555](https://github.com/diodonfrost/docker-ansible/commit/09e0555e6aa828ccb782747a3c9cbd0328f56b32))
 * **os:** adding debian 11 image ([01a60cd](https://github.com/diodonfrost/docker-ansible/commit/01a60cd9f91b903cfad1841f8d0da9f8770a9b19))
+* **package:** install libfuse ([e0f3713](https://github.com/diodonfrost/docker-ansible/commit/e0f37133ee44c332e27ca905f5649a9eeeb720e5))
 
 
 
@@ -245,3 +258,6 @@ docker image names the suffix "rolling" by
 
 
 # 1.0.0 (2018-08-11)
+
+
+
