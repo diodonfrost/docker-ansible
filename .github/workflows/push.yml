@@ -33,18 +33,9 @@ jobs:
           - image: centos
             version: "7"
             platform: "linux/amd64,linux/arm64/v8"
-          - image: centos
-            version: "8"
-            platform: "linux/amd64,linux/arm64/v8"
           - image: clearlinux
             version: "latest"
             platform: "linux/amd64"
-          - image: debian
-            version: "8"
-            platform: "linux/386,linux/amd64,linux/arm/v7"
-          - image: debian
-            version: "9"
-            platform: "linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8"
           - image: debian
             version: "10"
             platform: "linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8"
