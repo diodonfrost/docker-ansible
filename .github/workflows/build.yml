@@ -74,9 +74,6 @@ jobs:
           - image: fedora
             version: "34"
             platform: "linux/amd64"
-          - image: gentoo
-            version: "latest"
-            platform: "linux/amd64"
           - image: opensuse
             version: "15"
             platform: "linux/amd64"
