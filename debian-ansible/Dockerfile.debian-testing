@@ -16,7 +16,9 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
     sudo \
     && rm -rf /var/lib/apt/lists/*
 
-RUN python3 -m pip install ansible
+RUN apt-get update -y && apt-get install -y --no-install-recommends \
+    ansible \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /etc/ansible && echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
