@@ -18,6 +18,9 @@ jobs:
           - image: almalinux
             version: "8"
             platform: "linux/amd64,linux/arm64/v8"
+          - image: almalinux
+            version: "9"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: alpine
             version: "latest"
             platform: "linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8"
