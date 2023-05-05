@@ -119,6 +119,9 @@ jobs:
           - image: ubi-minimal
             version: "8"
             platform: "linux/amd64,linux/arm64/v8"
+          - image: ubi-minimal
+            version: "9"
+            platform: "linux/amd64,linux/arm64/v8"
           - image: ubuntu
             version: "14.04"
             platform: "linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8"
