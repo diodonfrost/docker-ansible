@@ -1,4 +1,14 @@
-#  (2021-10-26)
+#  (2023-05-02)
+
+
+
+# [4.10.0](https://github.com/diodonfrost/docker-ansible/compare/4.9.0...4.10.0) (2023-05-02)
+
+
+### Bug Fixes
+
+* **debian-testing:** install ansible from debian repository ([cc24ede](https://github.com/diodonfrost/docker-ansible/commit/cc24edea1049ff9d91875462a61e34aab29d347b))
+* **opensuse-15:** remove python 2 ([0f5a8f8](https://github.com/diodonfrost/docker-ansible/commit/0f5a8f843dcb086460af98d69fd4fe50d057a35d))
 
 
 
