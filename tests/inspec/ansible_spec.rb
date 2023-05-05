@@ -12,6 +12,9 @@ control 'ansible-01' do
       describe package(ansible_package) do
         it { should be_installed }
       end
+      describe package('ansible-core') do
+        it { should be_installed }
+      end
       describe pip('ansible') do
         it { should be_installed }
       end
