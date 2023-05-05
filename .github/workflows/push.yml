@@ -75,6 +75,21 @@ jobs:
           - image: fedora
             version: "34"
             platform: "linux/amd64"
+          - image: fedora
+            version: "35"
+            platform: "linux/amd64"
+          - image: fedora
+            version: "36"
+            platform: "linux/amd64"
+          - image: fedora
+            version: "37"
+            platform: "linux/amd64"
+          - image: fedora
+            version: "38"
+            platform: "linux/amd64"
+          - image: fedora
+            version: "39"
+            platform: "linux/amd64"
           - image: opensuse
             version: "15"
             platform: "linux/amd64"
