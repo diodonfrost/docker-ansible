@@ -1,4 +1,14 @@
-#  (2023-05-02)
+#  (2023-05-06)
+
+
+### Features
+
+* **docker:** add almalinux 9 image ([577d44a](https://github.com/diodonfrost/docker-ansible/commit/577d44aac16c5482f69fcf8c86ccb5ad89c0d7c4))
+* **docker:** add fedora images ([61f1f5e](https://github.com/diodonfrost/docker-ansible/commit/61f1f5e09737d414f877dc45b96d4987adaad1c2))
+* **docker:** add oraclelinux 9 image ([053cd67](https://github.com/diodonfrost/docker-ansible/commit/053cd67e3835086236caccda0d664bad307ace8f))
+* **docker:** add redhat ubi-minimal 9 image ([22f47f3](https://github.com/diodonfrost/docker-ansible/commit/22f47f37adb1d38880971c5fc8c810d3e8a14364))
+* **docker:** add rockylinux 9 image ([bd2b62d](https://github.com/diodonfrost/docker-ansible/commit/bd2b62d178301001aa1b1acc9a96d7fc8819a344))
+* **docker:** add ubuntu 22.04 image ([8b2577b](https://github.com/diodonfrost/docker-ansible/commit/8b2577bebf85492dbeeef7b41caa42e4beb55137))
 
 
 
