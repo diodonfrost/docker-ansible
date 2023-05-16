@@ -1,4 +1,17 @@
-#  (2023-05-06)
+#  (2023-05-16)
+
+
+
+# [4.12.0](https://github.com/diodonfrost/docker-ansible/compare/4.11.0...4.12.0) (2023-05-16)
+
+
+### Features
+
+* **docker:** add Amazon Linux 2 image ([731af12](https://github.com/diodonfrost/docker-ansible/commit/731af1232219b4599f73258885ee2c92fe1b54ed))
+
+
+
+# [4.11.0](https://github.com/diodonfrost/docker-ansible/compare/4.10.0...4.11.0) (2023-05-06)
 
 
 ### Features
