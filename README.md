@@ -44,6 +44,7 @@ Provides docker containers use for testing ansible role on some operating system
 | [Oraclelinux 8][Oraclelinux]     | [ansible-oraclelinux:8][]       | [diodonfrost/ansible-oraclelinux:8][]       |
 | [Oraclelinux 7][Oraclelinux]     | [ansible-oraclelinux:7][]       | [diodonfrost/ansible-oraclelinux:7][]       |
 | [Oraclelinux 6][Oraclelinux]     | [ansible-oraclelinux:6][]       | [diodonfrost/ansible-oraclelinux:6][]       |
+| [Amazonlinux 2023][Amazonlinux]  | [ansible-amazonlinux:2023][]    | [diodonfrost/ansible-amazonlinux:2023][]    |
 | [Amazonlinux 2][Amazonlinux]     | [ansible-amazonlinux:2][]       | [diodonfrost/ansible-amazonlinux:2][]       |
 | [Amazonlinux 1][Amazonlinux]     | [ansible-amazonlinux:1][]       | [diodonfrost/ansible-amazonlinux:1][]       |
 | [Opensuse tumbleweed][Opensuse]  | [ansible-opensuse:tumbleweed][] | [diodonfrost/ansible-opensuse:tumbleweed][] |
@@ -114,6 +115,7 @@ Provides docker containers use for testing ansible role on some operating system
 [ansible-oraclelinux:8]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-ansible/Dockerfile.oraclelinux-8
 [ansible-oraclelinux:7]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-ansible/Dockerfile.oraclelinux-7
 [ansible-oraclelinux:6]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-ansible/Dockerfile.oraclelinux-6
+[ansible-amazonlinux:2023]: https://github.com/diodonfrost/docker-ansible/blob/master/amazonlinux-ansible/Dockerfile.amazonlinux-2023
 [ansible-amazonlinux:2]: https://github.com/diodonfrost/docker-ansible/blob/master/amazonlinux-ansible/Dockerfile.amazonlinux-2
 [ansible-amazonlinux:1]: https://github.com/diodonfrost/docker-ansible/blob/master/amazonlinux-ansible/Dockerfile.amazonlinux-1
 [ansible-opensuse:tumbleweed]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-ansible/Dockerfile.opensuse-tumbleweed
@@ -167,6 +169,7 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/ansible-oraclelinux:8]: https://hub.docker.com/r/diodonfrost/ansible-oraclelinux
 [diodonfrost/ansible-oraclelinux:7]: https://hub.docker.com/r/diodonfrost/ansible-oraclelinux
 [diodonfrost/ansible-oraclelinux:6]: https://hub.docker.com/r/diodonfrost/ansible-oraclelinux
+[diodonfrost/ansible-amazonlinux:2023]: https://hub.docker.com/r/diodonfrost/ansible-amazonlinux
 [diodonfrost/ansible-amazonlinux:2]: https://hub.docker.com/r/diodonfrost/ansible-amazonlinux
 [diodonfrost/ansible-amazonlinux:1]: https://hub.docker.com/r/diodonfrost/ansible-oraclelinux
 [diodonfrost/ansible-opensuse:tumbleweed]: https://hub.docker.com/r/diodonfrost/ansible-opensuse

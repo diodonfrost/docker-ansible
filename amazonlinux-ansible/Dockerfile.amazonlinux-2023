@@ -1,0 +1,28 @@
+FROM amazonlinux:2
+LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
+
+RUN yum makecache fast && \
+    yum -y install deltarpm && \
+    yum -y update && \
+    yum -y install \
+    python3-pip \
+    sysvinit initscripts \
+    openssh-server \
+    openssh-clients \
+    unzip \
+    tar \
+    rsync \
+    sudo \
+    which \
+    fuse-libs \
+    && yum clean metadata \
+    && yum clean all
+
+RUN python3 -m pip install --upgrade pip && \
+    python3 -m pip install ansible
+
+# Install Ansible inventory file.
+RUN mkdir /etc/ansible && \
+    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+
+ENTRYPOINT ["/usr/sbin/init"]
