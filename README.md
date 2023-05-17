@@ -1,7 +1,7 @@
 # docker-ansible
 
 [![Build](https://github.com/diodonfrost/docker-ansible/workflows/Build/badge.svg)](https://github.com/diodonfrost/docker-ansible/actions)
-[![Docker Automated build](https://img.shields.io/docker/automated/diodonfrost/centos-22.04-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/diodonfrost/ubuntu-22.04-ansible/)
+[![Docker Automated build](https://img.shields.io/docker/automated/diodonfrost/ansible-ubuntu.svg?maxAge=2592000)](https://hub.docker.com/r/diodonfrost/ansible-ubuntu/)
 
 Provides dockerfiles with ansible and in some case systemd integration.
 
