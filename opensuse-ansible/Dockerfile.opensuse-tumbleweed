@@ -21,7 +21,7 @@ RUN zypper -n install \
               curl \
               tar \
               unzip \
-              busybox-gzip \
+              gzip \
               rsync \
               shadow \
               fuse-devel \
