@@ -11,6 +11,8 @@ Provides docker containers use for testing ansible role on some operating system
 
 | Base operating system            | Github                          | Docker Hub                                  |
 | -------------------------------- | ------------------------------- | ------------------------------------------- |
+| [CentOS stream9][CentOS stream]  | [ansible-centos:stream9][]      | [diodonfrost/ansible-centos:stream9][]      |
+| [CentOS stream8][CentOS stream]  | [ansible-centos:stream8][]      | [diodonfrost/ansible-centos:stream8][]      |
 | [CentOS 8][CentOS]               | [ansible-centos:8][]            | [diodonfrost/ansible-centos:8][]            |
 | [CentOS 7][CentOS]               | [ansible-centos:7][]            | [diodonfrost/ansible-centos:7][]            |
 | [CentOS 6][CentOS]               | [ansible-centos:6][]            | [diodonfrost/ansible-centos:6][]            |
@@ -65,6 +67,7 @@ Provides docker containers use for testing ansible role on some operating system
 | [Almalinux 9][Almalinux]         | [ansible-Almalinux:9][]         | [diodonfrost/ansible-Almalinux:9][]         |
 | [Almalinux 8][Almalinux]         | [ansible-Almalinux:8][]         | [diodonfrost/ansible-Almalinux:8][]         |
 
+[CentOS stream]: https://quay.io/repository/centos/centos
 [Centos]: https://hub.docker.com/_/centos/
 [Fedora]: https://hub.docker.com/_/fedora/
 [Ubuntu]: https://hub.docker.com/_/ubuntu/
@@ -82,6 +85,8 @@ Provides docker containers use for testing ansible role on some operating system
 [Rockylinux]: https://hub.docker.com/r/rockylinux/rockylinux
 [Almalinux]: https://hub.docker.com/_/almalinux
 
+[ansible-centos:stream9]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-stream9
+[ansible-centos:stream8]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-stream8
 [ansible-centos:8]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-8
 [ansible-centos:7]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-7
 [ansible-centos:6]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-6
@@ -136,6 +141,8 @@ Provides docker containers use for testing ansible role on some operating system
 [ansible-almalinux:9]: https://github.com/diodonfrost/docker-ansible/tree/master/almalinux-ansible/Dockerfile.almalinux-9
 [ansible-almalinux:8]: https://github.com/diodonfrost/docker-ansible/tree/master/almalinux-ansible/Dockerfile.almalinux-8
 
+[diodonfrost/ansible-centos:stream9]: https://hub.docker.com/r/diodonfrost/ansible-centos
+[diodonfrost/ansible-centos:stream8]: https://hub.docker.com/r/diodonfrost/ansible-centos
 [diodonfrost/ansible-centos:8]: https://hub.docker.com/r/diodonfrost/ansible-centos
 [diodonfrost/ansible-centos:7]: https://hub.docker.com/r/diodonfrost/ansible-centos
 [diodonfrost/ansible-centos:6]: https://hub.docker.com/r/diodonfrost/ansible-centos

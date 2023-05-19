@@ -39,6 +39,12 @@ jobs:
           - image: centos
             version: "7"
             platform: "linux/amd64,linux/arm64/v8"
+          - image: centos
+            version: "stream8"
+            platform: "linux/amd64"
+          - image: centos
+            version: "stream9"
+            platform: "linux/amd64"
           - image: clearlinux
             version: "latest"
             platform: "linux/amd64"
