@@ -1,4 +1,18 @@
-#  (2023-05-16)
+#  (2023-05-19)
+
+
+
+# [4.13.0](https://github.com/diodonfrost/docker-ansible/compare/4.12.0...4.13.0) (2023-05-19)
+
+
+### Bug Fixes
+
+* **opensuse:** replace busybox-gzip by gzip ([70ece65](https://github.com/diodonfrost/docker-ansible/commit/70ece6566d5ed84bc59b576c0211516e8bfa8d01))
+
+
+### Features
+
+* **docker:** add centos stream images ([3e6078e](https://github.com/diodonfrost/docker-ansible/commit/3e6078e1a4926b85e350a611e1bef9c5ea76fae6))
 
 
 
