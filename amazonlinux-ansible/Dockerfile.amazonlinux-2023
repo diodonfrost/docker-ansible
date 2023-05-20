@@ -1,12 +1,9 @@
-FROM amazonlinux:2
+FROM amazonlinux:2023
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
-RUN yum makecache fast && \
-    yum -y install deltarpm && \
-    yum -y update && \
-    yum -y install \
+RUN dnf -y install \
+    git \
     python3-pip \
-    sysvinit initscripts \
     openssh-server \
     openssh-clients \
     unzip \
@@ -15,11 +12,9 @@ RUN yum makecache fast && \
     sudo \
     which \
     fuse-libs \
-    && yum clean metadata \
-    && yum clean all
+    && dnf clean all
 
-RUN python3 -m pip install --upgrade pip && \
-    python3 -m pip install ansible
+RUN python3 -m pip install ansible
 
 # Install Ansible inventory file.
 RUN mkdir /etc/ansible && \
