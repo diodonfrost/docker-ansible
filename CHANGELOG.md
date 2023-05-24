@@ -1,4 +1,13 @@
-#  (2023-05-19)
+#  (2023-05-20)
+
+
+
+## [4.13.1](https://github.com/diodonfrost/docker-ansible/compare/4.13.0...4.13.1) (2023-05-20)
+
+
+### Bug Fixes
+
+* **amazonlinux:** change docker image source ([ff3e540](https://github.com/diodonfrost/docker-ansible/commit/ff3e5407e3e1e27faf2252856eb5dc35269cfb8f))
 
 
 
