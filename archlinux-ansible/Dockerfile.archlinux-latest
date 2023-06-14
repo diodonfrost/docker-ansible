@@ -11,13 +11,9 @@ rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 
-RUN pacman --noconfirm -Sy git python-pip sudo openssh gawk unzip tar rsync fuse && pacman --noconfirm -Scc
+RUN pacman --noconfirm -Sy git python-pip python-ansible sudo openssh gawk unzip tar rsync fuse && pacman --noconfirm -Scc
 
-# Install ansible
-RUN python -m pip install --upgrade pip && python -m pip install ansible
-
-RUN mkdir /etc/ansible && \
-    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
 VOLUME ["/sys/fs/cgroup"]
 
