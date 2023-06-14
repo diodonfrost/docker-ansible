@@ -2,7 +2,7 @@ FROM quay.io/centos/centos:stream8
 LABEL maintainer="diodonfrost <diodon.frost@diodonfrost.me>"
 
 ENV LANG en_US.UTF-8
-ENV LC_ALL en_US.UTF-8
+ENV LC_ALL C.UTF-8
 
 # Install systemd
 RUN dnf -y install systemd && dnf clean all; \
