@@ -1,4 +1,20 @@
-#  (2023-05-20)
+#  (2023-06-16)
+
+
+
+# [4.14.0](https://github.com/diodonfrost/docker-ansible/compare/4.13.1...4.14.0) (2023-06-14)
+
+
+### Bug Fixes
+
+* **archlinux:** install ansible from pacman ([6ba2437](https://github.com/diodonfrost/docker-ansible/commit/6ba2437a650de35aa10dd5565fa3fbb2eadcf72d))
+* **centos-stream:** Add UTF-8 environment variables and Ansible localhost inventory ([1975ac4](https://github.com/diodonfrost/docker-ansible/commit/1975ac43853e78f473e119456059226414a4dd37))
+* **centos-stream:** change locale encoding to UTF-8 ([ead9f10](https://github.com/diodonfrost/docker-ansible/commit/ead9f1006d7b69161c693a709d321d810d21c9be))
+
+
+### Features
+
+* **docker:** add debian 12 image ([ede7bc2](https://github.com/diodonfrost/docker-ansible/commit/ede7bc288c6ab7bb1786a3238cee9cd9a871e39b))
 
 
 
