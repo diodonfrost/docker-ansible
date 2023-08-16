@@ -32,4 +32,4 @@ RUN python3 -m pip install --upgrade pip && \
 
 VOLUME [ "/sys/fs/cgroup" ]
 
-ENTRYPOINT ["/usr/lib/systemd/systemd", "--system"]
+CMD ["/usr/lib/systemd/systemd", "--system"]

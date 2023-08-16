@@ -17,4 +17,4 @@ RUN apt-get update && apt-get install -y \
 
 RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
-ENTRYPOINT ["/lib/systemd/systemd"]
+CMD ["/lib/systemd/systemd"]

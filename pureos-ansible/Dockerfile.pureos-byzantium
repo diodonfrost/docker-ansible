@@ -22,4 +22,4 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN python3 -m pip install ansible==2.9.11 && \
     mkdir -p /etc/ansible && echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
-ENTRYPOINT ["/bin/systemd"]
+CMD ["/bin/systemd"]

@@ -25,4 +25,4 @@ RUN wget http://launchpadlibrarian.net/224464655/python-ndg-httpsclient_0.4.0-3_
 
 RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
-ENTRYPOINT ["/sbin/init"]
+CMD ["/sbin/init"]

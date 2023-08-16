@@ -36,4 +36,4 @@ RUN python -m pip install -U setuptools==44.1.0 && \
 
 VOLUME [ "/sys/fs/cgroup" ]
 
-ENTRYPOINT ["/usr/lib/systemd/systemd", "--system"]
+CMD ["/usr/lib/systemd/systemd", "--system"]

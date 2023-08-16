@@ -37,4 +37,4 @@ RUN \
         /usr/bin/find \
             /usr/lib/ -type d -name __pycache__ -exec rm -rf {} 2> /dev/null \; || true
 
-ENTRYPOINT ["/usr/lib/systemd/systemd"]
+CMD ["/usr/lib/systemd/systemd"]

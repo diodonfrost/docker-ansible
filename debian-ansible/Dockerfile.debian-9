@@ -27,4 +27,4 @@ RUN apt-get update && apt-get install -y ansible \
 
 RUN mkdir -p /etc/ansible && echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
-ENTRYPOINT ["/bin/systemd"]
+CMD ["/bin/systemd"]

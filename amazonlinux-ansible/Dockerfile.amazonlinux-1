@@ -23,4 +23,4 @@ RUN python3 -m pip install --upgrade pip && python3 -m pip install ansible
 RUN mkdir /etc/ansible && \
     echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
-ENTRYPOINT ["/sbin/init"]
+CMD ["/sbin/init"]

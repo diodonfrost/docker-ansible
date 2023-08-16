@@ -18,4 +18,4 @@ RUN zypper -n install git ansible sudo openssh tar unzip rsync; zypper clean
 
 VOLUME [ "/sys/fs/cgroup" ]
 
-ENTRYPOINT ["/usr/lib/systemd/systemd", "--system"]
+CMD ["/usr/lib/systemd/systemd", "--system"]

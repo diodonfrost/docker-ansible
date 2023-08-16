@@ -20,4 +20,4 @@ RUN python3 -m pip install ansible
 RUN mkdir /etc/ansible && \
     echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
-ENTRYPOINT ["/usr/sbin/init"]
+CMD ["/usr/sbin/init"]
