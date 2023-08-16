@@ -1,4 +1,20 @@
-#  (2023-06-16)
+#  (2023-08-16)
+
+
+
+# [5.0.0](https://github.com/diodonfrost/docker-ansible/compare/4.14.0...5.0.0) (2023-08-16)
+
+
+### Features
+
+* **alpine:** install shadow package ([02fe76d](https://github.com/diodonfrost/docker-ansible/commit/02fe76d2bed581cd0cb83027af73851bd0007fba))
+* **docker:** replace ENTRYPOINT by CMD ([e232135](https://github.com/diodonfrost/docker-ansible/commit/e2321350f3006aa8757000fb9bbad598eb0012ec))
+
+
+### BREAKING CHANGES
+
+* **docker:** replaces Dockerfile instruction 'ENTRYPOINT'
+by 'CMD' in all images.
 
 
 
