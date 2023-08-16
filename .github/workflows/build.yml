@@ -169,14 +169,14 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Build Docker images
-        run: |
-          docker build \
-            --no-cache \
-            --rm \
-            --file=${{ matrix.distribution.image }}-ansible/Dockerfile.${{ matrix.distribution.image }}-${{ matrix.distribution.version }} \
-            --tag=diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} \
-            ${{ matrix.distribution.image }}-ansible
+      - name: Build and export to Docker
+        uses: docker/build-push-action@v4
+        with:
+          no-cache: true
+          load: true
+          file: ${{ matrix.distribution.image }}-ansible/Dockerfile.${{ matrix.distribution.image }}-${{ matrix.distribution.version }}
+          tags: diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }}
+          context: ${{ matrix.distribution.image }}-ansible
 
       - name: Test Docker images
         run: |
@@ -191,10 +191,11 @@ jobs:
 
           inspec exec tests/inspec --chef-license accept-silent -t docker://$(cat ${container_id})
 
-      - name: Build Docker images on all platforms
-        run: |
-          docker buildx build \
-            --platform ${{ matrix.distribution.platform }} \
-            --file=${{ matrix.distribution.image }}-ansible/Dockerfile.${{ matrix.distribution.image }}-${{ matrix.distribution.version }} \
-            --tag=diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} \
-            ${{ matrix.distribution.image }}-ansible
+      - name: Build images on multiple platforms
+        uses: docker/build-push-action@v4
+        with:
+          no-cache: true
+          platforms: ${{ matrix.distribution.platform }}
+          file: ${{ matrix.distribution.image }}-ansible/Dockerfile.${{ matrix.distribution.image }}-${{ matrix.distribution.version }}
+          tags: diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }}
+          context: ${{ matrix.distribution.image }}-ansible
