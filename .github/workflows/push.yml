@@ -105,6 +105,9 @@ jobs:
           - image: fedora
             version: "39"
             platform: "linux/amd64"
+          - image: fedora
+            version: "40"
+            platform: "linux/amd64"
           - image: opensuse
             version: "15"
             platform: "linux/amd64"

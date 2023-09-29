@@ -16,6 +16,7 @@ Provides docker containers use for testing ansible role on some operating system
 | [CentOS 8][CentOS]               | [ansible-centos:8][]            | [diodonfrost/ansible-centos:8][]            |
 | [CentOS 7][CentOS]               | [ansible-centos:7][]            | [diodonfrost/ansible-centos:7][]            |
 | [CentOS 6][CentOS]               | [ansible-centos:6][]            | [diodonfrost/ansible-centos:6][]            |
+| [Fedora 40][Fedora]              | [ansible-fedora:40][]           | [diodonfrost/ansible-fedora:40][]           |
 | [Fedora 39][Fedora]              | [ansible-fedora:39][]           | [diodonfrost/ansible-fedora:39][]           |
 | [Fedora 38][Fedora]              | [ansible-fedora:38][]           | [diodonfrost/ansible-fedora:38][]           |
 | [Fedora 37][Fedora]              | [ansible-fedora:37][]           | [diodonfrost/ansible-fedora:37][]           |
@@ -91,6 +92,7 @@ Provides docker containers use for testing ansible role on some operating system
 [ansible-centos:8]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-8
 [ansible-centos:7]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-7
 [ansible-centos:6]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-6
+[ansible-fedora:40]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-ansible/Dockerfile.fedora-40
 [ansible-fedora:39]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-ansible/Dockerfile.fedora-39
 [ansible-fedora:38]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-ansible/Dockerfile.fedora-38
 [ansible-fedora:37]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-ansible/Dockerfile.fedora-37
@@ -148,6 +150,7 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/ansible-centos:8]: https://hub.docker.com/r/diodonfrost/ansible-centos
 [diodonfrost/ansible-centos:7]: https://hub.docker.com/r/diodonfrost/ansible-centos
 [diodonfrost/ansible-centos:6]: https://hub.docker.com/r/diodonfrost/ansible-centos
+[diodonfrost/ansible-fedora:40]: https://hub.docker.com/r/diodonfrost/ansible-fedora
 [diodonfrost/ansible-fedora:39]: https://hub.docker.com/r/diodonfrost/ansible-fedora
 [diodonfrost/ansible-fedora:38]: https://hub.docker.com/r/diodonfrost/ansible-fedora
 [diodonfrost/ansible-fedora:37]: https://hub.docker.com/r/diodonfrost/ansible-fedora
