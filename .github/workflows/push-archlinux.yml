@@ -1,0 +1,82 @@
+name: Push
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'archlinux-ansible/**'
+  schedule:
+    - cron: '0 18 * * sun'
+
+jobs:
+  push:
+    name: ${{ matrix.distribution.image }}-${{ matrix.distribution.version }}
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        distribution:
+          - image: archlinux
+            version: "latest"
+            platform: "linux/amd64,linux/arm64/v8"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Inspec
+        run: curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec -v 5.21.29
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and export to Docker
+        uses: docker/build-push-action@v4
+        with:
+          no-cache: true
+          load: true
+          file: ${{ matrix.distribution.image }}-ansible/Dockerfile.${{ matrix.distribution.image }}-${{ matrix.distribution.version }}
+          tags: diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }}
+          context: ${{ matrix.distribution.image }}-ansible
+
+      - name: Test Docker image
+        run: |
+          container_id=$(mktemp)
+          sudo docker run \
+            --detach \
+            --privileged \
+            --cgroupns=host \
+            -v /sys/fs/cgroup:/sys/fs/cgroup:rw \
+            -v /var/lib/containerd \
+            diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} > "${container_id}"
+
+          inspec exec tests/inspec --chef-license accept-silent -t docker://$(cat ${container_id})
+
+      - name: Build and Push to docker.io and ghcr.io registries
+        uses: docker/build-push-action@v4
+        with:
+          no-cache: false
+          push: true
+          platforms: ${{ matrix.distribution.platform }}
+          file: ${{ matrix.distribution.image }}-ansible/Dockerfile.${{ matrix.distribution.image }}-${{ matrix.distribution.version }}
+          context: ${{ matrix.distribution.image }}-ansible
+          tags: |
+            diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }}
+            ghcr.io/diodonfrost/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} 
