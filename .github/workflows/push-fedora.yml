@@ -62,6 +62,15 @@ jobs:
           - image: fedora
             version: "40"
             platform: "linux/amd64"
+          - image: fedora
+            version: "41"
+            platform: "linux/amd64"
+          - image: fedora
+            version: "42"
+            platform: "linux/amd64"
+          - image: fedora
+            version: "43"
+            platform: "linux/amd64"
 
     steps:
       - name: Checkout repository
