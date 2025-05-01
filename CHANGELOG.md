@@ -1,4 +1,17 @@
-#  (2023-08-16)
+# [5.1.0](https://github.com/diodonfrost/docker-ansible/compare/5.0.0...5.1.0) (2025-05-01)
+
+
+### Bug Fixes
+
+* **docker:** update Python version in AlmaLinux 8 ([972f27c](https://github.com/diodonfrost/docker-ansible/commit/972f27cdb80fdf89f5edc5c5f36bf2f8d833e294))
+
+
+### Features
+
+* **ci:** add support for Fedora versions 41, 42, and 43 ([eab2379](https://github.com/diodonfrost/docker-ansible/commit/eab2379066cf650dd6a858d0dce7efc9162c3ba5))
+* **devcontainer:** add Docker outside of Docker feature ([142661e](https://github.com/diodonfrost/docker-ansible/commit/142661e03f1b0c7cce8ae11d5df7e466d1ae4d00))
+* **docker:** add fedora 40 image ([53ea731](https://github.com/diodonfrost/docker-ansible/commit/53ea7311eb1c660da4e0f86d4ef88fa6b320ee85))
+* **docker:** add ubuntu 24.04 image ([fde1819](https://github.com/diodonfrost/docker-ansible/commit/fde1819629d82cc76d269b028bedf6083345b811))
 
 
 
