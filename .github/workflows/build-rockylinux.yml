@@ -24,6 +24,9 @@ jobs:
           - image: rockylinux
             version: "9"
             platform: "linux/amd64"
+          - image: rockylinux
+            version: "10"
+            platform: "linux/amd64"
 
     steps:
       - name: Checkout repository
