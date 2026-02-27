@@ -8,6 +8,7 @@ on:
       - 'debian-ansible/**'
   schedule:
     - cron: '0 18 * * sun'
+  workflow_dispatch:
 
 jobs:
   push:
