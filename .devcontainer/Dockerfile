@@ -34,3 +34,5 @@ RUN ansible-galaxy role install diodonfrost.ohmyzsh && \
 
 RUN ansible-galaxy role install diodonfrost.p10k && \
     ansible-pull -U https://github.com/diodonfrost/ansible-role-p10k tests/test.yml -e "zsh_plugin=ohmyzsh" -e '{"p10k_users": [vscode]}'
+
+RUN curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec -v 5.21.29
