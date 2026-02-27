@@ -11,6 +11,7 @@ Provides docker containers use for testing ansible role on some operating system
 
 | Base operating system            | Github                          | Docker Hub                                  |
 | -------------------------------- | ------------------------------- | ------------------------------------------- |
+| [CentOS stream10][CentOS stream] | [ansible-centos:stream10][]     | [diodonfrost/ansible-centos:stream10][]     |
 | [CentOS stream9][CentOS stream]  | [ansible-centos:stream9][]      | [diodonfrost/ansible-centos:stream9][]      |
 | [CentOS stream8][CentOS stream]  | [ansible-centos:stream8][]      | [diodonfrost/ansible-centos:stream8][]      |
 | [CentOS 8][CentOS]               | [ansible-centos:8][]            | [diodonfrost/ansible-centos:8][]            |
@@ -31,6 +32,8 @@ Provides docker containers use for testing ansible role on some operating system
 | [Fedora 28][Fedora]              | [ansible-fedora:28][]           | [diodonfrost/ansible-fedora:28][]           |
 | [Fedora 27][Fedora]              | [ansible-fedora:27][]           | [diodonfrost/ansible-fedora:27][]           |
 | [Fedora 26][Fedora]              | [ansible-fedora:26][]           | [diodonfrost/ansible-fedora:26][]           |
+| [Ubuntu 26.04][Ubuntu]           | [ansible-ubuntu:26.04][]        | [diodonfrost/ansible-ubuntu:26.04][]        |
+| [Ubuntu 24.04][Ubuntu]           | [ansible-ubuntu:24.04][]        | [diodonfrost/ansible-ubuntu:24.04][]        |
 | [Ubuntu 22.04][Ubuntu]           | [ansible-ubuntu:22.04][]        | [diodonfrost/ansible-ubuntu:22.04][]        |
 | [Ubuntu 20.04][Ubuntu]           | [ansible-ubuntu:20.04][]        | [diodonfrost/ansible-ubuntu:20.04][]        |
 | [Ubuntu 18.04][Ubuntu]           | [ansible-ubuntu:18.04][]        | [diodonfrost/ansible-ubuntu:18.04][]        |
@@ -38,12 +41,14 @@ Provides docker containers use for testing ansible role on some operating system
 | [Ubuntu 14.04][Ubuntu]           | [ansible-ubuntu:14.04][]        | [diodonfrost/ansible-ubuntu:14.04][]        |
 | [Ubuntu 12.04][Ubuntu]           | [ansible-ubuntu:12.04][]        | [diodonfrost/ansible-ubuntu:12.04][]        |
 | [Debian testing][Debian]         | [ansible-debian:testing][]      | [diodonfrost/ansible-debian:testing][]      |
+| [Debian 13][Debian]              | [ansible-debian:13][]           | [diodonfrost/ansible-debian:13][]           |
 | [Debian 12][Debian]              | [ansible-debian:12][]           | [diodonfrost/ansible-debian:12][]           |
 | [Debian 11][Debian]              | [ansible-debian:11][]           | [diodonfrost/ansible-debian:11][]           |
 | [Debian 10][Debian]              | [ansible-debian:10][]           | [diodonfrost/ansible-debian:10][]           |
 | [Debian 9][Debian]               | [ansible-debian:9][]            | [diodonfrost/ansible-debian:9][]            |
 | [Debian 8][Debian]               | [ansible-debian:8][]            | [diodonfrost/ansible-debian:8][]            |
 | [Elementary juno][Elementary]    | [ansible-elementary:juno][]     | [diodonfrost/ansible-elementary:juno][]     |
+| [Oraclelinux 10][Oraclelinux]    | [ansible-oraclelinux:10][]      | [diodonfrost/ansible-oraclelinux:10][]      |
 | [Oraclelinux 9][Oraclelinux]     | [ansible-oraclelinux:9][]       | [diodonfrost/ansible-oraclelinux:9][]       |
 | [Oraclelinux 8][Oraclelinux]     | [ansible-oraclelinux:8][]       | [diodonfrost/ansible-oraclelinux:8][]       |
 | [Oraclelinux 7][Oraclelinux]     | [ansible-oraclelinux:7][]       | [diodonfrost/ansible-oraclelinux:7][]       |
@@ -52,6 +57,7 @@ Provides docker containers use for testing ansible role on some operating system
 | [Amazonlinux 2][Amazonlinux]     | [ansible-amazonlinux:2][]       | [diodonfrost/ansible-amazonlinux:2][]       |
 | [Amazonlinux 1][Amazonlinux]     | [ansible-amazonlinux:1][]       | [diodonfrost/ansible-amazonlinux:1][]       |
 | [Opensuse tumbleweed][Opensuse]  | [ansible-opensuse:tumbleweed][] | [diodonfrost/ansible-opensuse:tumbleweed][] |
+| [Opensuse 16.0][Opensuse]        | [ansible-opensuse:16.0][]       | [diodonfrost/ansible-opensuse:16.0][]       |
 | [Opensuse leap][Opensuse]        | [ansible-opensuse:leap][]       | [diodonfrost/ansible-opensuse:leap][]       |
 | [Opensuse 15.1][Opensuse]        | [ansible-opensuse:15.1][]       | [diodonfrost/ansible-opensuse:15.1][]       |
 | [Opensuse 15][Opensuse]          | [ansible-opensuse:15][]         | [diodonfrost/ansible-opensuse:15][]         |
@@ -64,8 +70,10 @@ Provides docker containers use for testing ansible role on some operating system
 | [Pureos][Pureos]                 | [ansible-pureos:byzantium][]    | [diodonfrost/ansible-pureos:byzantium][]    |
 | [ubi-minimal 9][ubi-minimal]     | [ansible-ubi-minimal:9][]       | [diodonfrost/ansible-ubi-minimal:9][]       |
 | [ubi-minimal 8][ubi-minimal]     | [ansible-ubi-minimal:8][]       | [diodonfrost/ansible-ubi-minimal:8][]       |
+| [Rockylinux 10][Rockylinux]      | [ansible-rockylinux:10][]       | [diodonfrost/ansible-rockylinux:10][]       |
 | [Rockylinux 9][Rockylinux]       | [ansible-rockylinux:9][]        | [diodonfrost/ansible-rockylinux:9][]        |
 | [Rockylinux 8][Rockylinux]       | [ansible-rockylinux:8][]        | [diodonfrost/ansible-rockylinux:8][]        |
+| [Almalinux 10][Almalinux]        | [ansible-almalinux:10][]        | [diodonfrost/ansible-almalinux:10][]        |
 | [Almalinux 9][Almalinux]         | [ansible-Almalinux:9][]         | [diodonfrost/ansible-Almalinux:9][]         |
 | [Almalinux 8][Almalinux]         | [ansible-Almalinux:8][]         | [diodonfrost/ansible-Almalinux:8][]         |
 
@@ -87,6 +95,7 @@ Provides docker containers use for testing ansible role on some operating system
 [Rockylinux]: https://hub.docker.com/r/rockylinux/rockylinux
 [Almalinux]: https://hub.docker.com/_/almalinux
 
+[ansible-centos:stream10]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-stream10
 [ansible-centos:stream9]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-stream9
 [ansible-centos:stream8]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-stream8
 [ansible-centos:8]: https://github.com/diodonfrost/docker-ansible/blob/master/centos-ansible/Dockerfile.centos-8
@@ -107,6 +116,8 @@ Provides docker containers use for testing ansible role on some operating system
 [ansible-fedora:28]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-ansible/Dockerfile.fedora-28
 [ansible-fedora:27]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-ansible/Dockerfile.fedora-27
 [ansible-fedora:26]: https://github.com/diodonfrost/docker-ansible/blob/master/fedora-ansible/Dockerfile.fedora-28
+[ansible-ubuntu:26.04]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-ansible/Dockerfile.ubuntu-26.04
+[ansible-ubuntu:24.04]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-ansible/Dockerfile.ubuntu-24.04
 [ansible-ubuntu:22.04]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-ansible/Dockerfile.ubuntu-22.04
 [ansible-ubuntu:20.04]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-ansible/Dockerfile.ubuntu-20.04
 [ansible-ubuntu:18.04]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-ansible/Dockerfile.ubuntu-18.04
@@ -114,12 +125,14 @@ Provides docker containers use for testing ansible role on some operating system
 [ansible-ubuntu:14.04]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-ansible/Dockerfile.ubuntu-14.04
 [ansible-ubuntu:12.04]: https://github.com/diodonfrost/docker-ansible/blob/master/ubuntu-ansible/Dockerfile.ubuntu-12.04
 [ansible-debian:testing]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-ansible/Dockerfile.debian-testing
+[ansible-debian:13]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-ansible/Dockerfile.debian-13
 [ansible-debian:12]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-ansible/Dockerfile.debian-12
 [ansible-debian:11]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-ansible/Dockerfile.debian-11
 [ansible-debian:10]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-ansible/Dockerfile.debian-10
 [ansible-debian:9]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-ansible/Dockerfile.debian-9
 [ansible-debian:8]: https://github.com/diodonfrost/docker-ansible/blob/master/debian-ansible/Dockerfile.debian-8
 [ansible-elementary:juno]: https://github.com/diodonfrost/docker-ansible/blob/master/elementary-ansible/Dockerfile.elementary-juno
+[ansible-oraclelinux:10]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-ansible/Dockerfile.oraclelinux-10
 [ansible-oraclelinux:9]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-ansible/Dockerfile.oraclelinux-9
 [ansible-oraclelinux:8]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-ansible/Dockerfile.oraclelinux-8
 [ansible-oraclelinux:7]: https://github.com/diodonfrost/docker-ansible/blob/master/oraclelinux-ansible/Dockerfile.oraclelinux-7
@@ -128,6 +141,7 @@ Provides docker containers use for testing ansible role on some operating system
 [ansible-amazonlinux:2]: https://github.com/diodonfrost/docker-ansible/blob/master/amazonlinux-ansible/Dockerfile.amazonlinux-2
 [ansible-amazonlinux:1]: https://github.com/diodonfrost/docker-ansible/blob/master/amazonlinux-ansible/Dockerfile.amazonlinux-1
 [ansible-opensuse:tumbleweed]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-ansible/Dockerfile.opensuse-tumbleweed
+[ansible-opensuse:16.0]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-ansible/Dockerfile.opensuse-16.0
 [ansible-opensuse:leap]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-ansible/Dockerfile.opensuse-leap
 [ansible-opensuse:15.1]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-ansible/Dockerfile.opensuse-15.1
 [ansible-opensuse:15]: https://github.com/diodonfrost/docker-ansible/blob/master/opensuse-ansible/Dockerfile.opensuse-15
@@ -140,11 +154,14 @@ Provides docker containers use for testing ansible role on some operating system
 [ansible-pureos:byzantium]: https://github.com/diodonfrost/docker-ansible/blob/master/pureos-ansible/Dockerfile.pureos-byzantium
 [ansible-ubi-minimal:9]: https://github.com/diodonfrost/docker-ansible/blob/master/ubi-minimal-ansible/Dockerfile.ubi-minimal-9
 [ansible-ubi-minimal:8]: https://github.com/diodonfrost/docker-ansible/blob/master/ubi-minimal-ansible/Dockerfile.ubi-minimal-8
+[ansible-rockylinux:10]: https://github.com/diodonfrost/docker-ansible/tree/master/rockylinux-ansible/Dockerfile.rockylinux-10
 [ansible-rockylinux:9]: https://github.com/diodonfrost/docker-ansible/tree/master/rockylinux-ansible/Dockerfile.rockylinux-9
 [ansible-rockylinux:8]: https://github.com/diodonfrost/docker-ansible/tree/master/rockylinux-ansible/Dockerfile.rockylinux-8
+[ansible-almalinux:10]: https://github.com/diodonfrost/docker-ansible/tree/master/almalinux-ansible/Dockerfile.almalinux-10
 [ansible-almalinux:9]: https://github.com/diodonfrost/docker-ansible/tree/master/almalinux-ansible/Dockerfile.almalinux-9
 [ansible-almalinux:8]: https://github.com/diodonfrost/docker-ansible/tree/master/almalinux-ansible/Dockerfile.almalinux-8
 
+[diodonfrost/ansible-centos:stream10]: https://hub.docker.com/r/diodonfrost/ansible-centos
 [diodonfrost/ansible-centos:stream9]: https://hub.docker.com/r/diodonfrost/ansible-centos
 [diodonfrost/ansible-centos:stream8]: https://hub.docker.com/r/diodonfrost/ansible-centos
 [diodonfrost/ansible-centos:8]: https://hub.docker.com/r/diodonfrost/ansible-centos
@@ -165,6 +182,8 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/ansible-fedora:28]: https://hub.docker.com/r/diodonfrost/ansible-fedora
 [diodonfrost/ansible-fedora:27]: https://hub.docker.com/r/diodonfrost/ansible-fedora
 [diodonfrost/ansible-fedora:26]: https://hub.docker.com/r/diodonfrost/ansible-fedora
+[diodonfrost/ansible-ubuntu:26.04]: https://hub.docker.com/r/diodonfrost/ansible-ubuntu
+[diodonfrost/ansible-ubuntu:24.04]: https://hub.docker.com/r/diodonfrost/ansible-ubuntu
 [diodonfrost/ansible-ubuntu:22.04]: https://hub.docker.com/r/diodonfrost/ansible-ubuntu
 [diodonfrost/ansible-ubuntu:20.04]: https://hub.docker.com/r/diodonfrost/ansible-ubuntu
 [diodonfrost/ansible-ubuntu:18.04]: https://hub.docker.com/r/diodonfrost/ansible-ubuntu
@@ -172,12 +191,14 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/ansible-ubuntu:14.04]: https://hub.docker.com/r/diodonfrost/ansible-ubuntu
 [diodonfrost/ansible-ubuntu:12.04]: https://hub.docker.com/r/diodonfrost/ansible-ubuntu
 [diodonfrost/ansible-debian:testing]: https://hub.docker.com/r/diodonfrost/ansible-debian
+[diodonfrost/ansible-debian:13]: https://hub.docker.com/r/diodonfrost/ansible-debian
 [diodonfrost/ansible-debian:12]: https://hub.docker.com/r/diodonfrost/ansible-debian
 [diodonfrost/ansible-debian:11]: https://hub.docker.com/r/diodonfrost/ansible-debian
 [diodonfrost/ansible-debian:10]: https://hub.docker.com/r/diodonfrost/ansible-debian
 [diodonfrost/ansible-debian:9]: https://hub.docker.com/r/diodonfrost/ansible-debian
 [diodonfrost/ansible-debian:8]: https://hub.docker.com/r/diodonfrost/ansible-debian
 [diodonfrost/ansible-elementary:juno]: https://hub.docker.com/r/diodonfrost/ansible-elementary
+[diodonfrost/ansible-oraclelinux:10]: https://hub.docker.com/r/diodonfrost/ansible-oraclelinux
 [diodonfrost/ansible-oraclelinux:9]: https://hub.docker.com/r/diodonfrost/ansible-oraclelinux
 [diodonfrost/ansible-oraclelinux:8]: https://hub.docker.com/r/diodonfrost/ansible-oraclelinux
 [diodonfrost/ansible-oraclelinux:7]: https://hub.docker.com/r/diodonfrost/ansible-oraclelinux
@@ -186,6 +207,7 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/ansible-amazonlinux:2]: https://hub.docker.com/r/diodonfrost/ansible-amazonlinux
 [diodonfrost/ansible-amazonlinux:1]: https://hub.docker.com/r/diodonfrost/ansible-oraclelinux
 [diodonfrost/ansible-opensuse:tumbleweed]: https://hub.docker.com/r/diodonfrost/ansible-opensuse
+[diodonfrost/ansible-opensuse:16.0]: https://hub.docker.com/r/diodonfrost/ansible-opensuse
 [diodonfrost/ansible-opensuse:leap]: https://hub.docker.com/r/diodonfrost/ansible-opensuse
 [diodonfrost/ansible-opensuse:15.1]: https://hub.docker.com/r/diodonfrost/ansible-opensuse
 [diodonfrost/ansible-opensuse:15]: https://hub.docker.com/r/diodonfrost/ansible-opensuse
@@ -198,7 +220,9 @@ Provides docker containers use for testing ansible role on some operating system
 [diodonfrost/ansible-pureos:byzantium]: https://hub.docker.com/r/diodonfrost/ansible-pureos
 [diodonfrost/ansible-ubi-minimal:9]: https://hub.docker.com/r/diodonfrost/ansible-ubi-minimal
 [diodonfrost/ansible-ubi-minimal:8]: https://hub.docker.com/r/diodonfrost/ansible-ubi-minimal
+[diodonfrost/ansible-rockylinux:10]: https://hub.docker.com/r/diodonfrost/ansible-rockylinux
 [diodonfrost/ansible-rockylinux:9]: https://hub.docker.com/r/diodonfrost/ansible-rockylinux
 [diodonfrost/ansible-rockylinux:8]: https://hub.docker.com/r/diodonfrost/ansible-rockylinux
+[diodonfrost/ansible-almalinux:10]: https://hub.docker.com/r/diodonfrost/ansible-almalinux
 [diodonfrost/ansible-almalinux:9]: https://hub.docker.com/r/diodonfrost/ansible-almalinux
 [diodonfrost/ansible-almalinux:8]: https://hub.docker.com/r/diodonfrost/ansible-almalinux
