@@ -76,6 +76,9 @@ jobs:
           - image: fedora
             version: "44"
             platform: "linux/amd64"
+          - image: fedora
+            version: "45"
+            platform: "linux/amd64"
 
     steps:
       - name: Checkout repository
