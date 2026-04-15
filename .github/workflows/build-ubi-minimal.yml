@@ -1,4 +1,4 @@
-name: Build
+name: Build Ubi-minimal
 
 on:
   push:
